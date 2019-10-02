@@ -1,0 +1,41 @@
+/*
+ * define bootstrap vars according to externally hosted bootstrap library
+ */
+
+// Breakpoints
+// -upr = Upper breakpoint   -lwr = Lower breakpoint
+$xxs-upr:               360px;
+$xs-upr:                767px;
+$sm-lwr:                768px;
+$sm-upr:                991px;
+$md-lwr:                992px;
+$md-upr:                1199px;
+$lg-lwr:                1200px;
+$lg-upr:                1439px;
+$xl-lwr:                1440px;
+$xl-upr:                4200px;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+$utk-container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 1000px,
+        xl: 1280px
+) !important;
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                12 !default;
+$grid-gutter-width:           30px !default;
+
+$grid-breakpoints-custom: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+) !default;
