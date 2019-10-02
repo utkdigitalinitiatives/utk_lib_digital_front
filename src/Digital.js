@@ -1,8 +1,5 @@
 import React, {Component} from 'react';
-
 import Data from "./components/Data";
-
-const endpoint = 'http://porter.lib.utk.edu:8080/solr/collection1/select?q=*%3A*&fq=RELS_EXT_hasModel_uri_ss%3A%22info%3Afedora%2Fislandora%3AcollectionCModel%22+-PID%3A%22islandora%3Avideo_collection%22+-PID%3A%22ir%3AcitationCollection%22+-PID%3A%22islandora%3Aaudio_collection%22+-PID%3A%22islandora%3Aoralhistories_collection%22+-PID%3A%22islandora%3Asp_basic_image_collection%22+-PID%3A%22islandora%3Asp_large_image_collection%22+-PID%3A%22islandora%3Asp_pdf_collection%22&sort=PID+asc&rows=90&fl=PID+fgs_label_s+mods_abstract_s+mods_relatedItem_Featured_Item_titleInfo_title_s+mods_relatedItem_Featured_Item_identifier_pid_s+mods_relatedItem_Featured_Item_dateCreated_s+ancestors_ms&wt=json&indent=true';
 
 class Digital extends Component {
 
@@ -10,13 +7,13 @@ class Digital extends Component {
         super(props);
 
         this.state = {
-            collections : null
+            collections : 'load'
         };
     };
 
     componentDidMount() {
         this.setState({
-            collections : Data(endpoint)
+            collections : Data()
         })
     }
 
@@ -24,7 +21,8 @@ class Digital extends Component {
 
         return (
             <React.Fragment>
-                hi
+                testing...
+                {this.state.collections}
             </React.Fragment>
         );
     }

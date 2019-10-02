@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Data = (endpoint) => {
+let collections = null;
+const digital = require('../digital.json');
 
-    let collections = null;
+const Data = () => {
 
-    fetch(endpoint, {
+    fetch(digital.endpoint, {
         headers : {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
@@ -14,7 +15,7 @@ const Data = (endpoint) => {
         .then(data => {
             collections = data;
         })
-        .catch(err => console.error(this.props.url, err.toString()));
+        .catch(err => console.error(err.toString()));
 
     return collections
 };
