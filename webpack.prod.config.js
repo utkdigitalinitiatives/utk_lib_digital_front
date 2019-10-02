@@ -3,7 +3,6 @@ const webpack = require('webpack');
 const DefinePlugin = webpack.DefinePlugin;
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
@@ -18,7 +17,7 @@ module.exports = {
         // the entry point of our app
     ],
     output: {
-        filename: 'header.js',
+        filename: 'digital.js',
         path: path.resolve(__dirname, 'dist'),
         publicPath: 'dist/'
     },
@@ -77,11 +76,6 @@ module.exports = {
             }
         }),
 
-        new ExtractTextPlugin({filename: 'header.css', allChunks: true}),
-
-        new HtmlWebPackPlugin({
-            template: path.join(__dirname, "./src/index.html"),
-            filename: "./index.html"
-        })
+        new ExtractTextPlugin({filename: 'digital.css', allChunks: true})
     ],
 };

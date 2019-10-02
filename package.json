@@ -49,12 +49,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
-    "build-www": "webpack --config ./webpack.prod.config.js --mode production && prepend dist/header.js '/* eslint-disable */' && npm run build-www-set-absolutes-js && npm run build-www-set-absolutes-css && ./ship/ship-www.sh",
-    "build-www-set-absolutes-js": "replace 'dist[/]' '/wp-content/themes/utk_lib_wp_theme/resources/assets/react/header/' dist/*.js",
-    "build-www-set-absolutes-css": "replace '[/]dist[/]' '/wp-content/themes/utk_lib_wp_theme/resources/assets/react/header/' dist/*.css",
-    "build-assets": "webpack --config ./webpack.prod.config.js --mode production && prepend dist/header.js '/* eslint-disable */' && npm run build-assets-set-absolutes-js && npm run build-assets-set-absolutes-css && ./ship/ship-assets.sh",
-    "build-assets-set-absolutes-js": "replace 'dist[/]' 'https://www.lib.utk.edu/assets/header/' dist/*.js",
-    "build-assets-set-absolutes-css": "replace '[/]dist[/]' 'https://www.lib.utk.edu/assets/header/' dist/*.css"
+    "build": "webpack --config ./webpack.prod.config.js --mode production"
   },
   "homepage": "https://www.lib.utk.edu/",
   "publicPath": ""
