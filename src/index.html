@@ -5,15 +5,20 @@
     <title>Libraries at University of Tennessee, Knoxville</title>
     <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-    <noscript>
-        <div>HTML menu inserted here for WCAG 2.1 AA accessibility compliance.</div>
-    </noscript>
+    <style type="text/css">
+        .container {
+            margin: 0 auto;
+            max-width: 1280px !important;
+        }
+    </style>
 </head>
 <body style="background-color: #e0e0e0">
-    <header id="utk-lib-header"
-            data-page-title="Digital Collections"
-            data-url="https://www.lib.utk.edu"
-            data-libchat="e98ae2539f2bd5d1659cc53d7de2812b"></header>
+    <header id="utk-lib-header"></header>
     <main id="utk-lib-digital-front"></main>
+    <noscript>
+        do meta redirect to fallback.php
+    </noscript>
+    <script src="https://www.lib.utk.edu/assets/header/header.js"></script>
+    <link href="https://www.lib.utk.edu/assets/header/header.css" rel="stylesheet" />
 </body>
 </html>
