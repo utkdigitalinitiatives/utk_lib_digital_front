@@ -2,9 +2,9 @@
 
 require ('vendor/autoload.php');
 
-function run_utk_calendar() {
+function run_digital() {
     $plugin = new UTKDigital\Digital();
     $plugin->run();
 }
 
-run_utk_calendar();
+run_digital();
