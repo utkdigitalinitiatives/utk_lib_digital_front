@@ -15,7 +15,7 @@ class Collection extends Component {
             <div>
                 <h3>{data.fgs_label_s}</h3>
                 <ImageIIIF pid={data.PID}
-                           width={400} />
+                           width={322} />
             </div>
         );
     }

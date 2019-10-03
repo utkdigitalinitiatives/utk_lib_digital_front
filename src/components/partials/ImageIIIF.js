@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import LazyLoad from 'react-lazyload';
 
 const iiif = 'http://digital.lib.utk.edu/iiif/2/collections~islandora~object~'
 
@@ -46,9 +47,11 @@ class ImageIIIF extends Component {
 
         if (available === true)
             return (
-                <figure>
-                    <img src={source} />
-                </figure>
+                <LazyLoad>
+                    <figure>
+                        <img src={source} />
+                    </figure>
+                </LazyLoad>
             );
         else if (available === 'load')
             return (

@@ -12,12 +12,10 @@ class Splash extends Component {
         const {collection} = this.props
 
         return (
-            <div>
-                <div className="utk-digital--splash--background">
-                    <ImageIIIF pid={collection.PID}
-                               width={1000}
-                               type="collection" />
-                </div>
+            <div className="utk-digital--header--splash">
+                <ImageIIIF pid={collection.PID}
+                           width={1000}
+                           type="collection" />
             </div>
         );
     }

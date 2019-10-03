@@ -12,7 +12,7 @@ class DigitalHeader extends Component {
         const {featured} = this.props
 
         return (
-            <section>
+            <section className='utk-digital--header'>
                 <Splash collection={featured} />
             </section>
         );
