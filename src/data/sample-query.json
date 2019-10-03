@@ -1,0 +1,863 @@
+{
+  "responseHeader": {
+    "status": 0,
+    "QTime": 3,
+    "params": {
+      "q": "*:*",
+      "indent": "true",
+      "fl": "PID fgs_label_s mods_abstract_s mods_relatedItem_Featured_Item_titleInfo_title_s mods_relatedItem_Featured_Item_identifier_pid_s mods_relatedItem_Featured_Item_dateCreated_s ancestors_ms",
+      "fq": "RELS_EXT_hasModel_uri_ss:\"info:fedora/islandora:collectionCModel\" -PID:\"islandora:video_collection\" -PID:\"ir:citationCollection\" -PID:\"islandora:audio_collection\" -PID:\"islandora:oralhistories_collection\" -PID:\"islandora:sp_basic_image_collection\" -PID:\"islandora:sp_large_image_collection\" -PID:\"islandora:sp_pdf_collection\"",
+      "sort": "PID asc",
+      "rows": "90",
+      "wt": "json"
+    }
+  },
+  "response": {
+    "numFound": 83,
+    "start": 0,
+    "docs": [
+      {
+        "PID": "arrowmont:3d",
+        "fgs_label_s": "Art of Arrowmont",
+        "mods_abstract_s": "A Collection of Fine Art & Crafts.",
+        "ancestors_ms": [
+          "collections:arrowmont",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "arrowmont:arrow",
+        "fgs_label_s": "The Arrow of Pi Beta Phi",
+        "ancestors_ms": [
+          "collections:arrowmont",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "arrowmont:arrpgimg",
+        "fgs_label_s": "Arrowmont Photos from Scrapbooks",
+        "ancestors_ms": [
+          "collections:arrowmont",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "arrowmont:arrscrap",
+        "fgs_label_s": "From Pi Beta Phi to Arrowmont Scrapbooks",
+        "ancestors_ms": [
+          "collections:arrowmont",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "arrowmont:arrsimple",
+        "fgs_label_s": "Images: From Pi Beta Phi to Arrowmont",
+        "ancestors_ms": [
+          "collections:arrowmont",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "arrowmont:curriculum",
+        "fgs_label_s": "Arrowmont Curriculum Documents",
+        "ancestors_ms": [
+          "collections:arrowmont",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "arrowmont:sturley",
+        "fgs_label_s": "Ruth Sturley's Letters and Diary",
+        "ancestors_ms": [
+          "collections:arrowmont",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:acwiley",
+        "fgs_label_s": "Anna Catherine Wiley Sketches",
+        "mods_abstract_s": "This digital collection comprises over 150 of Anna Catherine Wiley’s early works, illustrating her development as an artist. The pieces include figure drawings, pencil sketches, and bookplate designs as well as her ink illustrations for the University of Tennessee’s yearbook, The Volunteer. Wiley, an impressionist painter and educator, was a key figure in the early 20th century art community of Knoxville and the larger East Tennessee region. Born in Coal Creek, Tennessee in 1879, Wiley moved with her family at the age of three to Knoxville. Wiley attended the University of Tennessee in the 1890s before moving to New York in 1903 to study with the Arts Student League. In New York, Wiley was exposed to a wide range of artists and art movements, including Impressionists such as William Merritt Chase who influenced her work. In 1905, Wiley returned to the University of Tennessee to teach art and quickly became a leader in the area’s art community. Her work earned numerous awards and was exhibited in major galleries across the country.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:agee",
+        "fgs_label_s": "Dedication of the James Agee Memorial Library - Photo Album",
+        "mods_abstract_s": "Program notes and photographs of Agee Week and the Dedication of the James Agee Memorial Library at the St. Andrew's School in St. Andrew's, Tennessee during the week of October 9-14, 1972. (In 1981, the school merged with Sewanee Academy to form St. Andrew's-Sewanee School.)",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:agrtfhs",
+        "fgs_label_s": "Tennessee Farm and Home Science",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:agrtfn",
+        "fgs_label_s": "Tennessee Farm News",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:agrutesc",
+        "fgs_label_s": "University of Tennessee Extension Special Circulars",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:alumnus",
+        "fgs_label_s": "Alumnus",
+        "mods_abstract_s": "The Tennessee Alumnus, established in 1917, is published three times a year for the University of Tennessee Alumni Association and distributed to recent graduates and donors. Circulation reaches more than 70,000 alumni and contributors.",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:archivision",
+        "fgs_label_s": "Archivision",
+        "mods_abstract_s": "The University of Tennessee Libraries licenses these images from Archivision, Inc. People affiliated with the University of Tennessee can log in to view the images using their NetID and Password. Use of the images is governed by our license. People affiliated with the University of Tennessee may use the images for educational, research, and personal use on a not-for-profit basis. For example, they may use the images in their lectures and presentations, in assignments, papers, and theses, and within password-protected course websites. They may not massively copy the images. If you have questions about this collection, please contact Chris Eaker at ceaker@utk.edu.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:arrowmont",
+        "fgs_label_s": "From Pi Beta Phi to Arrowmont",
+        "mods_abstract_s": "In 1912, the Pi Beta Phi Fraternity for Women founded the Pi Beta Phi Settlement School in Gatlinburg, Tennessee as a service project to commemorate its 50th anniversary. Thanks to a grant from the Institute of Museum and Library Services (IMLS), the University of Tennessee Libraries, along with the Arrowmont School of Arts and Crafts and the Pi Beta Phi Elementary School, Gatlinburg, Tennessee, have collaborated to create a fully-searchable digital collection of archival materials that document the history of the Settlement School and its contemporary legacy, Arrowmont. The digital collection features photographs of the Settlement School, early Arrowmont, and the surrounding community; an historical essay collection that relates the \"Pi Beta Phi to Arrowmont\" story; letters, diaries, and scrapbooks written and compiled by Settlement School teachers; images of contemporary art pieces housed at Arrowmont, including a 360-degree interactive gallery; and an integrated curriculum package for K-8 students developed at the current Pi Beta Phi Elementary School in Gatlinburg.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:ascoop",
+        "fgs_label_s": "Air Scoop ",
+        "mods_abstract_s": "The Air Scoop weekly newsletter informed and entertained members of the 63rd College Training Detachment based at the University of Tennessee during World War II. The detachment’s goal was to run a publication for and by aviation students in the detachment in order to unify the organization and to share news related to military training and social events occurring on and around the Knoxville campus.",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:bakerav",
+        "fgs_label_s": "Senator Howard Baker Audiovisual Materials",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:mpa",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:bass",
+        "fgs_label_s": "Dr. William M. Bass III collection:",
+        "mods_abstract_s": "The Dr. William M. Bass III Collection documents his career as one of the foremost experts in the field of forensic anthropology. The collection includes Bass’s class notes and lectures, personal and professional correspondence, field study research notes, publications, and teaching and departmental material. Research materials include original field study notebooks from expeditions in the Central and Northern Plains, describing excavated artifacts and skeletal remains that were identified, cataloged, and housed in the teaching collection within the Forensic Anthropology Center.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:bcpl",
+        "fgs_label_s": "Blount County Historical and Architectural Inventory",
+        "mods_abstract_s": "The Tennessee Historical Commission conducted an architectural survey in 1983 of over 4,600 Blount County buildings that were over 50 years old (dating from 1800 to 1930). These images represent a wide variety of building types, such as stone structures, log houses, wooden-frame churches, and brick schoolhouses. A selection of 94 images, representative of the larger collection, is available now.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:brehm",
+        "fgs_label_s": "C. E. Brehm, University of Tennessee Office of the President Records, 1948-1959",
+        "mods_abstract_s": "Selected material from the C. E. Brehm (1889-1971) President of the University of Tennessee papers from 1946 to 1959. Among the subjects represented in his collection are athletics, student organizations, university property acquisitions, and desegregation.",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:cDanielCartoon",
+        "fgs_label_s": "Charlie Daniel Editorial Cartoon Collection",
+        "mods_abstract_s": "Consists of 1759 cartoons from Charlie Daniel's body of work.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:cdf",
+        "fgs_label_s": "Children's Defense Fund",
+        "mods_abstract_s": "In partnership with the Children's Defense Fund, this digital collection provides access to the organization's publications and reports on federal and state policies, laws, and pending legislation that directly benefit or harm children. Dating back to the organization's founding in 1973, each publication offers significant data on numerous child statistics as well as information on child policy, including health and mental health, child welfare, early childhood and youth development, juvenile justice, and family income.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:civilwar",
+        "fgs_label_s": "Digital Civil War Collection",
+        "mods_abstract_s": "One of Special Collection's main collection strengths is the Civil War and Reconstruction Era. In addition to images and military documents--such as muster rolls, generals' orders, and supply requests--the department also houses a significant amount of correspondence and journals from the time period. As a collective whole, these materials chronicle the evolution of the American Civil War and the immediate aftermath. UT Libraries' Digital Civil War Collection provides a selection of digitized journals and correspondence. These materials provide unique insight into the era's military and regional culture by capturing the perspectives and personal experiences of soldiers as well as civilians affected by the war through personal relationships or geographic location. In addition, these materials record political opinions and regional attitudes about topical issues such as slavery and poverty. Each item includes a digital scan of the original document accompanied by a full text transcript.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:dabney",
+        "fgs_label_s": "Charles W. Dabney, University of Tennessee Office of the President Records, 1867-1954",
+        "mods_abstract_s": "Selected material from the Charles W. Dabney Jr., President of the University of Tennessee papers from 1887 to 1904. Highlighted in the collection are some of Dabney’s achievements as university president including making agricultural and mechanical courses mandatory, adding six new four-year courses in science, updating the physics curriculum, admitting the university's full time first female students, beginning the Summer School of the South, doubling the size of the faculty, and forming both the home economics and law departments.",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:druid",
+        "fgs_label_s": "Druid",
+        "mods_abstract_s": "The Druid magazine evolved during its short lifespan from a complete humanities publication composed of young artists and writers to one that also echoed the anti-war, counter-culture sentiment during the height of the Vietnam War. The independently published magazine featured interviews with creators, poetry, prose, plays, music reviews, photography, illustrations, and other creative works by University of Tennessee, Knoxville students.",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:egypt",
+        "fgs_label_s": "Nineteenth and Early Twentieth Century Images of Egypt",
+        "mods_abstract_s": "Selected images of Egypt from the McClung Museum of Natural History and Culture, University of Tennessee, Knoxville.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:ekcd",
+        "fgs_label_s": "Crime Documents from the Estes Kefauver Collection",
+        "mods_abstract_s": "Kefauver (1903-1963), a UT alumnus and East Tennessee native, served in the U.S. House of Representatives for almost ten years (1939-1949), the U.S. Senate for almost 15 years (1949-1963), and twice ran for President. This digital collection includes press releases, speeches, article drafts, and government publications penned by Estes Kefauver and colleagues on the organized crime and juvenile delinquency commissions.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:emancip",
+        "fgs_label_s": "The Emancipator",
+        "mods_abstract_s": "The Emancipator Newsletter, published monthly in Jonesborough, Tennessee in 1820 by Elihu Embree, advocated the abolition of slavery. Embree, a Quaker, had established what is probably the country's first anti-slavery paper in 1819, the Manumission Intelligencer, of which only one copy exists. This was followed by the Emancipator, a complete run of which exists at the Tennessee State Library. Publication of The Emancipator ended due to the death of Mr. Embree.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:fbpro",
+        "fgs_label_s": "The University of Tennessee Football Programs",
+        "mods_abstract_s": "The Volunteer Football Programs and Guides offer a unique glimpse into the history and traditions of the University of Tennessee football team. The Tennessee Volunteers have one of the most storied histories in college football and some of the most colorful traditions to match. Over the years, Volunteer football has been host to thrilling victories, crushing defeats, influential coaches, dedicated players, and enthusiastic fans.",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:gamble",
+        "fgs_label_s": "Ed Gamble Cartoon Collection",
+        "mods_abstract_s": "The Ed Gamble Cartoon Collection encompasses a representative sample from more than 6,000 original cartoons donated by the nationally syndicated cartoonist to UT Libraries in 2013. The more than 300 cartoons featured in this digital collection date between 1974 and 2005, when Gamble worked as the cartoonist for the Nashville Banner in Nashville, Tenn. (1972-1980) and the Florida Times-Union in Jacksonville, Fla. (1980-2010).",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:garner",
+        "fgs_label_s": "W. O. Garner Photograph Collection",
+        "mods_abstract_s": "The William Orland Garner Collection depicts people, homes, recreational activities, and scenery of Maryville, Tennessee in the 1890's. Created by an amateur photographer with an eye for detail, these photographs represent a broad range of economic, social, and racial groups in an essentially agrarian culture. Of special interest are the images of the Freedman's Normal Institute, a teaching institution for African-American teachers. This highly regarded institute influenced lives of individuals throughout the southern United States.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:gsmrc",
+        "fgs_label_s": "Great Smoky Mountains Regional Collection",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:harp",
+        "fgs_label_s": "Harp of Columbia",
+        "mods_abstract_s": "The harp of Columbia is a shape-note tunebook used in East Tennessee singing schools. It contains a variety of psalm and hymn tunes, odes and anthems, adapted for church services, singing-schools and societies. Preceding the songs are basic instructions on reading and interpreting notated music.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:hbs",
+        "fgs_label_s": "Senator Howard Baker Speeches and Remarks, 1966-1985",
+        "mods_abstract_s": "This digital collection contains transcripts of speeches given by Howard Baker during his tenure in the U.S. Senate. The topics include politics, trade, international relations, energy, the economy, and the environment.",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:ascoop",
+          "collections:mpa",
+          "islandora:root",
+          "digital:collections",
+          "collections:uarc",
+          "digital:collections",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:heilman",
+        "fgs_label_s": "The Botanical photography of Alan S. Heilman",
+        "mods_abstract_s": "This collection consists of more than 1,100 digitized color-film photographs of flowering plants, ferns, mosses, and lichens taken over the past sixty years by Alan S. Heilman, retired professor of Botany at the University of Tennessee, Knoxville. Recently gifted by Dr. Heilman to the University of Tennessee Libraries, the digital images represent a lifetime of fascination with the color, form, and development of plants.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:hesler",
+        "fgs_label_s": "L.R. Hesler’s Mushroom Research Notebooks",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:humbug",
+        "fgs_label_s": "The humming humbug",
+        "mods_abstract_s": "The Humming Humbug, or “A Lean Destructive Snoozepaper,” ran as a parody supplement to The Orange and White student newspaper. Its articles provided humorous commentary on academics and student life occurring on the University of Tennessee, Knoxville campus.",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:indtruth",
+        "fgs_label_s": "The independent truth",
+        "mods_abstract_s": "The Independent Truth newspaper served as an anonymous platform for its editors and writers to report, from their perspective, the truth on how the University of Tennessee, Knoxville leadership handled issues occurring on campus in 1935.",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:insurancena",
+        "fgs_label_s": "Insurance Company of North America",
+        "mods_abstract_s": "This volume of correspondence and legal papers documenting the Insurance Company of North America contains the signatures of 140 important figures, including John Quincy Adams, James Madison, Robert Morris, and Daniel Webster.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:kefauver",
+        "fgs_label_s": "Estes Kefauver Image Collection",
+        "mods_abstract_s": "Estes Kefauver was a big name in 1950s politics, but his name is surprisingly unfamiliar to the current generation. Kefauver (1903-1963), a UT alumnus and East Tennessee native, served in the U.S. House of Representatives for almost ten years (1939-1949), the U.S. Senate for almost 15 years (1949-1963), and twice ran for President. Kefauver's victory in the New Hampshire primary during the 1952 presidential campaign prompted then sitting President Harry Truman to withdraw from the race. In 1956 he bested John F. Kennedy to become the vice-presidential candidate on the Democratic Party ticket, alongside presidential nominee Adlai Stevenson.",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:mpa",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:knoxgardens",
+        "fgs_label_s": "Knoxville Garden Slides",
+        "mods_abstract_s": "This collection of hand-colored lantern slides depicts ornamental gardens in the Knoxville, Tennessee, area from the early twentieth century, and feature a variety of garden styles, plants, flowers, and foliage.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:mpa",
+        "fgs_label_s": "Modern Political Archives",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:mpabaker",
+        "fgs_label_s": "Photographs from the Life and Career of Howard Baker",
+        "mods_abstract_s": "Howard Baker, Jr., was a U.S. Senator from East Tennessee. Perhaps more than any other United States senator, he is known for his civility and non-partisanship in American politics. A Republican, Baker rose to national fame by investigating Richard Nixon during the televised Watergate hearings. He went on to become minority and majority leader of the Senate and one of Ronald Reagan's chiefs of staff. This collection of photographs from the Howard Baker, Jr., collections at UT Libraries' Modern Political Archives illustrate some of the relationships and events of Howard Baker's remarkable public life.",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:ascoop",
+          "collections:mpa",
+          "islandora:root",
+          "digital:collections",
+          "collections:uarc",
+          "digital:collections",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:mugwump",
+        "fgs_label_s": "Mugwump",
+        "mods_abstract_s": "A combination of college humor and literary material, The Mugwump was a University of Tennessee student publication that ran from November 1920 until 1932. The Mugwump details student life issues, sports, literary critiques, poetry, as well as student drawn cartoons and art work.",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:native",
+        "fgs_label_s": "Southeastern Native American Documents",
+        "mods_abstract_s": "Southeastern Native American Documents, 1730-1842, contains approximately 2,000 documents and images relating to the Native American population of the Southeastern United States from the collections of the University of Georgia Libraries, the University of Tennessee at Knoxville Library, the Frank H. McClung Museum, the Tennessee State Library and Archives, the Tennessee State Museum, the Museum of the Cherokee Indian, and the LaFayette-Walker County Library. The documents are comprised of letters, legal proceedings, military orders, financial papers, and archaeological images relating to Native Americans in the Southeast.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:phoenix",
+        "fgs_label_s": "Phoenix",
+        "mods_abstract_s": "Phoenix is a student-led literary publication, showcasing the creative output of UT's diverse student population. The Phoenix staff is proud to publish a new edition of Phoenix Literary/Art Magazine each semester of the regular academic year.",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:playbills",
+        "fgs_label_s": "Playbills",
+        "mods_abstract_s": "The University of Tennessee Theatre Playbills Collection showcases the history of theatre at the University of Tennessee, beginning with the UT Faculty Players to the current incarnation of the Clarence Brown Theatre Company, an affiliate of the League of Resident Theatres (LORT). Materials date from 1935 to present day.",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:ruskin",
+        "fgs_label_s": "Photographs of the Ruskin Cooperative Association",
+        "mods_abstract_s": "Images in the Ruskin Colony Collection show the land, structures, and people of the short-lived socialist experiment and the college that later occupied the Ruskin site. The Betsey B. Creekmore Special Collections and University Archives holds several collections that document the activities and development of the Ruskin Cooperative Association and the Ruskin Cave College.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:sanborn",
+        "fgs_label_s": "Sanborn Fire Insurance maps collection.",
+        "mods_abstract_s": "The Sanborn Fire Insurance Maps are a large-scale representation of the growth and layout of American cities. The University of Tennessee Libraries' collection currently provides digital versions of the four earliest sets of Knoxville maps - 1884, 1890, 1903, and 1917.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:scopes",
+        "fgs_label_s": "Of Monkeys and Men: Public and Private Views from the Scopes Trial",
+        "mods_abstract_s": "Of Monkeys and Men: Public and Private Views from the Scopes Trial digital collection consists of selected documents and photographs from the Sue K. Hicks Papers and the W.C. Robinson Collection of Scopes Trial Photographs. Sue K. Hicks, a Dayton lawyer, was a member of the Scopes prosecution team. The digital collection includes letters, notes, and other documents assembled by Hicks during the trial. W.C. Robinson was the son of “Doc” Robinson, owner of the Dayton drugstore where Scopes “Monkey Trial” spectators were greeted by a trained chimpanzee wearing a suit and bow tie. Sue Hicks and Doc Robinson were two of the community leaders who initiated the Dayton trial.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:swim",
+        "fgs_label_s": "The University of Tennessee Swimming and Diving Media Guides",
+        "mods_abstract_s": "Since reinstating its pool program in 1968, the University of Tennessee's Men's Swimming and Diving program has been highly successful in garnering multiple Olympic gold medalists, winning an NCAA title and claiming many SEC championships. Featured in this digital collection are the University of Tennessee Men's Swimming and Diving media guides that were published in print from 1968 through 2011.",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:tatum",
+        "fgs_label_s": "Robert Tatum Diaries",
+        "mods_abstract_s": "On June 7, 1913, four climbers reached the south summit of Denali, known at the time as Mount McKinley, the highest peak in North America. It was the first successful ascent to the pinnacle. Robert G. Tatum was a member of the climbing party. The University of Tennessee's digital collection of Tatum's diaries document the climb as well as Tatum's life after the ascent. Also available is a photograph album with images taken during and after the famous climb.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:tenncities",
+        "fgs_label_s": "Images of East Tennessee",
+        "mods_abstract_s": "Featuring images from the mid-nineteenth century through the late twentieth century, this digital collection is comprised of photographs and postcards from around the East Tennessee region. Particularly rich in images of Knoxville, the collection includes images of airports, exteriors and interiors of buildings (such as homes, businesses, schools, churches, hospitals), vistas, people, and more. Also present are photographs of the 1982 World's Fair in downtown Knoxville. This collection provides a glimpse at the development of Knoxville and the larger East Tennessee region.",
+        "mods_relatedItem_Featured_Item_titleInfo_title_s": "Gay Street Viaduct",
+        "mods_relatedItem_Featured_Item_identifier_pid_s": "tenncities:472",
+        "mods_relatedItem_Featured_Item_dateCreated_s": "1924-1930",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:tennessean",
+        "fgs_label_s": "The Tennessean: New Literary Magazine of the University of Tennessee",
+        "mods_abstract_s": "A vehicle for students’ creative expression through fiction writing, poetry, book reviews, art criticism, photographs, and illustrations. This digital collection includes issues from March 1947 to March 1950.",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:tenngirl",
+        "fgs_label_s": "Tennessee Girl Student Handbook",
+        "mods_abstract_s": "This publication is the female student handbook published originally by Women's Student Government Association (Associated Women Students) from 1930 to1970. This handbook was then incorporated into a single handbook for all students of University of Tennessee Knoxville.",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:tndp",
+        "fgs_label_s": "Tennessee Newspaper Digitization Project (TNDP)",
+        "mods_abstract_s": "The Tennessee Newspaper Digitization Project (TNDP) is a partnership between the University of Tennessee and the Tennessee State Library and Archives. The project provides access to a selection of Tennessee's historical newspapers. It is part of the National Digital Newspaper Program (NDNP) and is made possible by support from the National Endowment for the Humanities and the Library of Congress.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:torch",
+        "fgs_label_s": "Torchbearer",
+        "mods_abstract_s": "Torchbearer is a magazine for alumni, faculty, staff, and friends of the University of Tennessee, Knoxville. It services to update, inform, and highlight stories concerning the Knoxville campus. It is published in cooperation with the Office of Alumni Affairs, by the University of Tennessee Office of Communications and Marketing.",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:uarc",
+        "fgs_label_s": "University Archives Collections",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:univcat",
+        "fgs_label_s": "University of Tennessee Catalogs Online",
+        "mods_abstract_s": "Online archive of past course catalogs for graduate and undergraduate students at the University of Tennessee, Knoxville.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:univmonthly",
+        "fgs_label_s": "University monthly",
+        "mods_abstract_s": "East Tennessee University literary societies Chi Delta and the Philomathesian recognized a need for a college newspaper to report local and campus news on behalf of the university’s students, faculty, and alumni. When the literary societies jointly published and edited The University Monthly for the 1875 and 1876 academic years, their goal was to improve current students’ composition skills and connect alumni back to the university.",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:utkcomm",
+        "fgs_label_s": "University of Tennessee Commencement Programs",
+        "mods_abstract_s": "The University of Tennessee Commencement, with over two centuries of traditions behind it, is the formal ceremony that publicly recognizes graduate candidates and confers degrees upon them. The commencement programs featured in this collection range from 1841 to the present and will continue with programs from upcoming years.",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:utsmc",
+        "fgs_label_s": "University of Tennessee Sheet Music Collection",
+        "mods_abstract_s": "Before recorded sound, popular music was most frequently played at home by amateur musicians using sheet music. Popular music composers and lyricists tailored their compositions to appeal to the tastes of potential buyers, and sheet music publishers increased the appeal of their product by printing eye-catching artwork on the covers of their releases.UT Libraries has a large collection of sheet music published between the early 1800s and the mid-1900s. The bulk of this collection was donated by local historian Ronald Allen and many of the works have ties to Tennessee. Approximately 1,500 of these songs and instrumental works form this digital collection, and are also part of the Sheet Music Consortium, which provides access to the sheet music collections from many libraries. Note that some of the works in this collection include lyrics or illustrations that, while representative of the times in which they were published, may be offensive to users.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:vanvactor",
+        "fgs_label_s": "David Van Vactor Music Collection",
+        "mods_abstract_s": "The David Van Vactor Music Collection includes multiple drafts and final versions of compositions from all eras of Van Vactor’s long career. Successive drafts allow researchers to study Van Vactor’s process of composition, from writing and revising to working with his transcriptionist and publisher.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:voice",
+        "fgs_label_s": "The Vocational Voice: Journal of Ex-Service Men of UT",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:voloh",
+        "fgs_label_s": "Voices Out Loud Oral Histories",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:volvoices",
+        "fgs_label_s": "Volunteer Voices Statewide Digitization Project",
+        "mods_abstract_s": "Volunteer Voices is a state-wide digitization project to provide access to primary sources that document Tennessee's rich history and culture. Volunteer Voices combines the collaborative efforts to Tennessee archives, historical societies, libraries, museums, and schools.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:vpmoore",
+        "fgs_label_s": "Virginia P. Moore Collection",
+        "mods_abstract_s": "The Virginia P. Moore Collection includes handwritten recipes and notes, documents relating to Moore’s home demonstration work, and photographs that illustrate the breadth of her impactful career. A scrapbook compiled by Moore in 1912-1913 – “Tennessee Canning Girls at Work” – spotlights canning club girls from numerous Tennessee counties tending their garden plots and demonstrating their canning skills.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:wpatva",
+        "fgs_label_s": "WPA/TVA Archaeological Photographs",
+        "mods_abstract_s": "The University of Tennessee McClung Museum of Natural History and Culture, and the Libraries received a two-year grant from the Institute for Museum and Library Services to create an on-line database of information describing photographs taken by Works Progress Administration (WPA) workers of archaeological projects conducted in preparation for Tennessee Valley Authority (TVA) dam construction in the 1930s. Photographs and field notes for the database were contributed by the McClung Museum of Natural History and Culture at the University of Tennessee, the William S. Webb Museum of Anthropology at the University of Kentucky, and the Alabama Museum of Natural History at the University of Alabama. Because the archaeological sites on which the excavations were made have since been flooded, these images and the associated field notes and artifacts collected are the only record of these sites that we will ever have. Excavation sites include Chickamauga, Douglas, Fort Loudon, Guntersville Lake, Melton Hill, Pickwick Lake, Watts Bar, and Wheeler Lake.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:wwiioh",
+        "fgs_label_s": "World War II Oral Histories",
+        "mods_abstract_s": "Over the last 25 years, the Center for the Study of War and Society (CSWS) at the University of Tennessee has conducted hundreds of oral history interviews focusing on individual veterans experiences throughout the war both and at home and abroad. The WWII oral history interviews uniquely capture the experiences and memories of the veteran beginning with their lives before combat, motivations to enlist, personal experiences during the war, and their experiences readjusting to civilian life afterwards.",
+        "ancestors_ms": [
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "collections:yrb",
+        "fgs_label_s": "Volunteer Yearbooks",
+        "mods_abstract_s": "The Volunteer yearbook was published annually from 1897, except in 1918 when the events of World War I interrupted school activities. Until the last volume was published in 2009, it remained one of UT's oldest continuing traditions. The Volunteer was produced by students and published for distribution during the fall semester. Its editorial mission was to accurately document, highlight, and commemorate the academic year in which it was published through pictures, articles, and reportage of individuals and activities representative of the university's communities and organizations.",
+        "ancestors_ms": [
+          "digital:collections",
+          "collections:uarc",
+          "islandora:root",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "gsmrc:50yrcove",
+        "fgs_label_s": "Fifty Years in Cades Cove Collection",
+        "mods_abstract_s": "Digitized pages from Fifty Years in Cades Cove is the historical and genealogical writings of John W. Oliver, longtime resident of Cades Cove. Accompanying the three memoirs are approximately thirty photographs that document places and people in the memoirs and the Oliver family. The memoirs and photographs are part of the Dunn-Oliver Collection, University of Tennessee Special Collections MS. 3690. The material was donated by Durwood Dunn, a descendant of John W. Oliver, and author of Cades Cove: The Life and Death of a Southern Appalachian Community, 1818-1937.",
+        "ancestors_ms": [
+          "collections:gsmrc",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "gsmrc:adams",
+        "fgs_label_s": "Paul J. Adams Photograph Collection",
+        "mods_abstract_s": "\"In the 1920s, Paul Jay Adams led several expeditions to the summit of Mount Le Conte, which is widely regarded as the \"\"crown jewel\"\" of the Great Smoky Mountains. From 1925 to 1926, Adams operated a camp on Mount Le Conte, near the site of the present day Le Conte Lodge. During those years, Adams was accompanied by a German shepherd named \"\"Cumberland Jack.\"\" Adams and Cumberland Jack remained at the camp until May 10, 1926, when Jack Huff took over its management.\"",
+        "ancestors_ms": [
+          "collections:gsmrc",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "gsmrc:colloquy",
+        "fgs_label_s": "Great Smoky Mountains Colloquy",
+        "ancestors_ms": [
+          "collections:gsmrc",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "gsmrc:derris",
+        "fgs_label_s": "The William Derris Slide Collection",
+        "mods_abstract_s": "Digitized pages from the William Derris slide collection which consists of 334 Kodachrome slide images and fourteen film clips with new music added in 2014. The slides represent various views of the Great Smoky Mountains, primarily around Cades Cove, Little Greenbrier, Fontana Lake, Townsend, and Clingmans Dome.",
+        "ancestors_ms": [
+          "collections:gsmrc",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "gsmrc:kintner",
+        "fgs_label_s": "Panoramic Images of Elgin P. Kintner, M.D.",
+        "ancestors_ms": [
+          "collections:gsmrc",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "gsmrc:pcard00",
+        "fgs_label_s": "Postcards from the Great Smoky Mountains",
+        "ancestors_ms": [
+          "collections:gsmrc",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "gsmrc:rfj",
+        "fgs_label_s": "Tales from the Woods",
+        "mods_abstract_s": "Personal journal of Albert G. \"Dutch\" Roth, documenting hikes in the Great Smoky Mountains area through stories and photographs spanning 1924-1959. With his camera and typewriter, Dutch records observations of the people and places of the mountains from 728 documented hikes",
+        "ancestors_ms": [
+          "collections:gsmrc",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "gsmrc:roth",
+        "fgs_label_s": "Albert \"Dutch\" Roth Photograph Collection",
+        "ancestors_ms": [
+          "collections:gsmrc",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "gsmrc:smhc",
+        "fgs_label_s": "Smoky Mountains Hiking Club Collection",
+        "ancestors_ms": [
+          "collections:gsmrc",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "gsmrc:thompson",
+        "fgs_label_s": "Thompson Brothers Digital Photograph Collection",
+        "ancestors_ms": [
+          "collections:gsmrc",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "gsmrc:wcc",
+        "fgs_label_s": "William Cox Cochran Photographic Collection",
+        "mods_abstract_s": "Digitized pages includes 89 images of East Tennessee during August 12 thru 30, 1886, and were captured by William Cox Cochran. The photographs are part of the Great Smoky Mountains Regional Project, University of Tennessee Libraries, Knoxville, Tennessee and primarily are of East Tennessee people and landmarks, mostly located in what is now the Great Smoky Mountains National Park. There are many photographs of Chilhowee Range, Nebo Mountain, and Miller's Cove. The collection includes two photographs of the University of Tennessee-Knoxville. The photographic images in the collection were donated by Miss Mary Rudd Cochran, daughter of W.C. Cochran, to the University of Tennessee Library in 1959. William Cox Cochran (1848-1936) was an Ohio lawyer, scholar, and trustee of Oberlin College. He served in the Dept. of the Interior in Washington under his stepfather, Jacob D. Cox. In 1872, Cochran studied law and opened a law office in Cincinnati. Later, he served as clerk of the U.S. Circuit Court of Appeals in Cincinnati.",
+        "ancestors_ms": [
+          "collections:gsmrc",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "gsmrc:wderfilms",
+        "fgs_label_s": "The William Derris Film Collection",
+        "mods_abstract_s": "Digitized pages from the William Derris slide collection which consists of 334 Kodachrome slide images and fourteen film clips with new music added in 2014. The slides represent various views of the Great Smoky Mountains, primarily around Cades Cove, Little Greenbrier, Fontana Lake, Townsend, and Clingmans Dome.",
+        "ancestors_ms": [
+          "collections:gsmrc",
+          "digital:collections",
+          "islandora:root"
+        ]
+      },
+      {
+        "PID": "gsmrc:webster",
+        "fgs_label_s": "Herbert M. Webster Photograph Collection",
+        "mods_abstract_s": "Digitized pages from the Herbert M. Webster photograph collection. Webster began a life-long avocation of photographing the Great Smoky Mountains as a sixteen-year-old on his first excursion to Mount Le Conte. Within a few years, he was visiting the mountains regularly, venturing into the backcountry with many of those whose names are synonymous with early twentieth century exploration of the Smokies -- Dutch Roth, Jim Thompson, Carlos Campbell, Guy Frizzell, Wiley Oakley, and Harvey Broome -- and capturing on film the vanishing way of life of the mountaineer, the Smoky Mountain backcountry, and his own adventures in the wilderness.",
+        "ancestors_ms": [
+          "collections:gsmrc",
+          "digital:collections",
+          "islandora:root"
+        ]
+      }
+    ]
+  }
+}
