@@ -10,8 +10,11 @@ class DigitalCollections extends Component {
     render() {
 
         return (
-            <section>
-                <Grid collections={this.props.collections} />
+            <section className='utk-digital--collections'>
+                <div className="container">
+                    <h2>Browse Collections</h2>
+                    <Grid collections={this.props.collections} />
+                </div>
             </section>
         );
     }

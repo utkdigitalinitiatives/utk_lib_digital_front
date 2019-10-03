@@ -23,5 +23,30 @@
 
 .utk-digital--header {
   width: 100%;
-  background-color: $smokeyx;
+  background-color: $rock;
+}
+
+.utk-digital--collections {
+  padding-top: $golden-ratio-4;
+
+  h2 {
+    margin: 0;
+    font-family: $sans;
+    font-size: $type-4;
+    font-weight: 400;
+    line-height: 1.29em;
+    color: $smokey;
+  }
+}
+
+.utk-digital--grid {
+  display: flex;
+  flex-flow: wrap;
+  margin-left: -14.5px;
+  width: calc(100% + 29px);
+  margin-top: $golden-ratio-3;
+
+  > div {
+    width: 25%;
+  }
 }

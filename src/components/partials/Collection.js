@@ -12,10 +12,10 @@ class Collection extends Component {
         const {data} = this.props
 
         return (
-            <div>
-                <h3>{data.fgs_label_s}</h3>
+            <div className="utk-digital--collection">
                 <ImageIIIF pid={data.PID}
                            width={322} />
+                <h3>{data.fgs_label_s}</h3>
             </div>
         );
     }

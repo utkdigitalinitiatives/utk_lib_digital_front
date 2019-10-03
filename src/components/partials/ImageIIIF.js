@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import LazyLoad from 'react-lazyload';
+import placeholder from '../../media/placeholder.png';
 
-const iiif = 'http://digital.lib.utk.edu/iiif/2/collections~islandora~object~'
+const iiif = 'http://digital.lib.utk.edu/iiif/2/collections~islandora~object~';
 
 class ImageIIIF extends Component {
 
@@ -10,7 +11,8 @@ class ImageIIIF extends Component {
 
         this.state = {
             available : 'load',
-            source : null
+            source : null,
+            preload : null
         };
     };
 
@@ -32,10 +34,12 @@ class ImageIIIF extends Component {
     componentDidMount() {
 
         const {pid, width} = this.props;
+        const preload = iiif + pid +'~datastream~FEATURED~view/full/18,/0/default.jpg';
         const source = iiif + pid +'~datastream~FEATURED~view/full/' + width + ',/0/default.jpg';
 
         this.setState({
-            source : source
+            source : source,
+            preload : preload
         });
 
         this.checkResponse(source)
@@ -43,15 +47,20 @@ class ImageIIIF extends Component {
 
     render() {
 
-        const {available, source} = this.state;
+        const {available, source, preload} = this.state;
 
         if (available === true)
             return (
-                <LazyLoad>
-                    <figure>
-                        <img src={source} />
-                    </figure>
-                </LazyLoad>
+                <div className="utk-digital--image">
+                    <LazyLoad>
+                        <figure>
+                            <img src={source} />
+                        </figure>
+                        <span className="utk-digital--image--preload"
+                              style={{ backgroundImage: "url("+ preload +")" }}>
+                        </span>
+                    </LazyLoad>
+                </div>
             );
         else if (available === 'load')
             return (
@@ -59,7 +68,9 @@ class ImageIIIF extends Component {
             )
         else
             return (
-                <span>placeholder</span>
+                <span className="utk-digital--image-placeholder">
+                    <img src={placeholder} />
+                </span>
             )
     }
 }

@@ -18,7 +18,7 @@ class Grid extends Component {
     render() {
 
         return (
-            <div>
+            <div className="utk-digital--grid">
                 {this.getCollections(this.props.collections)}
             </div>
         );
