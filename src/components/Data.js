@@ -1,11 +1,10 @@
 import React from 'react';
 
 let collections = null;
-const digital = require('../digital.json');
 
-const Data = () => {
+const Data = (constants) => {
 
-    fetch(digital.endpoint, {
+    fetch(constants.endpoint, {
         headers : {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
