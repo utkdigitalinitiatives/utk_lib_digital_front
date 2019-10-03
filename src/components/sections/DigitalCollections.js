@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Grid from "../partials/Grid";
 
 class DigitalCollections extends Component {
 
@@ -10,7 +11,7 @@ class DigitalCollections extends Component {
 
         return (
             <section>
-                collections
+                <Grid collections={this.props.collections} />
             </section>
         );
     }

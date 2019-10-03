@@ -26,12 +26,18 @@ class Digital extends Component {
 
         let collections = this.state.collections;
 
-        return (
-            <React.Fragment>
-                <DigitalHeader collections={getRandomCollection(collections, digital.featuredFilter)} />
-                <DigitalCollections collections={collections} />
-            </React.Fragment>
-        );
+        if (collections === 'load') {
+            return 'Loading'
+        } else if (collections === null) {
+            return 'Critical Error'
+        } else {
+            return (
+                <React.Fragment>
+                    <DigitalHeader featured={getRandomCollection(collections, digital.featuredFilter)} />
+                    <DigitalCollections collections={collections} />
+                </React.Fragment>
+            );
+        }
     }
 }
 

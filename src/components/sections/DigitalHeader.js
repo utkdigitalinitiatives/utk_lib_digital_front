@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Splash from "../partials/Splash";
 
 class DigitalHeader extends Component {
 
@@ -8,9 +9,11 @@ class DigitalHeader extends Component {
 
     render() {
 
+        const {featured} = this.props
+
         return (
             <section>
-                header
+                <Splash collection={featured} />
             </section>
         );
     }

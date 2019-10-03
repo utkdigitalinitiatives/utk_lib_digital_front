@@ -1,11 +1,11 @@
 import React from 'react';
-import remove from "lodash/remove"
+import filter from "lodash/filter"
 
 const digital = require('../digital.json');
 
-const getRandomCollection = (data, filter) => {
+const getRandomCollection = (data, filterBy) => {
 
-    let featured = remove(data, filter)
+    let featured = filter(data, filterBy)
 
     return featured[Math.floor(Math.random()*featured.length)]
 };
