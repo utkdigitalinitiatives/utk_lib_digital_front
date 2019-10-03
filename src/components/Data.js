@@ -17,7 +17,17 @@ const Data = () => {
         })
         .catch(err => console.error(err.toString()));
 
+    if (collections === null)
+        collections = SampleData();
+
     return collections
+};
+
+const SampleData = () => {
+
+    let sample = require('../data/sample-query.json');
+
+    return sample.response.docs;
 };
 
 export default Data;

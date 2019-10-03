@@ -22,7 +22,6 @@ class Digital extends Component {
         return (
             <React.Fragment>
                 testing...
-                {this.state.collections}
             </React.Fragment>
         );
     }
