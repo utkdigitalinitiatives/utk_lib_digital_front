@@ -10,39 +10,32 @@ class ImageIIIF extends Component {
         super(props);
 
         this.state = {
-            available : 'load',
             source : null,
-            preload : null
+            preload : null,
+            available : null,
         };
     };
 
-    checkResponse = (request) => {
-        fetch(request).then(response => {
-            if (response.status === 200)
-                this.setState({
-                    available : true
-                });
-            else
-                this.setState({
-                    available : false
-                });
-        });
-
-        return null
-    };
+    getFeaturedImage = (data) => {
+        if (typeof data.fedora_datastream_version_FEATURED_SIZE_ms !== "undefined")
+            return true
+    }
 
     componentDidMount() {
 
-        const {pid, width} = this.props;
-        const preload = iiif + pid +'~datastream~FEATURED~view/full/18,/0/default.jpg';
-        const source = iiif + pid +'~datastream~FEATURED~view/full/' + width + ',/0/default.jpg';
+        const {data, width} = this.props;
 
-        this.setState({
-            source : source,
-            preload : preload
-        });
+        if (this.getFeaturedImage(data)) {
 
-        this.checkResponse(source)
+            const preload = iiif + data.PID +'~datastream~FEATURED~view/full/18,/0/default.jpg';
+            const source = iiif + data.PID +'~datastream~FEATURED~view/full/' + width + ',/0/default.jpg';
+
+            this.setState({
+                source : source,
+                preload : preload,
+                available : true
+            });
+        }
     }
 
     render() {
@@ -56,15 +49,11 @@ class ImageIIIF extends Component {
                         <figure>
                             <img src={source} />
                         </figure>
-                        <span className="utk-digital--image--preload"
-                              style={{ backgroundImage: "url("+ preload +")" }}>
-                        </span>
                     </LazyLoad>
+                    <span className="utk-digital--image--preload"
+                          style={{ backgroundImage: "url("+ preload +")" }}>
+                    </span>
                 </div>
-            );
-        else if (available === 'load')
-            return (
-                <span>loading</span>
             )
         else
             return (

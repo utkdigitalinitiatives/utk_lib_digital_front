@@ -13,9 +13,8 @@ class Splash extends Component {
 
         return (
             <div className="utk-digital--header--splash">
-                <ImageIIIF pid={collection.PID}
-                           width={1000}
-                           type="collection" />
+                <ImageIIIF data={collection}
+                           width={1000} />
             </div>
         );
     }

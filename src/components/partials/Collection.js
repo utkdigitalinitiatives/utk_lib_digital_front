@@ -13,7 +13,7 @@ class Collection extends Component {
 
         return (
             <div className="utk-digital--collection">
-                <ImageIIIF pid={data.PID}
+                <ImageIIIF data={data}
                            width={322} />
                 <h3>{data.fgs_label_s}</h3>
             </div>
