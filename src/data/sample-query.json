@@ -429,6 +429,9 @@
       {
         "PID": "collections:knoxgardens",
         "fgs_label_s": "Knoxville Garden Slides",
+        "fedora_datastream_version_FEATURED_SIZE_ms": [
+          "2868241"
+        ],
         "mods_abstract_s": "This collection of hand-colored lantern slides depicts ornamental gardens in the Knoxville, Tennessee, area from the early twentieth century, and feature a variety of garden styles, plants, flowers, and foliage.",
         "ancestors_ms": [
           "digital:collections",
@@ -731,6 +734,9 @@
       {
         "PID": "collections:yrb",
         "fgs_label_s": "Volunteer Yearbooks",
+        "fedora_datastream_version_FEATURED_SIZE_ms": [
+          "1544791"
+        ],
         "mods_abstract_s": "The Volunteer yearbook was published annually from 1897, except in 1918 when the events of World War I interrupted school activities. Until the last volume was published in 2009, it remained one of UT's oldest continuing traditions. The Volunteer was produced by students and published for distribution during the fall semester. Its editorial mission was to accurately document, highlight, and commemorate the academic year in which it was published through pictures, articles, and reportage of individuals and activities representative of the university's communities and organizations.",
         "ancestors_ms": [
           "digital:collections",
