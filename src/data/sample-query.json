@@ -1,11 +1,11 @@
 {
   "responseHeader": {
     "status": 0,
-    "QTime": 3,
+    "QTime": 2,
     "params": {
       "q": "*:*",
       "indent": "true",
-      "fl": "PID fgs_label_s mods_abstract_s mods_relatedItem_Featured_Item_titleInfo_title_s mods_relatedItem_Featured_Item_identifier_pid_s mods_relatedItem_Featured_Item_dateCreated_s ancestors_ms",
+      "fl": "PID fgs_label_s mods_abstract_s mods_relatedItem_Featured_Item_titleInfo_title_s mods_relatedItem_Featured_Item_identifier_pid_s mods_relatedItem_Featured_Item_dateCreated_s ancestors_ms fedora_datastream_version_FEATURED_SIZE_ms",
       "fq": "RELS_EXT_hasModel_uri_ss:\"info:fedora/islandora:collectionCModel\" -PID:\"islandora:video_collection\" -PID:\"ir:citationCollection\" -PID:\"islandora:audio_collection\" -PID:\"islandora:oralhistories_collection\" -PID:\"islandora:sp_basic_image_collection\" -PID:\"islandora:sp_large_image_collection\" -PID:\"islandora:sp_pdf_collection\"",
       "sort": "PID asc",
       "rows": "90",
@@ -268,6 +268,9 @@
       {
         "PID": "collections:egypt",
         "fgs_label_s": "Nineteenth and Early Twentieth Century Images of Egypt",
+        "fedora_datastream_version_FEATURED_SIZE_ms": [
+          "7280082"
+        ],
         "mods_abstract_s": "Selected images of Egypt from the McClung Museum of Natural History and Culture, University of Tennessee, Knoxville.",
         "ancestors_ms": [
           "digital:collections",
@@ -554,6 +557,9 @@
       {
         "PID": "collections:tenncities",
         "fgs_label_s": "Images of East Tennessee",
+        "fedora_datastream_version_FEATURED_SIZE_ms": [
+          "1921012"
+        ],
         "mods_abstract_s": "Featuring images from the mid-nineteenth century through the late twentieth century, this digital collection is comprised of photographs and postcards from around the East Tennessee region. Particularly rich in images of Knoxville, the collection includes images of airports, exteriors and interiors of buildings (such as homes, businesses, schools, churches, hospitals), vistas, people, and more. Also present are photographs of the 1982 World's Fair in downtown Knoxville. This collection provides a glimpse at the development of Knoxville and the larger East Tennessee region.",
         "mods_relatedItem_Featured_Item_titleInfo_title_s": "Gay Street Viaduct",
         "mods_relatedItem_Featured_Item_identifier_pid_s": "tenncities:472",
@@ -785,6 +791,9 @@
       {
         "PID": "gsmrc:pcard00",
         "fgs_label_s": "Postcards from the Great Smoky Mountains",
+        "fedora_datastream_version_FEATURED_SIZE_ms": [
+          "2990998"
+        ],
         "ancestors_ms": [
           "collections:gsmrc",
           "digital:collections",
