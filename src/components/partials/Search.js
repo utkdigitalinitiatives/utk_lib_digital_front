@@ -12,7 +12,10 @@ class Search extends Component {
         return (
             <div className="utk-digital--search">
                 <div className="container">
-                    search stuff
+                    <div className="utk-digital--search--heading">
+                        <span className="utk-heading-1" role="heading" aria-level="1">Digital Collections</span>
+                        <span className="utk-description" role="subheading">Explore Items digitized from our collections. <a href="#">Learn More</a></span>
+                    </div>
                 </div>
             </div>
         );

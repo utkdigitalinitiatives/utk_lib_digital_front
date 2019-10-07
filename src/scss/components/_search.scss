@@ -4,4 +4,43 @@
   width: 100%;
   color: $white;
   bottom: $golden-ratio-4;
+
+  &--heading {
+    display: flex;
+    flex-direction: column;
+
+    .utk-heading-1 {
+      font-size: $type-6;
+      color: $white;
+      font-family: $sans;
+      font-weight: 700;
+      line-height: 1.29em;
+      letter-spacing: -0.029em;
+      display: block;
+      margin-bottom: $golden-ratio-0;
+    }
+
+    .utk-description {
+      font-size: $type-3;
+      color: $gray-1;
+      font-family: $sans;
+      font-weight: 400;
+      line-height: 1.29em;
+      margin-bottom: $golden-ratio-1;
+      display: flex;
+
+      a,
+      a:visited {
+        color: $orange;
+        display: block;
+        margin-left: $golden-ratio-2;
+        text-decoration: underline;
+      }
+
+      a:hover,
+      a:focus {
+        text-decoration: underline;
+      }
+    }
+  }
 }
