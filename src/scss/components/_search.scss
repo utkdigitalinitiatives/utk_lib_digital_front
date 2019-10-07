@@ -10,14 +10,15 @@
     flex-direction: column;
 
     .utk-heading-1 {
-      font-size: $type-5;
+      font-size: $type-6;
       color: $white;
       font-family: $sans;
       font-weight: 700;
       line-height: 1.29em;
       letter-spacing: -0.029em;
       display: block;
-      margin-bottom: $golden-ratio-0;
+      margin-bottom: $golden-ratio-1;
+      text-shadow: $box-shadow;
     }
 
     .utk-description {
@@ -26,8 +27,9 @@
       font-family: $sans;
       font-weight: 400;
       line-height: 1.29em;
-      margin-bottom: $golden-ratio-1;
+      margin-bottom: $golden-ratio-2;
       display: flex;
+      text-shadow: $box-shadow;
 
       a,
       a:visited {
