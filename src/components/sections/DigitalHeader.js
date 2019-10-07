@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Search from "../partials/Search";
 import Splash from "../partials/Splash";
 
 class DigitalHeader extends Component {
@@ -13,6 +14,7 @@ class DigitalHeader extends Component {
 
         return (
             <section className='utk-digital--header'>
+                <Search/>
                 <Splash collection={featured} />
             </section>
         );

@@ -5,6 +5,7 @@
   max-height: calc(90vh - 82px);
   position: relative;
   overflow: hidden;
+  z-index: 0;
 
   .utk-digital--image {
     z-index: 0;
