@@ -6,14 +6,30 @@
   position: relative;
   overflow: hidden;
 
-  figure {
-    margin: 0;
-    display: flex;
-    width: 100%;
+  .utk-digital--image {
+    z-index: 0;
 
-    img {
+    figure {
+      margin: 0;
+      display: flex;
       width: 100%;
-      object-fit: cover;
+
+      img {
+        width: 100%;
+        min-height: 500px;
+        object-fit: cover;
+      }
     }
+  }
+
+  &--overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+
+    @include filter-gradient(rgba(black, 0), 38.2%, rgba(black, 0.76), calc(100% - 123px));
   }
 }

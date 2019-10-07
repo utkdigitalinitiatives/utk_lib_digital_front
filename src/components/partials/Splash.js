@@ -15,6 +15,7 @@ class Splash extends Component {
             <div className="utk-digital--header--splash">
                 <ImageIIIF data={collection}
                            width={1000} />
+                <div className="utk-digital--header--splash--overlay"></div>
             </div>
         );
     }
