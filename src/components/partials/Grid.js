@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ImageIIIF from "./ImageIIIF";
+import Toggle from './Toggle';
 
 import FlipMove from 'react-flip-move';
 import shuffle from 'lodash/shuffle';
@@ -9,11 +10,13 @@ class Collection extends Component {
 
     render() {
 
-        const {data, index} = this.props
+        const {data, index, view} = this.props
+
+        const viewClass = `utk-digital--collection ${view}`;
         const style = { zIndex: 100 - index }
 
         return (
-            <div className="utk-digital--collection"
+            <div className={viewClass}
                  style={style}>
                 <ImageIIIF data={data}
                            width={322}/>
@@ -29,12 +32,17 @@ class Grid extends Component {
         super(props);
 
         this.state = {
+            view: 'grid',
+            order: 'asc',
             sortingMethod: 'chronological',
             enterLeaveAnimation: 'accordionVertical',
             collections: this.props.collections,
             removedcollections: [],
         };
 
+        this.toggleList = this.toggleList.bind(this);
+        this.toggleGrid = this.toggleGrid.bind(this);
+        this.toggleSort = this.toggleSort.bind(this);
         this.sortShuffle = this.sortShuffle.bind(this);
     };
 
@@ -59,6 +67,33 @@ class Grid extends Component {
         });
     }
 
+    toggleList() {
+        this.setState({
+            view: 'list',
+            enterLeaveAnimation: 'accordianVertical'
+        });
+    }
+
+    toggleGrid() {
+        this.setState({
+            view: 'grid',
+            enterLeaveAnimation: 'accordianHorizontal'
+        });
+    }
+
+    toggleSort() {
+        const sortAsc = (a, b) => a.timestamp - b.timestamp;
+        const sortDesc = (a, b) => b.timestamp - a.timestamp;
+
+        this.setState({
+            order: (this.state.order === 'asc' ? 'desc' : 'asc'),
+            sortingMethod: 'chronological',
+            articles: this.state.articles.sort(
+                this.state.order === 'asc' ? sortDesc : sortAsc
+            )
+        });
+    }
+
     sortShuffle() {
         this.setState({
             sortingMethod: 'shuffle',
@@ -70,6 +105,7 @@ class Grid extends Component {
         return items.map((item, index) => {
             return <Collection key={item.PID}
                                index={index}
+                               view={this.state.view}
                                data={item}
                                clickHandler={throttle(() => this.moveCollections('collections', 'removedcollections', item.PID), 290)}
                                {...item} />
@@ -82,20 +118,31 @@ class Grid extends Component {
             <React.Fragment>
                 <header>
                     <div className="abs-left">
-                        {/*<Toggle*/}
-                            {/*clickHandler={this.toggleList}*/}
-                            {/*text="List" icon="list"*/}
-                            {/*active={this.state.view === 'list'}*/}
-                        {/*/>*/}
-                        {/*<Toggle*/}
-                            {/*clickHandler={this.toggleGrid}*/}
-                            {/*text="Grid" icon="th"*/}
-                            {/*active={this.state.view === 'grid'}*/}
-                        {/*/>*/}
+                        <Toggle
+                            clickHandler={this.toggleList}
+                            text="List"
+                            icon="list"
+                            active={this.state.view === 'list'}
+                        />
+                        <Toggle
+                            clickHandler={this.toggleGrid}
+                            text="Grid"
+                            icon="th"
+                            active={this.state.view === 'grid'}
+                        />
                     </div>
                     <div className="abs-right">
-                        <button onClick={this.sortShuffle}
-                        >shuffle</button>
+                        <Toggle
+                            clickHandler={this.toggleSort}
+                            text={this.state.order === 'asc' ? 'Ascending' : 'Descending'}
+                            icon={this.state.order === 'asc' ? 'angle-up' : 'angle-down'}
+                            active={this.state.sortingMethod === 'chronological'}
+                        />
+                        <Toggle
+                            clickHandler={this.sortShuffle}
+                            text="Shuffle" icon="random"
+                            active={this.state.sortingMethod === 'shuffle'}
+                        />
                     </div>
                 </header>
                 <FlipMove className="utk-digital--grid"
