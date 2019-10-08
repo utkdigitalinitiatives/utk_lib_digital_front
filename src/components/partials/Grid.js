@@ -3,6 +3,7 @@ import ImageIIIF from "./ImageIIIF";
 import Toggle from './Toggle';
 
 import FlipMove from 'react-flip-move';
+import orderBy from 'lodash/orderBy';
 import shuffle from 'lodash/shuffle';
 import throttle from 'lodash/throttle';
 
@@ -21,6 +22,7 @@ class Collection extends Component {
                 <ImageIIIF data={data}
                            width={322}/>
                 <h3>{data.fgs_label_s}</h3>
+                <p>{data.mods_abstract_s}</p>
             </div>
         );
     }
@@ -70,27 +72,22 @@ class Grid extends Component {
     toggleList() {
         this.setState({
             view: 'list',
-            enterLeaveAnimation: 'accordianVertical'
+            enterLeaveAnimation: 'accordionHorizontal'
         });
     }
 
     toggleGrid() {
         this.setState({
             view: 'grid',
-            enterLeaveAnimation: 'accordianHorizontal'
+            enterLeaveAnimation: 'accordionHorizontal'
         });
     }
 
     toggleSort() {
-        const sortAsc = (a, b) => a.timestamp - b.timestamp;
-        const sortDesc = (a, b) => b.timestamp - a.timestamp;
-
         this.setState({
+            collections: orderBy(this.state.collections, 'fgs_label_s', this.state.order),
             order: (this.state.order === 'asc' ? 'desc' : 'asc'),
-            sortingMethod: 'chronological',
-            articles: this.state.articles.sort(
-                this.state.order === 'asc' ? sortDesc : sortAsc
-            )
+            sortingMethod: 'alphabetically'
         });
     }
 
@@ -121,26 +118,25 @@ class Grid extends Component {
                         <Toggle
                             clickHandler={this.toggleList}
                             text="List"
-                            icon="list"
                             active={this.state.view === 'list'}
                         />
                         <Toggle
                             clickHandler={this.toggleGrid}
                             text="Grid"
-                            icon="th"
                             active={this.state.view === 'grid'}
                         />
                     </div>
                     <div className="abs-right">
                         <Toggle
                             clickHandler={this.toggleSort}
-                            text={this.state.order === 'asc' ? 'Ascending' : 'Descending'}
+                            text={this.state.order === 'asc' ? 'A-Z' : 'Z-A'}
                             icon={this.state.order === 'asc' ? 'angle-up' : 'angle-down'}
                             active={this.state.sortingMethod === 'chronological'}
                         />
                         <Toggle
                             clickHandler={this.sortShuffle}
-                            text="Shuffle" icon="random"
+                            text="Randomize"
+                            icon="shuffle"
                             active={this.state.sortingMethod === 'shuffle'}
                         />
                     </div>
