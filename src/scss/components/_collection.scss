@@ -12,6 +12,10 @@
     color: $smokey;
   }
 
+  p {
+    display: none;
+  }
+
   &.list {
     width: 100%;
     display: flex;
@@ -24,6 +28,10 @@
     h3 {
       font-size: $type-3;
       font-weight: 700;
+    }
+
+    p {
+      display: block;
     }
   }
 }

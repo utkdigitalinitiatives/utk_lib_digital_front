@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import LazyLoad from 'react-lazyload';
+import LazyLoad, {forceCheck} from 'react-lazyload';
 import placeholder from '../../media/placeholder.png';
 
 const iiif = 'https://digital.lib.utk.edu/iiif/2/collections~islandora~object~';
@@ -15,6 +15,10 @@ class ImageIIIF extends Component {
             available : null,
         };
     };
+
+    componentWillUpdate(nextProps, nextState, nextContext) {
+        forceCheck()
+    }
 
     getFeaturedImage = (data) => {
         if (typeof data.fedora_datastream_version_FEATURED_SIZE_ms !== "undefined")

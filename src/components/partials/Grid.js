@@ -3,6 +3,7 @@ import ImageIIIF from "./ImageIIIF";
 import Toggle from './Toggle';
 
 import FlipMove from 'react-flip-move';
+import {forceCheck} from 'react-lazyload';
 import orderBy from 'lodash/orderBy';
 import shuffle from 'lodash/shuffle';
 import throttle from 'lodash/throttle';
@@ -19,7 +20,8 @@ class Collection extends Component {
         return (
             <div className={viewClass}
                  style={style}>
-                <ImageIIIF data={data}
+                <ImageIIIF parentKey={index}
+                           data={data}
                            width={322}/>
                 <h3>{data.fgs_label_s}</h3>
                 <p>{data.mods_abstract_s}</p>
