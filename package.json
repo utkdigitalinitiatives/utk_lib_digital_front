@@ -30,6 +30,7 @@
     "react": "^16.8.6",
     "react-day-picker": "^7.3.2",
     "react-dom": "^16.8.6",
+    "react-flip-move": "^3.0.3",
     "react-gtm-module": "^2.0.7",
     "react-hot-loader": "3.0.0-beta.7",
     "react-keydown": "^1.9.7",

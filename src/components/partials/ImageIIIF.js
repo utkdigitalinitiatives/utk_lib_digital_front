@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import LazyLoad from 'react-lazyload';
 import placeholder from '../../media/placeholder.png';
 
-const iiif = 'http://digital.lib.utk.edu/iiif/2/collections~islandora~object~';
+const iiif = 'https://digital.lib.utk.edu/iiif/2/collections~islandora~object~';
 
 class ImageIIIF extends Component {
 

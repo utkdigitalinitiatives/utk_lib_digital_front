@@ -27,6 +27,7 @@
     img {
       width: 100%;
       object-fit: cover;
+      box-shadow: $box-shadow;
     }
   }
 
@@ -45,8 +46,10 @@
 
 .utk-digital--image-placeholder {
   display: block;
+  background-color: $gray-1;
 
   > img {
     width: 100%;
+    opacity: 0;
   }
 }
