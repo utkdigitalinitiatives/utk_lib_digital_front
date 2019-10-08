@@ -1,6 +1,6 @@
 .utk-digital--collection {
-  padding: 0 14.5px;
-  margin-bottom: $golden-ratio-3;
+  padding: 0 23.5px;
+  margin-bottom: $golden-ratio-4;
   width: 25%;
 
   h3 {
@@ -38,7 +38,6 @@
 
 .utk-digital--image {
   position: relative;
-  overflow: hidden;
 
   figure {
     margin: 0;
@@ -47,11 +46,11 @@
     position: relative;
     left: 0;
     top: 0;
+    display: flex;
 
     img {
       width: 100%;
       object-fit: cover;
-      box-shadow: $box-shadow;
     }
   }
 
@@ -69,8 +68,8 @@
 }
 
 .utk-digital--image-placeholder {
-  display: block;
   background-color: $gray-1;
+  display: flex;
 
   > img {
     width: 100%;
