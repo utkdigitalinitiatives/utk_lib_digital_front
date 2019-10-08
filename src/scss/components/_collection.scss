@@ -6,9 +6,9 @@
   h3 {
     font-family: $sans;
     font-size: $type-2;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.29em;
-    margin: $golden-ratio-0 0 0;
+    margin: $golden-ratio-1 0 0;
     color: $smokey;
   }
 
@@ -34,6 +34,17 @@
       display: block;
     }
   }
+
+  &:hover,
+  &:focus {
+    h3 {
+      color: $globe;
+    }
+
+    img {
+      filter: contrast(1.06) brightness(1.06) saturate(1.11);
+    }
+  }
 }
 
 .utk-digital--image {
@@ -51,6 +62,8 @@
     img {
       width: 100%;
       object-fit: cover;
+      filter: contrast(1) brightness(1) saturate(1);
+      transition: $transition-all-fast;
     }
   }
 

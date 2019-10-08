@@ -3,13 +3,13 @@
   "featuredFilter": "mods_relatedItem_Featured_Item_identifier_pid_s",
   "featuredImageAvailable": "fedora_datastream_version_FEATURED_SIZE_ms",
   "exclude": [
-    "collections:gsrmc",
-    "collections:mpa",
-    "collections:uarc"
+    "collections:gsmrc",
+    "collections:uarc",
+    "collections:mpa"
   ],
   "groups": [
-    "collections:gsrmc",
-    "collections:mpa",
-    "collections:uarc"
+    "collections:gsmrc",
+    "collections:uarc",
+    "collections:mpa"
   ]
 }

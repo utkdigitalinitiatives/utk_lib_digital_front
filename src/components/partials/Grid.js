@@ -3,7 +3,6 @@ import ImageIIIF from "./ImageIIIF";
 import Toggle from './Toggle';
 
 import FlipMove from 'react-flip-move';
-import {forceCheck} from 'react-lazyload';
 import orderBy from 'lodash/orderBy';
 import shuffle from 'lodash/shuffle';
 import throttle from 'lodash/throttle';
@@ -18,14 +17,15 @@ class Collection extends Component {
         const style = { zIndex: 100 - index }
 
         return (
-            <div className={viewClass}
-                 style={style}>
+            <a className={viewClass}
+               style={style}
+               href="#">
                 <ImageIIIF parentKey={index}
                            data={data}
                            width={322}/>
                 <h3>{data.fgs_label_s}</h3>
                 <p>{data.mods_abstract_s}</p>
-            </div>
+            </a>
         );
     }
 }
@@ -41,7 +41,8 @@ class Grid extends Component {
             sortingMethod: 'alphabetically',
             enterLeaveAnimation: 'elevator',
             collections: this.props.collections,
-            removedcollections: [],
+            group: 'collections:gsmrc',
+            removedcollections: []
         };
 
         this.toggleList = this.toggleList.bind(this);
@@ -97,7 +98,7 @@ class Grid extends Component {
     sortGroups() {
         this.setState({
             sortingMethod: 'groups',
-            collections: shuffle(this.state.collections)
+            collections: this.props.collections
         });
     }
 
@@ -108,13 +109,31 @@ class Grid extends Component {
         });
     }
 
-    getCollections = (items) => {
+    setGroups = (collections) => {
+        let groupsArr = []
+        let group = this.state.group
+
+        collections.map(function (item) {
+            if (item.ancestors_ms.includes(group)) {
+                groupsArr.push(item)
+            }
+        })
+
+        return groupsArr
+    }
+
+    getCollections = () => {
+        let items = this.state.collections;
+
+        if (this.state.sortingMethod === 'groups')
+            items = this.setGroups(this.props.collections);
+
         return items.map((item, index) => {
             return <Collection key={item.PID}
                                index={index}
                                view={this.state.view}
                                data={item}
-                               clickHandler={throttle(() => this.moveCollections('collections', 'removedcollections', item.PID), 290)}
+                               clickHandler={throttle(() => this.moveCollections('collections', 'removedcollections', item.PID), 470)}
                                {...item} />
         });
     };
@@ -155,14 +174,6 @@ class Grid extends Component {
                             icon="shuffle"
                             active={this.state.sortingMethod === 'random'}
                         />
-                        <Toggle
-                            clickHandler={() => (
-                                this.moveCollections('collections', 'removedcollections')
-                            )}
-                            text="Remove Item"
-                            icon="close"
-                            active={this.state.collections.length > 0}
-                        />
                     </div>
                 </header>
                 <FlipMove className="utk-digital--grid"
@@ -170,7 +181,7 @@ class Grid extends Component {
                           duration={500}
                           enterAnimation={this.state.enterLeaveAnimation}
                           leaveAnimation={this.state.enterLeaveAnimation}>
-                    {this.getCollections(this.state.collections)}
+                    {this.getCollections()}
                 </FlipMove>
             </React.Fragment>
         );
