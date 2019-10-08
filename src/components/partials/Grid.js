@@ -36,15 +36,16 @@ class Grid extends Component {
         this.state = {
             view: 'grid',
             order: 'asc',
-            sortingMethod: 'chronological',
-            enterLeaveAnimation: 'accordionVertical',
+            sortingMethod: 'alphabetically',
+            enterLeaveAnimation: 'elevator',
             collections: this.props.collections,
             removedcollections: [],
         };
 
         this.toggleList = this.toggleList.bind(this);
         this.toggleGrid = this.toggleGrid.bind(this);
-        this.toggleSort = this.toggleSort.bind(this);
+        this.sortAlpha = this.sortAlpha.bind(this);
+        this.sortGroups = this.sortGroups.bind(this);
         this.sortShuffle = this.sortShuffle.bind(this);
     };
 
@@ -72,22 +73,29 @@ class Grid extends Component {
     toggleList() {
         this.setState({
             view: 'list',
-            enterLeaveAnimation: 'accordionHorizontal'
+            enterLeaveAnimation: 'elevator'
         });
     }
 
     toggleGrid() {
         this.setState({
             view: 'grid',
-            enterLeaveAnimation: 'accordionHorizontal'
+            enterLeaveAnimation: 'elevator'
         });
     }
 
-    toggleSort() {
+    sortAlpha() {
         this.setState({
             collections: orderBy(this.state.collections, 'fgs_label_s', this.state.order),
             order: (this.state.order === 'asc' ? 'desc' : 'asc'),
             sortingMethod: 'alphabetically'
+        });
+    }
+
+    sortGroups() {
+        this.setState({
+            sortingMethod: 'groups',
+            collections: shuffle(this.state.collections)
         });
     }
 
@@ -128,16 +136,30 @@ class Grid extends Component {
                     </div>
                     <div className="abs-right">
                         <Toggle
-                            clickHandler={this.toggleSort}
+                            clickHandler={this.sortAlpha}
                             text={this.state.order === 'asc' ? 'A-Z' : 'Z-A'}
                             icon={this.state.order === 'asc' ? 'angle-up' : 'angle-down'}
-                            active={this.state.sortingMethod === 'chronological'}
+                            active={this.state.sortingMethod === 'alphabetically'}
+                        />
+                        <Toggle
+                            clickHandler={this.sortGroups}
+                            text="Group By Collection"
+                            icon="shuffle"
+                            active={this.state.sortingMethod === 'groups'}
                         />
                         <Toggle
                             clickHandler={this.sortShuffle}
                             text="Randomize"
                             icon="shuffle"
-                            active={this.state.sortingMethod === 'shuffle'}
+                            active={this.state.sortingMethod === 'random'}
+                        />
+                        <Toggle
+                            clickHandler={() => (
+                                this.moveCollections('collections', 'removedcollections')
+                            )}
+                            text="Remove Item"
+                            icon="close"
+                            active={this.state.collections.length > 0}
                         />
                     </div>
                 </header>
