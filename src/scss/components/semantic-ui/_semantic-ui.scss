@@ -1,0 +1,108 @@
+/*
+ * components
+ */
+@import "components/button";
+@import "components/dropdown";
+
+/*
+ * temp overrides for demoing... actual theme should be built
+ */
+
+body {
+  font-family: $sans;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.58em;
+  letter-spacing: -0.003em !important;
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $sans;
+  }
+
+  .ui.labeled.icon.button {
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+    background-color: $gray-0;
+    color: $smokeyx;
+    font-weight: 700;
+    border-radius: $golden-ratio-0;
+    border-top-right-radius: $golden-ratio-2;
+    border-bottom-right-radius: $golden-ratio-2;
+    font-size: $type-2;
+    white-space: nowrap;
+    height: $golden-ratio-4;
+    padding: 0 calc(#{$golden-ratio-4 + $golden-ratio-2}) 0 $golden-ratio-2 !important;
+    box-shadow: $box-shadow-float;
+    width: $gr-long;
+    max-width: 100%;
+    transition: $transition-all-fast;
+
+    &:hover,
+    &.active {
+      background-color: $white;
+    }
+
+    > .icon {
+      left: auto !important;
+      opacity: 1;
+      right: 0;
+      height: $golden-ratio-4;
+      width: $golden-ratio-4;;
+      background-color: $orange !important;
+      border-radius: 0;
+      border-top-right-radius: $golden-ratio-0;
+      border-bottom-right-radius: $golden-ratio-0;
+
+      &::before {
+        color: $white;
+        opacity: 1;
+      }
+    }
+  }
+
+  .utk-panel-focus-research-tools .ui.labeled.icon.button {
+    width: calc(100% - #{$golden-ratio-5});
+  }
+
+  .ui.floating.dropdown>.menu {
+    background-color: $gray-1;
+    border: none;
+    box-shadow: $box-shadow-float-submenu !important;
+
+    .menu {
+      border-top: $gray-3;
+      border-top-right-radius: 0 !important;
+      border-top-left-radius: 0 !important;
+      box-shadow: none !important;
+    }
+  }
+
+  .ui.button,
+  .ui.dropdown .menu>.item {
+    font-family: $sans;
+  }
+
+
+  .ui.dropdown .menu>.item {
+    font-size: $type-2;
+    color: $smokeyx;
+    padding: $golden-ratio-1 $golden-ratio-2 !important;
+
+    &:hover,
+    &:focus {
+      color: $globe;
+      background-color: $gray-0;
+    }
+  }
+
+  .ui.dropdown.dropdown .menu>.input {
+    margin: $golden-ratio-1;
+  }
+}

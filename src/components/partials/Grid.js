@@ -13,13 +13,15 @@ class Collection extends Component {
 
         const {data, index, view} = this.props
 
+        const pid = encodeURIComponent(data.PID);
+        const url = `https://digital.lib.utk.edu/collections/islandora/object/${pid}`;
         const viewClass = `utk-digital--collection ${view}`;
         const style = { zIndex: 100 - index }
 
         return (
             <a className={viewClass}
                style={style}
-               href="#">
+               href={url}>
                 <ImageIIIF parentKey={index}
                            data={data}
                            width={322}/>

@@ -17,6 +17,13 @@
 @import "global/bootstrap-grid";
 
 /*
+ * semantic ui
+ */
+@import "semantic/dropdown";
+@import "semantic/select";
+@import "semantic/tab";
+
+/*
  * vendor
  */
 @import "../vendor/typography/gotham.css";
@@ -32,12 +39,14 @@
  */
 @import "layout/container";
 
+
 /*
  * components
  */
 @import "components/collection";
 @import "components/search";
 @import "components/splash";
+@import "components/semantic-ui/semantic-ui";
 
 /*
  * vendor

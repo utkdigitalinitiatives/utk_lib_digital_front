@@ -1,0 +1,144 @@
+.utk-digital--search {
+  .ui.input {
+    font-size: 1em;
+  }
+
+  .ui.input {
+    position: relative;
+    font-weight: 400;
+    font-style: normal;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    color: rgba(0,0,0,.87);
+  }
+
+  .ui.input>input {
+    margin: 0;
+    max-width: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    outline: 0;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    text-align: left;
+    line-height: 1.21428571em;
+    font-family: $sans;
+    padding: .67857143em 1em;
+    background: #fff;
+    border: 1px solid rgba(34, 36, 38, .15);
+    color: rgba(0, 0, 0, .87);
+    border-radius: .28571429rem;
+    -webkit-transition: border-color .1s ease, -webkit-box-shadow .1s ease;
+    transition: border-color .1s ease, -webkit-box-shadow .1s ease;
+    transition: box-shadow .1s ease, border-color .1s ease;
+    transition: box-shadow .1s ease, border-color .1s ease, -webkit-box-shadow .1s ease;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .ui.selection.dropdown {
+    cursor: pointer;
+    word-wrap: break-word;
+    line-height: 1em;
+    white-space: normal;
+    outline: 0;
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+    min-width: 14em;
+    min-height: 2.71428571em;
+    background: #fff;
+    display: inline-block;
+    padding: .78571429em 2.1em .78571429em 1em;
+    color: rgba(0,0,0,.87);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid rgba(34,36,38,.15);
+    border-radius: .28571429rem;
+    -webkit-transition: width .1s ease,-webkit-box-shadow .1s ease;
+    transition: width .1s ease,-webkit-box-shadow .1s ease;
+    transition: box-shadow .1s ease,width .1s ease;
+    transition: box-shadow .1s ease,width .1s ease,-webkit-box-shadow .1s ease;
+    position: relative;
+    padding: $golden-ratio-1 35px $golden-ratio-1 $golden-ratio-1 !important;
+  }
+
+  .ui.selection.dropdown .menu {
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-overflow-scrolling: touch;
+    border-top-width: 0!important;
+    width: auto;
+    outline: 0;
+    margin: 0 -1px;
+    min-width: calc(100% + 2px);
+    width: calc(100% + 2px);
+    border-radius: 0 0 .28571429rem .28571429rem;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(34,36,38,.15);
+    box-shadow: 0 2px 3px 0 rgba(34,36,38,.15);
+    -webkit-transition: opacity .1s ease;
+    transition: opacity .1s ease;
+  }
+
+  .ui.action.input:not([class*="left action"])>.button:not(:first-child), .ui.action.input:not([class*="left action"])>.buttons:not(:first-child)>.button, .ui.action.input:not([class*="left action"])>.dropdown:not(:first-child) {
+    border-radius: 0;
+  }
+
+  .ui.compact.selection.dropdown {
+    min-width: 0;
+  }
+
+  @media only screen and (min-width: 992px) {
+    .ui.selection.dropdown .menu {
+      max-height: 16.02857143rem;
+    }
+  }
+
+  .ui.dropdown .menu {
+    left: 0;
+  }
+
+  .ui.dropdown .menu {
+    cursor: auto;
+    position: absolute;
+    display: none;
+    outline: 0;
+    top: 100%;
+    min-width: -webkit-max-content;
+    min-width: -moz-max-content;
+    min-width: max-content;
+    margin: 0;
+    padding: 0 0;
+    background: #fff;
+    font-size: 1em;
+    text-shadow: none;
+    text-align: left;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(34,36,38,.15);
+    box-shadow: 0 2px 3px 0 rgba(34,36,38,.15);
+    border: 1px solid rgba(34,36,38,.15);
+    border-radius: .28571429rem;
+    -webkit-transition: opacity .1s ease;
+    transition: opacity .1s ease;
+    z-index: 11;
+    will-change: transform,opacity;
+
+    > .item {
+      white-space: nowrap;
+      color: $smokey;
+    }
+  }
+
+  .ui.selection.active.dropdown .menu {
+    border-color: $gray-1;
+    -webkit-box-shadow: 0 2px 3px 0 rgba(34,36,38,.15);
+    box-shadow: 0 2px 3px 0 rgba(34,36,38,.15);
+    color: $smokey !important;
+  }
+
+  .visible.transition {
+    display: block!important;
+    visibility: visible!important;
+  }
+}
