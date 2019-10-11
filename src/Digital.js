@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Data from "./components/Data";
+
 import getRandomCollection from "./components/Utilties";
 import DigitalHeader from "./components/sections/DigitalHeader";
 import DigitalCollections from "./components/sections/DigitalCollections";
@@ -17,9 +17,21 @@ class Digital extends Component {
     };
 
     componentDidMount() {
-        this.setState({
-            collections : Data(digital)
+
+        fetch(digital.endpoint, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
         })
+            .then(response => response.json())
+            .then(data => {
+                this.setState({
+                    collections : data.collections
+                })
+            })
+            .catch(err => console.error(err.toString()));
+
     }
 
     render() {
