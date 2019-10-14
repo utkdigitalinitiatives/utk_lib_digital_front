@@ -1,0 +1,59 @@
+.utk-digital--image {
+  position: relative;
+
+  figure {
+    margin: 0;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+    transition: $transition-all-load;
+    opacity: 0;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      filter: contrast(1) brightness(1) saturate(1);
+      transition: $transition-all-fast;
+    }
+
+    &.image-visible {
+      opacity: 1;
+    }
+  }
+
+  &--preload {
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+    background-color: $rock;
+
+    > img {
+      filter: blur(18px);
+      width: 100%;
+      object-fit: cover;
+      transition: $transition-all-fast;
+    }
+  }
+
+  &-placeholder {
+    background-color: $rock;
+    display: flex;
+    align-items: flex-start;
+
+    > img {
+      width: 100%;
+      opacity: 0;
+      object-fit: cover;
+    }
+  }
+}

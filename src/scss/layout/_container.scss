@@ -33,20 +33,6 @@
   z-index: 0;
 }
 
-.utk-digital--collections {
-  padding-top: $golden-ratio-4;
-  background-color: $white;
-
-  h2 {
-    margin: 0;
-    font-family: $sans;
-    font-size: $type-4;
-    font-weight: 400;
-    line-height: 1.29em;
-    color: $smokey;
-  }
-}
-
 .utk-digital--grid {
   display: flex;
   flex-flow: wrap;

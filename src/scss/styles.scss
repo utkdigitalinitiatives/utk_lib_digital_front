@@ -45,6 +45,7 @@
  */
 @import "components/browse";
 @import "components/collection";
+@import "components/image";
 @import "components/loading";
 @import "components/search";
 @import "components/splash";
@@ -54,4 +55,3 @@
  * vendor
  */
 @import "../vendor/bootstrap/bootstrap-grid";
-@import "../vendor/fontello/css/fontello.css";

@@ -144,11 +144,13 @@ class Grid extends Component {
                         <Toggle
                             clickHandler={this.toggleGrid}
                             text="Grid"
+                            icon="th-1"
                             active={this.state.view === 'grid'}
                         />
                         <Toggle
                             clickHandler={this.toggleList}
                             text="List"
+                            icon="th-list-1"
                             active={this.state.view === 'list'}
                         />
                     </div>
@@ -156,13 +158,13 @@ class Grid extends Component {
                         <Toggle
                             clickHandler={this.sortAlpha}
                             text={this.state.order === 'asc' ? 'A-Z' : 'Z-A'}
-                            icon={this.state.order === 'asc' ? 'angle-up' : 'angle-down'}
+                            icon={this.state.order === 'asc' ? 'up-circled2' : 'down-circled2'}
                             active={this.state.sortingMethod === 'alphabetically'}
                         />
                         <Toggle
                             clickHandler={this.sortGroups}
                             text="Group By Collection"
-                            icon="shuffle"
+                            icon="box"
                             active={this.state.sortingMethod === 'groups'}
                         />
                     </div>
