@@ -32,6 +32,29 @@
     left: 0;
     top: 0;
 
-    @include filter-gradient(rgba(black, 0), 38.2%, rgba(black, 0.76), calc(100% - 123px));
+    @include filter-gradient(rgba($smokeyx, 0), 61.8%, rgba($smokeyx, 0.95), calc(100% - 123px));
+  }
+
+  &--featured {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    bottom: $golden-ratio-4;
+    z-index: 2;
+
+    &--content {
+      max-width: $gr-short;
+      margin-left: $gr-long;
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      color: $white;
+
+      h3,
+      h4,
+      h5 {
+        color: $white;
+      }
+    }
   }
 }

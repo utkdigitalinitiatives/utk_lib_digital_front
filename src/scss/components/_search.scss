@@ -8,6 +8,7 @@
   &--heading {
     display: flex;
     flex-direction: column;
+    width: $gr-long;
 
     .utk-heading-1 {
       font-size: $type-6;
