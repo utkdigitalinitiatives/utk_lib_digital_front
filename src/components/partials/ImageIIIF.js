@@ -16,7 +16,7 @@ class Source extends Component {
     componentDidMount(){
         setTimeout(() => {
             this.setState({didMount: true})
-        }, 290)
+        }, 470)
     }
 
     render() {
@@ -73,7 +73,9 @@ class ImageIIIF extends Component {
         if (available === true)
             return (
                 <div className="utk-digital--image">
-                    <LazyLoad o throttle={760}>
+                    <LazyLoad resize={true}
+                              offset={0}
+                              throttle={290}>
                         <Source src={source} />
                     </LazyLoad>
                     <span className="utk-digital--image--preload">
