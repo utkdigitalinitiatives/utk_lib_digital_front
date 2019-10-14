@@ -21,10 +21,16 @@
   text-rendering: optimizeLegibility;
 }
 
+.utk-lib-digital-front {
+  position: relative;
+  z-index: 0;
+}
+
 .utk-digital--header {
   width: 100%;
   background-color: $rock;
   position: relative;
+  z-index: 0;
 }
 
 .utk-digital--collections {

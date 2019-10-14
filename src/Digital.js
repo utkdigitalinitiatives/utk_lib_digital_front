@@ -18,7 +18,6 @@ class Digital extends Component {
     };
 
     componentDidMount() {
-
         fetch(digital.endpoint, {
             headers: {
                 'Content-Type': 'application/json',
@@ -38,10 +37,17 @@ class Digital extends Component {
                 }, 470)
             })
             .catch(err => console.error(err.toString()));
-
     }
 
-    loadContent (data) {
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if(this.state.dataLoad === true)
+            setTimeout(() => {
+                var load = document.querySelector('.utk-loading');
+                load.parentNode.removeChild(load);
+            }, 760)
+    }
+
+    loadContent = (data) => {
         if (data !== 'load')
             return (
                 <React.Fragment>
@@ -57,10 +63,10 @@ class Digital extends Component {
 
         return (
             <React.Fragment>
-                <div className={`utk-loading${this.state.dataLoad && ' utk-loading--loaded'}`}>
-                    <div className="utk-loading--spinner"></div>
-                </div>
                 {this.loadContent(collections)}
+                <div className={`utk-loading${this.state.dataLoad && ' utk-loading--loaded'}`}>
+                    <div className="utk-loading--spinner">Loading</div>
+                </div>
             </React.Fragment>
         )
     }
