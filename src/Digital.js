@@ -12,7 +12,8 @@ class Digital extends Component {
         super(props);
 
         this.state = {
-            collections : 'load'
+            collections : 'load',
+            dataLoad : ''
         };
     };
 
@@ -29,27 +30,39 @@ class Digital extends Component {
                 this.setState({
                     collections : data.collections
                 })
+
+                setTimeout(() => {
+                    this.setState({
+                        dataLoad : true
+                    })
+                }, 470)
             })
             .catch(err => console.error(err.toString()));
 
+    }
+
+    loadContent (data) {
+        if (data !== 'load')
+            return (
+                <React.Fragment>
+                    <DigitalHeader featured={getRandomCollection(data, digital.featuredFilter)} />
+                    <DigitalCollections collections={data} />
+                </React.Fragment>
+            )
     }
 
     render() {
 
         let collections = this.state.collections;
 
-        if (collections === 'load') {
-            return 'Loading'
-        } else if (collections === null) {
-            return 'Critical Error'
-        } else {
-            return (
-                <React.Fragment>
-                    <DigitalHeader featured={getRandomCollection(collections, digital.featuredFilter)} />
-                    <DigitalCollections collections={collections} />
-                </React.Fragment>
-            );
-        }
+        return (
+            <React.Fragment>
+                <div className={`utk-loading${this.state.dataLoad && ' utk-loading--loaded'}`}>
+                    <div className="utk-loading--spinner"></div>
+                </div>
+                {this.loadContent(collections)}
+            </React.Fragment>
+        )
     }
 }
 
