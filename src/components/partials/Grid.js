@@ -25,8 +25,10 @@ class Collection extends Component {
                 <ImageIIIF parentKey={index}
                            data={data}
                            width={322}/>
-                <h3>{data.fgs_label_s}</h3>
-                <p>{data.mods_abstract_s}</p>
+                <div className="utk-digital--collection--content">
+                    <h3>{data.fgs_label_s}</h3>
+                    <p>{data.mods_abstract_s}</p>
+                </div>
             </a>
         );
     }
