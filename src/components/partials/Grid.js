@@ -42,7 +42,7 @@ class Grid extends Component {
             view: 'grid',
             order: 'asc',
             sortingMethod: 'alphabetically',
-            enterLeaveAnimation: 'elevator',
+            enterLeaveAnimation: 'fade',
             collections: this.props.collections,
             group: 'collections:gsmrc',
             removedcollections: []
@@ -78,14 +78,12 @@ class Grid extends Component {
     toggleList() {
         this.setState({
             view: 'list',
-            enterLeaveAnimation: 'elevator'
         });
     }
 
     toggleGrid() {
         this.setState({
             view: 'grid',
-            enterLeaveAnimation: 'elevator'
         });
     }
 
