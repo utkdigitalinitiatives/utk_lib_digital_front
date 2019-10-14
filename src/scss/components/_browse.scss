@@ -1,35 +1,41 @@
-.utk-digital--collections header {
-  display: flex;
-  justify-content: space-between;
-  margin-top: $golden-ratio-3;
+.utk-digital--collections {
+  display: block;
+  position: relative;
+  z-index: 1;
 
-  button {
-    height: $golden-ratio-4;
-    padding: 0 $golden-ratio-3;
-    border-radius: $golden-ratio-4;
-    border: none;
-    font-family: $sans;
-    font-size: $type-1;
-    box-shadow: $box-shadow;
-    margin-right: $golden-ratio-2;
-    color: $smokey;
-    cursor: pointer;
-    transition: $transition-all-fast;
-    outline: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    background-image: none;
-    background-color: $white;
+  header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: $golden-ratio-3;
 
-    &:focus,
-    &.active {
-      box-shadow: inset $box-shadow-float;
-      background-color: $globe;
-      color: $white;
-    }
+    button {
+      height: $golden-ratio-4;
+      padding: 0 $golden-ratio-3;
+      border-radius: $golden-ratio-4;
+      border: none;
+      font-family: $sans;
+      font-size: $type-1;
+      box-shadow: $box-shadow;
+      margin-right: $golden-ratio-2;
+      color: $smokey;
+      cursor: pointer;
+      transition: $transition-all-fast;
+      outline: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      background-image: none;
+      background-color: $white;
 
-    &:last-child {
-      margin-right: 0;
+      &:focus,
+      &.active {
+        box-shadow: inset $box-shadow-float;
+        background-color: $globe;
+        color: $white;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }

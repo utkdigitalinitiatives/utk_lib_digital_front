@@ -73,7 +73,8 @@ class ImageIIIF extends Component {
         if (available === true)
             return (
                 <div className="utk-digital--image">
-                    <LazyLoad resize={true}
+                    <LazyLoad once={true}
+                              resize={true}
                               offset={0}
                               throttle={290}>
                         <Source src={source} />
