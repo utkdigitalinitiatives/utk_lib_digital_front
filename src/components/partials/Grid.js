@@ -4,7 +4,6 @@ import Toggle from './Toggle';
 
 import FlipMove from 'react-flip-move';
 import orderBy from 'lodash/orderBy';
-import shuffle from 'lodash/shuffle';
 import throttle from 'lodash/throttle';
 
 class Collection extends Component {
@@ -53,7 +52,6 @@ class Grid extends Component {
         this.toggleGrid = this.toggleGrid.bind(this);
         this.sortAlpha = this.sortAlpha.bind(this);
         this.sortGroups = this.sortGroups.bind(this);
-        this.sortShuffle = this.sortShuffle.bind(this);
     };
 
     moveCollections(source, dest, pid) {
@@ -93,7 +91,7 @@ class Grid extends Component {
 
     sortAlpha() {
         let order = (this.state.order === 'asc' ? 'desc' : 'asc')
-        
+
         this.setState({
             collections: orderBy(this.state.collections, 'fgs_label_s', order),
             order: order,
@@ -105,13 +103,6 @@ class Grid extends Component {
         this.setState({
             sortingMethod: 'groups',
             collections: this.props.collections
-        });
-    }
-
-    sortShuffle() {
-        this.setState({
-            sortingMethod: 'shuffle',
-            collections: shuffle(this.state.collections)
         });
     }
 
@@ -176,17 +167,12 @@ class Grid extends Component {
                             icon="shuffle"
                             active={this.state.sortingMethod === 'groups'}
                         />
-                        <Toggle
-                            clickHandler={this.sortShuffle}
-                            text="Randomize"
-                            icon="shuffle"
-                            active={this.state.sortingMethod === 'random'}
-                        />
                     </div>
                 </header>
                 <FlipMove className="utk-digital--grid"
                           staggerDurationBy="30"
-                          duration={500}
+                          duration={760}
+                          easing="cubic-bezier(.93,.3,.6,.95)"
                           enterAnimation={this.state.enterLeaveAnimation}
                           leaveAnimation={this.state.enterLeaveAnimation}>
                     {this.getCollections()}
