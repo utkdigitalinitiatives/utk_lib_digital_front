@@ -116,8 +116,10 @@ class Grid extends Component {
         let group = this.state.group
 
         collections.map(function (item) {
-            if (item.ancestors_ms.includes(group)) {
-                groupsArr.push(item)
+            console.log(item)
+            if (item.hasOwnProperty('ancestors_ms')) {
+                if (item.ancestors_ms.includes(group))
+                    groupsArr.push(item)
             }
         })
 
