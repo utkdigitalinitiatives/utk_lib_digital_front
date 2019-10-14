@@ -153,7 +153,7 @@ class Grid extends Component {
 
         return (
             <React.Fragment>
-                <header>
+                <header className={`utk-sort-${this.state.sortingMethod}`}>
                     <div className="utk-digital--collections--view">
                         <Toggle
                             clickHandler={this.toggleGrid}
