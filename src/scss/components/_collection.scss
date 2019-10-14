@@ -76,7 +76,7 @@
     margin: 0;
     width: 100%;
     z-index: 1;
-    position: relative;
+    position: absolute;
     left: 0;
     top: 0;
     padding: 0;
@@ -87,20 +87,34 @@
       width: 100%;
       object-fit: cover;
       filter: contrast(1) brightness(1) saturate(1);
-      transition: $transition-all-fast;
+      transition: $transition-all;
+      opacity: 0;
+    }
+
+    &.image-visible {
+      > img {
+        opacity: 1;
+      }
     }
   }
 
   &--preload {
-    position: absolute;
+    position: relative;
     left: 0;
     top: 0;
     z-index: 0;
     width: 100%;
-    display: block;
-    background-position: 50% 50%;
-    background-size: cover;
-    filter: blur(29px);
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+    background-color: $rock;
+
+    > img {
+      filter: blur(18px);
+      width: 100%;
+      object-fit: cover;
+      transition: $transition-all;
+    }
   }
 }
 

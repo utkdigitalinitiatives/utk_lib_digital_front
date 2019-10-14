@@ -4,6 +4,30 @@ import placeholder from '../../media/placeholder.png';
 
 const iiif = 'https://digital.lib.utk.edu/iiif/2/collections~islandora~object~';
 
+class Source extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            didMount : ''
+        };
+    };
+
+    componentDidMount(){
+        setTimeout(() => {
+            this.setState({didMount: true})
+        }, 290)
+    }
+
+    render() {
+        return (
+            <figure className={`image-fade-in${this.state.didMount && ' image-visible'}`}>
+                <img src={this.props.src} />
+            </figure>
+        )
+    }
+}
+
 class ImageIIIF extends Component {
 
     constructor(props) {
@@ -12,7 +36,7 @@ class ImageIIIF extends Component {
         this.state = {
             source : null,
             preload : null,
-            available : null,
+            available : null
         };
     };
 
@@ -49,13 +73,11 @@ class ImageIIIF extends Component {
         if (available === true)
             return (
                 <div className="utk-digital--image">
-                    <LazyLoad>
-                        <figure>
-                            <img src={source} />
-                        </figure>
+                    <LazyLoad o throttle={760}>
+                        <Source src={source} />
                     </LazyLoad>
-                    <span className="utk-digital--image--preload"
-                          style={{ backgroundImage: "url("+ preload +")" }}>
+                    <span className="utk-digital--image--preload">
+                        <img src={preload} />
                     </span>
                 </div>
             )

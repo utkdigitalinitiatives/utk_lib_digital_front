@@ -151,14 +151,14 @@ class Grid extends Component {
                 <header>
                     <div className="abs-left">
                         <Toggle
-                            clickHandler={this.toggleList}
-                            text="List"
-                            active={this.state.view === 'list'}
-                        />
-                        <Toggle
                             clickHandler={this.toggleGrid}
                             text="Grid"
                             active={this.state.view === 'grid'}
+                        />
+                        <Toggle
+                            clickHandler={this.toggleList}
+                            text="List"
+                            active={this.state.view === 'list'}
                         />
                     </div>
                     <div className="abs-right">
