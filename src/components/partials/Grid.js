@@ -170,7 +170,6 @@ class Grid extends Component {
                     </div>
                 </header>
                 <FlipMove className="utk-digital--grid"
-                          staggerDurationBy="30"
                           duration={760}
                           easing="cubic-bezier(.93,.3,.6,.95)"
                           enterAnimation={this.state.enterLeaveAnimation}
