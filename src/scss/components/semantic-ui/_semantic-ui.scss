@@ -1,8 +1,6 @@
 /*
  * components
  */
-@import "components/button";
-@import "components/dropdown";
 
 /*
  * temp overrides for demoing... actual theme should be built
@@ -67,7 +65,7 @@ body {
     }
   }
 
-  .utk-panel-focus-research-tools .ui.labeled.icon.button {
+  .ui.labeled.icon.button {
     width: calc(100% - #{$golden-ratio-5});
   }
 

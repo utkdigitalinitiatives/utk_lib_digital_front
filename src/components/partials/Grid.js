@@ -4,7 +4,11 @@ import Toggle from './Toggle';
 
 import FlipMove from 'react-flip-move';
 import orderBy from 'lodash/orderBy';
+import findIndex from 'lodash/findIndex';
 import throttle from 'lodash/throttle';
+import {Dropdown, Select} from "semantic-ui-react";
+
+const digital = require('../../digital.json')
 
 class Collection extends Component {
 
@@ -15,7 +19,7 @@ class Collection extends Component {
         const pid = encodeURIComponent(data.PID);
         const url = `https://digital.lib.utk.edu/collections/islandora/object/${pid}`;
         const viewClass = `utk-digital--collection ${view}`;
-        const style = { zIndex: 100 - index }
+        const style = {zIndex: 100 - index}
 
         return (
             <a className={viewClass}
@@ -45,7 +49,9 @@ class Grid extends Component {
             enterLeaveAnimation: 'fade',
             collections: this.props.collections,
             group: 'collections:gsmrc',
-            removedcollections: []
+            groupLabel: 'Great Smoky Mountains Regional Collection',
+            removedcollections: [],
+            filterString: ''
         };
 
         this.toggleList = this.toggleList.bind(this);
@@ -55,19 +61,19 @@ class Grid extends Component {
     };
 
     moveCollections(source, dest, pid) {
-        const sourceCollections= this.state[source].slice();
+        const sourceCollections = this.state[source].slice();
         let destCollections = this.state[dest].slice();
 
-        if ( !sourceCollections.length ) return;
+        if (!sourceCollections.length) return;
 
         // Find the index of the collection clicked.
         // If no pid is provided, the index is 0
         const i = pid ? sourceCollections.findIndex(item => item.PID === pid) : 0;
 
         // If the collection is already removed, do nothing.
-        if ( i === -1 ) return;
+        if (i === -1) return;
 
-        destCollections = [].concat( sourceCollections.splice(i, 1), destCollections );
+        destCollections = [].concat(sourceCollections.splice(i, 1), destCollections);
 
         this.setState({
             [source]: sourceCollections,
@@ -109,7 +115,6 @@ class Grid extends Component {
         let group = this.state.group
 
         collections.map(function (item) {
-            console.log(item)
             if (item.hasOwnProperty('ancestors_ms')) {
                 if (item.ancestors_ms.includes(group))
                     groupsArr.push(item)
@@ -117,6 +122,15 @@ class Grid extends Component {
         })
 
         return groupsArr
+    }
+
+    updateGroups = (e, data) => {
+        this.setState({
+            group: data.value,
+            groupLabel: e.target.textContent
+        });
+
+        this.sortGroups()
     }
 
     getCollections = () => {
@@ -140,33 +154,40 @@ class Grid extends Component {
         return (
             <React.Fragment>
                 <header>
-                    <div className="abs-left">
+                    <div className="utk-digital--collections--view">
                         <Toggle
                             clickHandler={this.toggleGrid}
                             text="Grid"
-                            icon="th-1"
+                            icon="th"
                             active={this.state.view === 'grid'}
                         />
                         <Toggle
                             clickHandler={this.toggleList}
                             text="List"
-                            icon="th-list-1"
+                            icon="th-list"
                             active={this.state.view === 'list'}
                         />
                     </div>
-                    <div className="abs-right">
+                    <div className="utk-digital--collections--toggles">
                         <Toggle
                             clickHandler={this.sortAlpha}
                             text={this.state.order === 'asc' ? 'A-Z' : 'Z-A'}
-                            icon={this.state.order === 'asc' ? 'up-circled2' : 'down-circled2'}
+                            icon={this.state.order === 'asc' ? 'up-dir' : 'down-dir'}
                             active={this.state.sortingMethod === 'alphabetically'}
                         />
                         <Toggle
                             clickHandler={this.sortGroups}
-                            text="Group By Collection"
+                            text="Collection Groups"
                             icon="box"
                             active={this.state.sortingMethod === 'groups'}
                         />
+                        <Dropdown icon
+                                  className="icon-down-open"
+                                  text={this.state.groupLabel}
+                                  value={this.state.group}
+                                  name="group"
+                                  options={digital.groups}
+                                  onChange={this.updateGroups} />
                     </div>
                 </header>
                 <FlipMove className="utk-digital--grid"

@@ -8,8 +8,25 @@
     "collections:mpa"
   ],
   "groups": [
-    "collections:gsmrc",
-    "collections:uarc",
-    "collections:mpa"
+    {
+      "key" : "collections:gsmrc",
+      "text" : "Great Smoky Mountains Regional Collection",
+      "value" : "collections:gsmrc"
+    },
+    {
+      "key" : "collections:uarc",
+      "text" : "University Archives",
+      "value" : "collections:uarc"
+    },
+    {
+      "key" : "collections:mpa",
+      "text" : "Modern Political Archives",
+      "value" : "collections:mpa"
+    },
+    {
+      "key" : "collections:arrowmont",
+      "text" : "Arrowmont",
+      "value" : "collections:arrowmont"
+    }
   ]
 }
