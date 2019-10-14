@@ -42,7 +42,7 @@ class Digital extends Component {
     componentDidUpdate(prevProps, prevState, snapshot) {
         if(this.state.dataLoad === true)
             setTimeout(() => {
-                var load = document.querySelector('.utk-loading');
+                const load = document.querySelector('.utk-loading');
                 load.parentNode.removeChild(load);
             }, 760)
     }
