@@ -92,9 +92,11 @@ class Grid extends Component {
     }
 
     sortAlpha() {
+        let order = (this.state.order === 'asc' ? 'desc' : 'asc')
+        
         this.setState({
-            collections: orderBy(this.state.collections, 'fgs_label_s', this.state.order),
-            order: (this.state.order === 'asc' ? 'desc' : 'asc'),
+            collections: orderBy(this.state.collections, 'fgs_label_s', order),
+            order: order,
             sortingMethod: 'alphabetically'
         });
     }
