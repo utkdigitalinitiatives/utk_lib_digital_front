@@ -65,7 +65,7 @@ class Digital extends Component {
             <React.Fragment>
                 {this.loadContent(collections)}
                 <div className={`utk-loading${this.state.dataLoad && ' utk-loading--loaded'}`}>
-                    <div className="utk-loading--spinner">Loading</div>
+                    <div className="utk-loading--spinner"></div>
                 </div>
             </React.Fragment>
         )
