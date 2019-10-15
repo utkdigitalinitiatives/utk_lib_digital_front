@@ -4,9 +4,8 @@ import Toggle from './Toggle';
 
 import FlipMove from 'react-flip-move';
 import orderBy from 'lodash/orderBy';
-import findIndex from 'lodash/findIndex';
 import throttle from 'lodash/throttle';
-import {Dropdown, Select} from "semantic-ui-react";
+import {Dropdown} from "semantic-ui-react";
 
 const digital = require('../../digital.json')
 

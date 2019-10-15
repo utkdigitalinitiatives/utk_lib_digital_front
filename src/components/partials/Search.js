@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Button, Form, Select, Input} from 'semantic-ui-react'
+import {Button, Form, Select, Input, Dropdown} from 'semantic-ui-react'
 
 const options = [
     {key: 'all', text: 'All', value: 'all'},
@@ -17,7 +17,19 @@ class Search extends Component {
 
     constructor(props) {
         super(props);
+
+        this.state = {
+            type: 'all',
+            typeLabel: 'All'
+        };
     };
+
+    updateType = (e, data) => {
+        this.setState({
+            type: data.value,
+            typeLabel: e.target.textContent
+        });
+    }
 
     render() {
 
@@ -42,10 +54,12 @@ class Search extends Component {
                                 <input/>
                                 <Select icon
                                         compact
-                                        text="All"
+                                        text={this.state.typeLabel}
+                                        value={this.state.type}
                                         name="digital-resource"
                                         options={options}
-                                        className="icon-down-open" />
+                                        className="icon-down-open"
+                                        onChange={this.updateType} />
                                 <Button type='submit'>Search</Button>
                             </Input>
                         </Form>
