@@ -32,7 +32,7 @@
     left: 0;
     top: 0;
 
-    @include filter-gradient(rgba($smokeyx, 0), 199px, rgba(black, 0.76), calc(100% - 199px));
+    @include filter-gradient(rgba($smokeyx, 0), 15%, rgba(black, 0.76), calc(100% - 199px));
   }
 
   &--featured {
