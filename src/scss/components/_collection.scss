@@ -4,6 +4,8 @@
   width: 25%;
   display: flex;
   flex-direction: column;
+  transform: scale3d(1, 1, 1);
+  transition: $transition-all-fast;
 
   h3 {
     font-family: $sans;
@@ -23,6 +25,10 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    background-color: $white;
+    padding: $golden-ratio-3;
+    box-shadow: $box-shadow;
+    margin-bottom: $golden-ratio-3;
 
     .utk-digital--collection--content {
       margin-left: $golden-ratio-3;
@@ -59,6 +65,8 @@
 
   &:hover,
   &:focus {
+    transform: scale3d(1.03, 1.03, 1);
+
     h3 {
       color: $globe;
     }
