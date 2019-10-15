@@ -3,7 +3,7 @@
   z-index: 1;
   width: 100%;
   color: $white;
-  bottom: $golden-ratio-4;
+  bottom: $golden-ratio-5;
 
   &--heading {
     display: flex;
@@ -28,7 +28,6 @@
       font-family: $sans;
       font-weight: 400;
       line-height: 1.29em;
-      margin-bottom: $golden-ratio-2;
       display: flex;
       text-shadow: $box-shadow;
 

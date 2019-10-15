@@ -39,7 +39,7 @@
     position: absolute;
     width: 100%;
     right: 0;
-    bottom: $golden-ratio-4;
+    bottom: $golden-ratio-5;
     z-index: 2;
 
     &--content {
@@ -50,10 +50,24 @@
       text-align: right;
       color: $white;
 
-      h3,
-      h4,
-      h5 {
+      h3 {
+        margin: 0 0 $golden-ratio-3;
+        text-transform: uppercase;
+        font-size: $type-1;
+        color: $rock;
+      }
+
+      h4 {
+        margin: 0 0 $golden-ratio-0;
         color: $white;
+        font-size: $type-3;
+      }
+
+      h5 {
+        margin: 0;
+        color: $summitt;
+        font-weight: 400;
+        font-size: $type-2;
       }
     }
   }
