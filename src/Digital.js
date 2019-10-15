@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
-import getRandomCollection from "./components/Utilties";
 import DigitalHeader from "./components/sections/DigitalHeader";
 import DigitalCollections from "./components/sections/DigitalCollections";
+import filter from "lodash/filter";
 
 const digital = require('./digital.json');
 
@@ -13,8 +13,26 @@ class Digital extends Component {
 
         this.state = {
             collections : 'load',
-            dataLoad : ''
+            dataLoad : '',
+            featured : null
         };
+    };
+
+    getRandomCollection = (data, filterBy) => {
+        let item = null
+
+        if (this.state.featured) {
+            item = this.state.featured
+        } else {
+            let featured = filter(data, filterBy)
+            item = featured[Math.floor(Math.random()*featured.length)]
+
+            this.setState({
+                featured : item
+            })
+        }
+
+        return item
     };
 
     componentDidMount() {
@@ -51,7 +69,7 @@ class Digital extends Component {
         if (data !== 'load')
             return (
                 <React.Fragment>
-                    <DigitalHeader featured={getRandomCollection(data, digital.featuredFilter)} />
+                    <DigitalHeader featured={this.getRandomCollection(data, digital.featuredFilter)} />
                     <DigitalCollections collections={data} />
                 </React.Fragment>
             )
