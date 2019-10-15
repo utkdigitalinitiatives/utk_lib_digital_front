@@ -28,9 +28,17 @@
 
 .utk-digital--header {
   width: 100%;
-  background-color: $rock;
+  position: relative;
+  z-index: 1;
+  background-color: $gray-0;
+}
+
+.utk-digital--collections {
+  display: block;
   position: relative;
   z-index: 0;
+  padding-top: $golden-ratio-4;
+  background-color: $gray-0;
 }
 
 .utk-digital--grid {

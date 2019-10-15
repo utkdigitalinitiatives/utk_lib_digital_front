@@ -19,7 +19,7 @@
       letter-spacing: -0.029em;
       display: block;
       margin-bottom: $golden-ratio-1;
-      text-shadow: $box-shadow;
+      text-shadow: $box-shadow-float-submenu;
     }
 
     .utk-description {
@@ -28,8 +28,9 @@
       font-family: $sans;
       font-weight: 400;
       line-height: 1.29em;
+      -webkit-font-smoothing: subpixel-antialiased;
       display: flex;
-      text-shadow: $box-shadow;
+      text-shadow: $box-shadow-float-submenu;
 
       a,
       a:visited {
@@ -42,6 +43,99 @@
       a:hover,
       a:focus {
         text-decoration: underline;
+      }
+    }
+  }
+
+  &--base {
+    width: $gr-long;
+    margin-top: $golden-ratio-3;
+
+    &--form {
+      display: flex;
+      flex-direction: column;
+
+      .ui.action.input {
+        position: relative;
+
+        .utk-search--icon {
+          position: absolute;
+          z-index: 1;
+          height: $golden-ratio-4;
+          width: $golden-ratio-4;
+          font-size: $type-2;
+          color: $rock;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        input {
+          border: none;
+          background-color: $white;
+          height: $golden-ratio-4;
+          z-index: 0;
+          padding: 0 $golden-ratio-5 0 $golden-ratio-4;
+          color: $smokeyx;
+          border-radius: $golden-ratio-4;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+
+          &::placeholder {
+            color: $rock;
+          }
+        }
+
+        .dropdown {
+          position: relative;
+          z-index: 3;
+          padding: 0 !important;
+          min-height: auto;
+          border: none;
+          border-left: 2px solid $gray-0;
+          border-right: 2px solid $gray-0;
+
+          &::before {
+            position: absolute;
+            right: $golden-ratio-1;
+            top: 17px;
+            font-size: $type-0;
+            color: $rock;
+          }
+
+          > .text {
+            height: $golden-ratio-4;
+            padding: 0 35px 0 $golden-ratio-1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: $type-1;
+            color: $smokey;
+          }
+
+          > .menu {
+            width: auto;
+            margin-top: $golden-ratio-0;
+            border-radius: $golden-ratio-0;
+          }
+        }
+
+        button {
+          background: none;
+          border: none;
+          font-size: $type-1;
+          font-weight: 700;
+          color: $smokey;
+          z-index: 2;
+          right: 0;
+          top: 0;
+          height: $golden-ratio-4;
+          padding: 0 $golden-ratio-2;
+          background-color: $white;
+          border-radius: $golden-ratio-4 !important;
+          border-top-left-radius: 0 !important;
+          border-bottom-left-radius: 0 !important;
+        }
       }
     }
   }

@@ -30,23 +30,25 @@ class Search extends Component {
                         <span className="utk-description" role="subheading">Explore Items digitized from our collections. <a
                             href="#">Learn More</a></span>
                     </div>
-                    <div>
-                        {/*<Form method="post" className="utk-search--form">*/}
-                            {/*<span className="utk-search--icon">*/}
-                                {/*<span className="icon-search"></span>*/}
-                            {/*</span>*/}
-                            {/*<Input type='text'*/}
-                                   {/*name="value"*/}
-                                   {/*action>*/}
-                                {/*<input/>*/}
-                                {/*<Button type='submit'>Submit</Button>*/}
-                            {/*</Input>*/}
-                            {/*<Select icon*/}
-                                    {/*text="All"*/}
-                                    {/*name="primo"*/}
-                                    {/*options={options}*/}
-                                    {/*className="icon-down-open"/>*/}
-                        {/*</Form>*/}
+                    <div className="utk-digital--search--base">
+                        <Form method="post" className="utk-digital--search--base--form">
+                            <Input type='text'
+                                   name="digital-search"
+                                   placeholder="Search UT Digital Collections"
+                                   action>
+                                <span className="utk-search--icon">
+                                    <span className="icon-search"></span>
+                                </span>
+                                <input/>
+                                <Select icon
+                                        compact
+                                        text="All"
+                                        name="digital-resource"
+                                        options={options}
+                                        className="icon-down-open" />
+                                <Button type='submit'>Search</Button>
+                            </Input>
+                        </Form>
                     </div>
                 </div>
             </div>
