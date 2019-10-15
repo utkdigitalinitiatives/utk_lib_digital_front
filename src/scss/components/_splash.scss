@@ -32,7 +32,7 @@
     left: 0;
     top: 0;
 
-    @include filter-gradient(rgba($smokeyx, 0), 199px, rgba($smokeyx, 0.95), calc(100% - 123px));
+    @include filter-gradient(rgba($smokeyx, 0), 199px, rgba($smokeyx, 0.92), calc(100% - 123px));
   }
 
   &--featured {
@@ -45,16 +45,18 @@
     &--content {
       max-width: $gr-short;
       margin-left: $gr-long;
-      display: flex;
-      flex-direction: column;
       text-align: right;
       color: $white;
 
       h3 {
-        margin: 0 0 $golden-ratio-3;
+        margin: 0 0 $golden-ratio-2;
         text-transform: uppercase;
         font-size: $type-1;
         color: $rock;
+        position: relative;
+        display: inline-block;
+        width: auto;
+        font-weight: 700;
       }
 
       h4 {
@@ -65,9 +67,14 @@
 
       h5 {
         margin: 0;
-        color: $summitt;
+        color: $orange;
         font-weight: 400;
         font-size: $type-2;
+      }
+
+      a:hover,
+      a:focus {
+        text-decoration: underline;
       }
     }
   }
