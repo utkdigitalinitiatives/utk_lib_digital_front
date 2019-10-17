@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const DefinePlugin = webpack.DefinePlugin;
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CompressionPlugin = require('compression-webpack-plugin');
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
@@ -75,7 +76,13 @@ module.exports = {
                 NODE_ENV: JSON.stringify('production')
             }
         }),
-
+        new CompressionPlugin({
+            filename: "[path].gz[query]",
+            algorithm: "gzip",
+            test: /\.js$|\.css$|\.html$/,
+            threshold: 10240,
+            minRatio: 0.8
+        }),
         new ExtractTextPlugin({filename: 'digital.css', allChunks: true})
     ],
 };
