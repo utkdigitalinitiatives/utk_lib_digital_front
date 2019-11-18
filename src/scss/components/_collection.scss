@@ -22,22 +22,45 @@
   }
 
   &.list {
-    width: calc(100% - 58px);
     display: flex;
+    padding: 0;
     flex-direction: row;
+    margin-bottom: $golden-ratio-4;
     background-color: $white;
-    padding: $golden-ratio-3;
-    box-shadow: $box-shadow;
-    margin-bottom: $golden-ratio-3;
-    margin-left: $golden-ratio-3;
+    margin-left: 23.5px;
+    width: calc(100% - 47px);
+    min-height: calc(#{$golden-ratio-7 + ($golden-ratio-4 * 2)});
 
     .utk-digital--collection--content {
-      margin-left: $golden-ratio-3;
+      margin-left: $golden-ratio-4;
+      padding: $golden-ratio-4;
+      flex-grow: 1;
+    }
+
+    figure {
+      left: auto;
+      top: $golden-ratio-4;
+      right: -$golden-ratio-4;
+
+      img {
+        box-shadow: $box-shadow;
+        filter: contrast(1.06) brightness(1.06) saturate(1.11);
+      }
+    }
+
+    .utk-digital--image--preload {
+      height: 100%;
+      clip-path: polygon(0 0, calc(100% - 18px) 0,100% 100%,0 100%);
+
+      img {
+        height: 100%;
+      }
     }
 
     img {
-      width: $golden-ratio-7;
-      height: $golden-ratio-6;
+      width: $golden-ratio-8;
+      height: $golden-ratio-7;
+      object-fit: cover;
     }
 
     h3 {
@@ -55,11 +78,32 @@
     }
 
     .utk-digital--image-placeholder {
-      width: $golden-ratio-7;
-      height: $golden-ratio-6;
+      width: $golden-ratio-8;
+      height: 100%;
+      clip-path: polygon(0 0, calc(100% - 18px) 0,100% 100%,0 100%);
 
       img {
         object-fit: contain;
+      }
+    }
+
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+
+      .utk-digital--collection--content {
+        margin-left: 0;
+        margin-right: $golden-ratio-4;
+      }
+
+      figure {
+        left: -$golden-ratio-4;
+        right: auto;
+      }
+
+      .utk-digital--image--preload,
+      .utk-digital--image-placeholder {
+        height: 100%;
+        clip-path: polygon(0 0, 100% 0,100% 100%,18px 100%);
       }
     }
   }
@@ -70,10 +114,6 @@
 
     h3 {
       color: $globe;
-    }
-
-    img {
-      filter: contrast(1.06) brightness(1.06) saturate(1.11);
     }
   }
 }
