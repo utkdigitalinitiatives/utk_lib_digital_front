@@ -85,4 +85,5 @@ module.exports = {
         }),
         new ExtractTextPlugin({filename: 'digital.css', allChunks: true})
     ],
+
 };
