@@ -21,6 +21,10 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  span.btn {
+    display: none;
+  }
+
   &.list {
     display: flex;
     padding: 0;
@@ -35,6 +39,10 @@
       margin-left: $golden-ratio-4;
       padding: $golden-ratio-4;
       flex-grow: 1;
+
+      &--more {
+        font-weight: 700;
+      }
     }
 
     figure {
@@ -70,11 +78,18 @@
     }
 
     p {
-      font-size: $type-2;
-      display: block;
       font-family: $sans;
-      -webkit-font-smoothing: antialiased;
+      font-size: $type-2;
+      line-height: 1.76em;
+      display: block;
+      word-break: break-word;
       color: $smokey !important;
+      margin-bottom: 23px;
+      text-rendering: optimizeLegibility;
+    }
+
+    span.btn {
+      display: inline-flex;
     }
 
     .utk-digital--image-placeholder {
