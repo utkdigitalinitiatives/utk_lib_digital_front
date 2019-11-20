@@ -22,12 +22,21 @@
       }
     }
 
-    .utk-digital--collections--toggles .button-toggle:last-of-type {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      background-color: $globe;
-      color: $white;
-      box-shadow: inset $box-shadow;
+    .utk-digital--collections--toggles .button-toggle {
+      &.active,
+      &:focus {
+        box-shadow: $box-shadow;
+        background-color: $white !important;
+        color: $smokey;
+      }
+
+      &:last-of-type {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        background-color: $globe;
+        color: $white;
+        box-shadow: $box-shadow;
+      }
     }
 
     .ui.dropdown {
