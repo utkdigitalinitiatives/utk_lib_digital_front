@@ -19,9 +19,16 @@ class Search extends Component {
         super(props);
 
         this.state = {
+            search: '',
             type: 'all',
-            typeLabel: 'All'
+            typeLabel: 'All',
         };
+    };
+
+    updateSearch = (e, data) => {
+        this.setState({
+            search: data.value
+        });
     };
 
     updateType = (e, data) => {
@@ -29,10 +36,19 @@ class Search extends Component {
             type: data.value,
             typeLabel: e.target.textContent
         });
-    }
+    };
+
+    handleSubmit = (e, data) => {
+
+        e.preventDefault();
+
+        const { search, type } = this.state
+        let islandoraQuery = "https://digital.lib.utk.edu/collections/islandora/search/" + search + "?type=edismax&islandora_solr_search_navigation=0&f%5B0%5D=mods_typeOfResource_ms%3A%22" + type + "%22";
+
+        window.location.href = islandoraQuery;
+    };
 
     render() {
-
 
         return (
             <div className="utk-digital--search">
@@ -43,10 +59,14 @@ class Search extends Component {
                             href="#">Learn More</a></span>
                     </div>
                     <div className="utk-digital--search--base">
-                        <Form method="post" className="utk-digital--search--base--form">
+                        <Form method="post"
+                              className="utk-digital--search--base--form"
+                              onSubmit={this.handleSubmit}>
                             <Input type='text'
                                    name="digital-search"
+                                   value={this.state.search}
                                    placeholder="Search UT Digital Collections"
+                                   onChange={this.updateSearch}
                                    action>
                                 <span className="utk-search--icon">
                                     <span className="icon-search"></span>
