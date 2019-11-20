@@ -38,12 +38,17 @@ class Search extends Component {
         });
     };
 
-    handleSubmit = (e, data) => {
+    handleSubmit = (e) => {
 
         e.preventDefault();
 
         const { search, type } = this.state
-        let islandoraQuery = "https://digital.lib.utk.edu/collections/islandora/search/" + search + "?type=edismax&islandora_solr_search_navigation=0&f%5B0%5D=mods_typeOfResource_ms%3A%22" + type + "%22";
+
+        let facet = '';
+        if (type !== 'all')
+            facet = "=mods_typeOfResource_ms%3A%22" + type + "%22";
+
+        let islandoraQuery = "https://digital.lib.utk.edu/collections/islandora/search/" + search + "?type=edismax&islandora_solr_search_navigation=0&f%5B0%5D" + facet;
 
         window.location.href = islandoraQuery;
     };
