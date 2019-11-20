@@ -136,6 +136,15 @@
           border-radius: $golden-ratio-4 !important;
           border-top-left-radius: 0 !important;
           border-bottom-left-radius: 0 !important;
+          transition: $transition-all-fast;
+          border-left: 1px solid $white;
+
+          &:hover,
+          &:focus {
+            cursor: pointer;
+            background-color: $gray-0;
+            color: $globe;
+          }
         }
       }
     }
