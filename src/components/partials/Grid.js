@@ -67,11 +67,10 @@ class Grid extends Component {
         this.state = {
             view: 'grid',
             order: 'asc',
-            sortingMethod: 'alphabetically',
             enterLeaveAnimation: 'fade',
             collections: this.props.collections,
-            group: 'collections:gsmrc',
-            groupLabel: 'Great Smoky Mountains Regional Collection',
+            group: 'digital:collections',
+            groupLabel: 'All Collections',
             removedcollections: [],
             filterString: ''
         };
@@ -120,14 +119,12 @@ class Grid extends Component {
 
         this.setState({
             collections: orderBy(this.state.collections, 'fgs_label_s', order),
-            order: order,
-            sortingMethod: 'alphabetically'
+            order: order
         });
     }
 
     sortGroups() {
         this.setState({
-            sortingMethod: 'groups',
             collections: this.props.collections
         });
     }
@@ -156,10 +153,7 @@ class Grid extends Component {
     }
 
     getCollections = () => {
-        let items = this.state.collections;
-
-        if (this.state.sortingMethod === 'groups')
-            items = this.setGroups(this.props.collections);
+        let items = this.setGroups(this.state.collections);
 
         return items.map((item, index) => {
             return <Collection key={item.PID}
@@ -175,7 +169,7 @@ class Grid extends Component {
 
         return (
             <React.Fragment>
-                <header className={`utk-sort-${this.state.sortingMethod}`}>
+                <header>
                     <div className="utk-digital--collections--view">
                         <Toggle
                             clickHandler={this.toggleGrid}
@@ -195,13 +189,11 @@ class Grid extends Component {
                             clickHandler={this.sortAlpha}
                             text={this.state.order === 'asc' ? 'A-Z' : 'Z-A'}
                             icon={this.state.order === 'asc' ? 'up-dir' : 'down-dir'}
-                            active={this.state.sortingMethod === 'alphabetically'}
                         />
                         <Toggle
                             clickHandler={this.sortGroups}
-                            text="Collection Groups"
+                            text="Group"
                             icon="box"
-                            active={this.state.sortingMethod === 'groups'}
                         />
                         <Dropdown icon
                                   className="icon-down-open"
