@@ -9,6 +9,11 @@
   ],
   "groups": [
     {
+      "key" : "digital:collections",
+      "text" : "All Collections",
+      "value" : "digital:collections"
+    },
+    {
       "key" : "collections:gsmrc",
       "text" : "Great Smoky Mountains Regional Collection",
       "value" : "collections:gsmrc"
