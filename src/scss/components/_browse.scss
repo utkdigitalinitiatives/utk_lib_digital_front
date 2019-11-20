@@ -33,9 +33,10 @@
       &:last-of-type {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        background-color: $globe;
-        color: $white;
-        box-shadow: $box-shadow;
+        background-color: $globe !important;
+        color: $white !important;
+        box-shadow: $box-shadow !important;
+        cursor: default !important;
       }
     }
 
