@@ -28,10 +28,10 @@ class Splash extends Component {
 
     render() {
 
-        const {collection, view} = this.props
+        const {collection} = this.props
 
         return (
-            <div className={`utk-digital--header--splash utk-digital--header--splash--view-${view}`}>
+            <div className="utk-digital--header--splash">
                 {this.featuredItem(collection)}
                 <ImageIIIF data={collection}
                            width={1100} />

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Search from "../partials/Search";
 import Splash from "../partials/Splash";
+import About from "../partials/About";
 
 class DigitalHeader extends Component {
 
@@ -25,8 +26,9 @@ class DigitalHeader extends Component {
         const {featured} = this.props
 
         return (
-            <section className='utk-digital--header'>
+            <section className={`utk-digital--header utk-digital--header--view-${this.state.view}`}>
                 <Search activeView={this.activeView} view={this.state.view} />
+                <About activeView={this.activeView} view={this.state.view} />
                 <Splash activeView={this.activeView} view={this.state.view} collection={featured} />
             </section>
         );

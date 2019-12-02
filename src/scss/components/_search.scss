@@ -1,3 +1,8 @@
+.utk-digital--header--view-about .utk-digital--search {
+  left: -10%;
+  opacity: 0;
+}
+
 .utk-digital--search {
   position: absolute;
   z-index: 1;
@@ -7,11 +12,6 @@
   left: 0;
   opacity: 1;
   transition: $transition-all;
-
-  &.utk-digital--search--view-about {
-    left: -10%;
-    opacity: 0;
-  }
 
   &--heading {
     display: flex;

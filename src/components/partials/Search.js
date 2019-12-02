@@ -61,10 +61,8 @@ class Search extends Component {
 
     render() {
 
-        const {view} = this.props
-
         return (
-            <div className={`utk-digital--search utk-digital--search--view-${view}`}>
+            <div className="utk-digital--search">
                 <div className="container">
                     <div className="utk-digital--search--heading">
                         <span className="utk-heading-1" role="heading" aria-level="1">Digital Collections</span>

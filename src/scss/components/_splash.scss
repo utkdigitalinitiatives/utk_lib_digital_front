@@ -1,3 +1,20 @@
+.utk-digital--header--view-about {
+  .utk-digital--header--splash {
+    &--featured {
+      right: -10%;
+      opacity: 0;
+    }
+
+    &--overlay {
+      background-color: rgba($smokeyx, 0.65);
+    }
+
+    .utk-digital--image figure img {
+      filter: blur(18px);
+    }
+  }
+}
+
 .utk-digital--header--splash {
   width: 100%;
   height: 61.8vw;
@@ -7,23 +24,6 @@
   overflow: hidden;
   z-index: 0;
   background-color: $smokey;
-
-  &.utk-digital--header--splash--view-about {
-    .utk-digital--header--splash {
-      &--featured {
-        right: -10%;
-        opacity: 0;
-      }
-
-      &--overlay {
-        background-color: rgba($smokeyx, 0.65);
-      }
-    }
-
-    .utk-digital--image figure img {
-      filter: blur(18px);
-    }
-  }
 
   .utk-digital--image {
     z-index: 0;
