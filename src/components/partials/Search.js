@@ -1,17 +1,7 @@
 import React, {Component} from 'react';
 import {Button, Form, Select, Input, Dropdown} from 'semantic-ui-react'
 
-const options = [
-    {key: 'all', text: 'All', value: 'all'},
-    {key: 'text', text: 'Text', value: 'text'},
-    {key: 'still image', text: 'Still Image', value: 'still image'},
-    {key: 'notated music', text: 'Notated Music', value: 'notated music'},
-    {key: 'sound recording-musical', text: 'Sound Recording (Musical)', value: 'sound recording-musical'},
-    {key: 'sound recording-nonmusical', text: 'Sound Recording (Non-musical)', value: 'sound recording-nonmusical'},
-    {key: 'cartographic', text: 'Cartographic', value: 'cartographic'},
-    {key: 'moving image', text: 'Moving Image', value: 'moving image'},
-    {key: 'three dimensional object', text: 'Three Dimensional Object', value: 'three dimensional object'},
-]
+const digital = require('../../digital.json')
 
 class Search extends Component {
 
@@ -82,7 +72,7 @@ class Search extends Component {
                                         text={this.state.typeLabel}
                                         value={this.state.type}
                                         name="digital-resource"
-                                        options={options}
+                                        options={digital.searchOptions}
                                         className="icon-down-open"
                                         onChange={this.updateType} />
                                 <Button type='submit'>Search</Button>
