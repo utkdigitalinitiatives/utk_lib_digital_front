@@ -1,5 +1,5 @@
 .utk-digital--header--view-about .utk-digital--search {
-  left: -10%;
+  left: -200%;
   opacity: 0;
 }
 
@@ -30,6 +30,18 @@
       text-shadow: $box-shadow-float-submenu;
     }
 
+    .utk-heading-2 {
+      font-size: $type-5;
+      color: $white;
+      font-family: $sans;
+      font-weight: 700;
+      line-height: 1.29em;
+      letter-spacing: -0.029em;
+      display: block;
+      margin-bottom: $golden-ratio-1;
+      text-shadow: $box-shadow-float-submenu;
+    }
+
     .utk-description {
       font-size: $type-3;
       color: $gray-1;
@@ -46,11 +58,10 @@
         display: block;
         margin-left: $golden-ratio-1;
         text-decoration: none;
-      }
 
-      a:hover,
-      a:focus {
-        text-decoration: underline;
+        &:first-child {
+          margin-left: 0;
+        }
       }
     }
   }

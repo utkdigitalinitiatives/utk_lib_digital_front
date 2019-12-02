@@ -66,7 +66,8 @@ class Search extends Component {
                 <div className="container">
                     <div className="utk-digital--search--heading">
                         <span className="utk-heading-1" role="heading" aria-level="1">Digital Collections</span>
-                        <span className="utk-description" role="subheading">Explore Items digitized from our collections.
+                        <span className="utk-description" role="subheading">
+                            <span>Explore Items digitized from our collections.</span>
                             <a href="#about"
                                onKeyDown={this.handleKeyDown()}
                                onClick={this.handleOnClick()}>Learn More</a>

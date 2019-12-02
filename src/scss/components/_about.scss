@@ -1,0 +1,23 @@
+.utk-digital--header--view-about {
+  .utk-digital--about {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+.utk-digital--about {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  color: $white;
+  left: -200%;
+  bottom: $golden-ratio-5;
+  opacity: 0;
+  transition: $transition-all;
+
+  p {
+    margin-top: 1em;
+    margin-bottom: 0;
+    line-height: 1.58em;
+  }
+}
