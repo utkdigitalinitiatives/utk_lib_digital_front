@@ -12,11 +12,8 @@ class Search extends Component {
         this.state = {
             search: '',
             type: 'all',
-            typeLabel: 'All',
-            activeView: 'search'
+            typeLabel: 'All'
         };
-
-        this.activeView = this.activeView.bind(this);
     };
 
     updateSearch = (e, data) => {
@@ -32,18 +29,9 @@ class Search extends Component {
         });
     };
 
-    activeView(view) {
-
-        this.setState({
-            activeView: view
-        });
-
-    }
-
     togglePage = (e) => {
         if (e.type === 'click' || (e.type === 'keydown' && e.keyCode === 13)) {
             e.stopPropagation();
-
             this.props.activeView('about');
         }
     }
@@ -73,13 +61,15 @@ class Search extends Component {
 
     render() {
 
+        const {view} = this.props
+
         return (
-            <div className="utk-digital--search">
+            <div className={`utk-digital--search utk-digital--search--view-${view}`}>
                 <div className="container">
                     <div className="utk-digital--search--heading">
                         <span className="utk-heading-1" role="heading" aria-level="1">Digital Collections</span>
                         <span className="utk-description" role="subheading">Explore Items digitized from our collections.
-                            <a href="#toggle"
+                            <a href="#about"
                                onKeyDown={this.handleKeyDown()}
                                onClick={this.handleOnClick()}>Learn More</a>
                         </span>

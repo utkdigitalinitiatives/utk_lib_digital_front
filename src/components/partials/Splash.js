@@ -7,10 +7,10 @@ class Splash extends Component {
         super(props);
     };
 
-    featuredItem = (item, view) => {
+    featuredItem = (item) => {
 
         return (
-            <div className={`utk-digital--header--splash--featured utk-digital--header--view-${view}`}>
+            <div className={`utk-digital--header--splash--featured`}>
                 <div className="container">
                     <div className="utk-digital--header--splash--featured--content">
                         <h3>Featured Collection</h3>
@@ -31,8 +31,8 @@ class Splash extends Component {
         const {collection, view} = this.props
 
         return (
-            <div className="utk-digital--header--splash">
-                {this.featuredItem(collection, view)}
+            <div className={`utk-digital--header--splash utk-digital--header--splash--view-${view}`}>
+                {this.featuredItem(collection)}
                 <ImageIIIF data={collection}
                            width={1100} />
                 <div className="utk-digital--header--splash--overlay"></div>

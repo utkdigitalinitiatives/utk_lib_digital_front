@@ -8,6 +8,23 @@
   z-index: 0;
   background-color: $smokey;
 
+  &.utk-digital--header--splash--view-about {
+    .utk-digital--header--splash {
+      &--featured {
+        right: -10%;
+        opacity: 0;
+      }
+
+      &--overlay {
+        background-color: rgba($smokeyx, 0.65);
+      }
+    }
+
+    .utk-digital--image figure img {
+      filter: blur(18px);
+    }
+  }
+
   .utk-digital--image {
     z-index: 0;
 
@@ -31,8 +48,9 @@
     z-index: 1;
     left: 0;
     top: 0;
+    transition: $transition-all;
 
-    @include filter-gradient(rgba($smokeyx, 0), 15%, rgba(black, 0.76), calc(100% - 199px));
+    @include filter-gradient(rgba($smokeyx, 0), 15%, rgba($smokeyx, 0.95), calc(100% - 199px));
   }
 
   &--featured {
@@ -41,6 +59,8 @@
     right: 0;
     bottom: $golden-ratio-5;
     z-index: 2;
+    opacity: 1;
+    transition: $transition-all;
 
     &--content {
       max-width: $gr-short;

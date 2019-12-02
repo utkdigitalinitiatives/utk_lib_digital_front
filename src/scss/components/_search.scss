@@ -4,6 +4,14 @@
   width: 100%;
   color: $white;
   bottom: $golden-ratio-5;
+  left: 0;
+  opacity: 1;
+  transition: $transition-all;
+
+  &.utk-digital--search--view-about {
+    left: -10%;
+    opacity: 0;
+  }
 
   &--heading {
     display: flex;
