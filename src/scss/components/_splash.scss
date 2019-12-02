@@ -1,16 +1,28 @@
 .utk-digital--header--view-about {
   .utk-digital--header--splash {
+    height: $golden-ratio-9;
+    min-height: unset;
+    max-height: unset;
+    top: 0 ;
+    position: absolute;
+
     &--featured {
-      right: -200%;
       opacity: 0;
+      transition: none;
     }
 
     &--overlay {
-      background-color: rgba($smokeyx, 0.92);
+      transition: none;
+      background-color: rgba($smokeyx, 0.76);
+
+      @include filter-gradient(rgba($smokeyx, 0.76), 15%, rgba($smokeyx, 1), calc(100% - 199px));
     }
 
-    .utk-digital--image figure img {
-      filter: blur(18px);
+    .utk-digital--image {
+      figure img {
+        filter: blur(18px);
+        transition: $transition-all-load;
+      }
     }
   }
 }
@@ -27,6 +39,7 @@
 
   .utk-digital--image {
     z-index: 0;
+    width: 100%;
 
     figure {
       margin: 0;
@@ -37,6 +50,7 @@
         width: 100%;
         min-height: 500px;
         object-fit: cover;
+        transition: $transition-all-load;
       }
     }
   }
@@ -48,7 +62,7 @@
     z-index: 1;
     left: 0;
     top: 0;
-    transition: $transition-all;
+    transition: $transition-all-load;
 
     @include filter-gradient(rgba($smokeyx, 0), 15%, rgba($smokeyx, 0.92), calc(100% - 199px));
   }
@@ -60,7 +74,7 @@
     bottom: $golden-ratio-5;
     z-index: 2;
     opacity: 1;
-    transition: $transition-all;
+    transition: $transition-all-load;
 
     &--content {
       max-width: $gr-short;

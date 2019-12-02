@@ -1,19 +1,38 @@
+.utk-digital--header {
+  transition: $transition-all-load;
+  background-color: $smokeyx;
+}
+
 .utk-digital--header--view-about {
   .utk-digital--about {
     opacity: 1;
-    left: 0;
+    height: 100%;
+    transition: $transition-all-load;
+
+    .utk-digital--search--heading {
+      position: relative;
+      bottom: unset;
+      height: auto;
+    }
   }
 }
 
 .utk-digital--about {
-  position: absolute;
   z-index: 1;
   width: 100%;
   color: $white;
-  left: -200%;
-  bottom: $golden-ratio-5;
+  position: relative;
   opacity: 0;
-  transition: $transition-all;
+  transition: none;
+  height: 0;
+  overflow: hidden;
+
+  .utk-digital--search--heading {
+    position: relative;
+    bottom: unset;
+    height: 0;
+    padding: $golden-ratio-6 0;
+  }
 
   p {
     margin-top: 1em;

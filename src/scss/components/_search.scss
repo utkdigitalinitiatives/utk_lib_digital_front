@@ -1,6 +1,6 @@
 .utk-digital--header--view-about .utk-digital--search {
-  left: -200%;
   opacity: 0;
+  transition: none;
 }
 
 .utk-digital--search {
@@ -9,9 +9,8 @@
   width: 100%;
   color: $white;
   bottom: $golden-ratio-5;
-  left: 0;
   opacity: 1;
-  transition: $transition-all;
+  transition: $transition-all-load;
 
   > .container {
     position: relative;
