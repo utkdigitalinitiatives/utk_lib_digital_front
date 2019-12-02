@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 import DigitalHeader from "./components/sections/DigitalHeader";
 import DigitalCollections from "./components/sections/DigitalCollections";
 import filter from "lodash/filter";
+import remove from "lodash/remove";
+import indexOf from "lodash/indexOf";
 
 const digital = require('./digital.json');
 
@@ -44,6 +46,12 @@ class Digital extends Component {
         })
             .then(response => response.json())
             .then(data => {
+
+                remove(data.collections, function(collection) {
+                    if (indexOf(digital.exclude, collection.PID) !== -1)
+                        return collection
+                })
+
                 this.setState({
                     collections : data.collections
                 })
