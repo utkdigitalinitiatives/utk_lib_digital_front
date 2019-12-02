@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import {Button, Form, Select, Input, Dropdown} from 'semantic-ui-react'
 
 const digital = require('../../digital.json')
@@ -12,7 +13,10 @@ class Search extends Component {
             search: '',
             type: 'all',
             typeLabel: 'All',
+            activeView: 'search'
         };
+
+        this.activeView = this.activeView.bind(this);
     };
 
     updateSearch = (e, data) => {
@@ -27,6 +31,30 @@ class Search extends Component {
             typeLabel: e.target.textContent
         });
     };
+
+    activeView(view) {
+
+        this.setState({
+            activeView: view
+        });
+
+    }
+
+    togglePage = (e) => {
+        if (e.type === 'click' || (e.type === 'keydown' && e.keyCode === 13)) {
+            e.stopPropagation();
+
+            this.props.activeView('about');
+        }
+    }
+
+    handleOnClick () {
+        return (e) => this.togglePage(e);
+    }
+
+    handleKeyDown () {
+        return (e) => this.togglePage(e);
+    }
 
     handleSubmit = (e) => {
 
@@ -50,8 +78,11 @@ class Search extends Component {
                 <div className="container">
                     <div className="utk-digital--search--heading">
                         <span className="utk-heading-1" role="heading" aria-level="1">Digital Collections</span>
-                        <span className="utk-description" role="subheading">Explore Items digitized from our collections. <a
-                            href="#">Learn More</a></span>
+                        <span className="utk-description" role="subheading">Explore Items digitized from our collections.
+                            <a href="#toggle"
+                               onKeyDown={this.handleKeyDown()}
+                               onClick={this.handleOnClick()}>Learn More</a>
+                        </span>
                     </div>
                     <div className="utk-digital--search--base">
                         <Form method="post"
@@ -84,5 +115,9 @@ class Search extends Component {
         );
     }
 }
+
+Search.propTypes = {
+    activeView: PropTypes.func
+};
 
 export default Search;

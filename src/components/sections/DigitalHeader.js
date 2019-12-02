@@ -6,7 +6,19 @@ class DigitalHeader extends Component {
 
     constructor(props) {
         super(props);
+
+        this.state = {
+            view : 'search'
+        };
+
+        this.activeView = this.activeView.bind(this);
     };
+
+    activeView(activeView) {
+        this.setState({
+            view: activeView
+        });
+    }
 
     render() {
 
@@ -14,8 +26,8 @@ class DigitalHeader extends Component {
 
         return (
             <section className='utk-digital--header'>
-                <Search/>
-                <Splash collection={featured} />
+                <Search activeView={this.activeView} view={this.state.view} />
+                <Splash activeView={this.activeView} view={this.state.view} collection={featured} />
             </section>
         );
     }
