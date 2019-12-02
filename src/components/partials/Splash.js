@@ -9,6 +9,11 @@ class Splash extends Component {
 
     featuredItem = (item) => {
 
+        let title = item.mods_relatedItem_Featured_Item_titleInfo_title_s
+
+        if (item.mods_relatedItem_Featured_Item_dateCreated_s)
+            title = title + ', ' + item.mods_relatedItem_Featured_Item_dateCreated_s
+
         return (
             <div className={`utk-digital--header--splash--featured`}>
                 <div className="container">
@@ -18,7 +23,7 @@ class Splash extends Component {
                             <h4>{item.fgs_label_s}</h4>
                         </a>
                         <a href={item.mods_relatedItem_Featured_Item_identifier_pid_s}>
-                            <h5>{item.mods_relatedItem_Featured_Item_titleInfo_title_s}, {item.mods_relatedItem_Featured_Item_dateCreated_s}</h5>
+                            <h5>{title}</h5>
                         </a>
                     </div>
                 </div>
