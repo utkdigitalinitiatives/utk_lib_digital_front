@@ -13,10 +13,14 @@
   opacity: 1;
   transition: $transition-all;
 
+  > .container {
+    position: relative;
+  }
+
   &--heading {
     display: flex;
     flex-direction: column;
-    width: 700px;
+    width: calc((100% - 38.2%) - 47px);
     position: absolute;
     bottom: $golden-ratio-5;
 
@@ -69,10 +73,10 @@
   }
 
   &--base {
-    width: 700px;
     margin-top: $golden-ratio-3;
     position: absolute;
     bottom: 0;
+    width: calc((100% - 38.2%) - 47px);
 
     &--form {
       display: flex;
