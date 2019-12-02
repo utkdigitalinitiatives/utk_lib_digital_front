@@ -22,6 +22,8 @@ class Splash extends Component {
             <div className={`utk-digital--header--splash--featured`}>
                 <div className="container">
                     <div className="utk-digital--header--splash--featured--content">
+                        <ImageIIIF data={item}
+                                   width={322} />
                         <h3>Featured Collection</h3>
                         <a href={collectionUrl}>
                             <h4>{item.fgs_label_s}</h4>

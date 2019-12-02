@@ -7,8 +7,20 @@
     position: absolute;
 
     &--featured {
-      opacity: 0;
-      transition: none;
+      bottom: unset;
+      top: $golden-ratio-6;
+
+      .utk-digital--image {
+        width: 100%;
+        max-width: 100%;
+        opacity: 1;
+        transition: $transition-opacity-load;
+
+        figure img {
+          min-height: auto;
+          filter: blur(0) !important;
+        }
+      }
     }
 
     &--overlay {
@@ -39,6 +51,7 @@
   .utk-digital--image {
     z-index: 0;
     width: 100%;
+    align-self: flex-end;
 
     figure {
       margin: 0;
@@ -75,12 +88,23 @@
     opacity: 1;
     transition: $transition-all-load;
 
+    .utk-digital--image {
+      z-index: 0;
+      opacity: 0;
+      width: 0;
+      margin-bottom: $golden-ratio-3;
+      box-shadow: $box-shadow-float-submenu;
+    }
+
     &--content {
       max-width: $gr-short;
       margin-left: $gr-long;
       text-align: right;
       color: $white;
       padding-left: $golden-ratio-5;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
 
       h3 {
         margin: 0 0 $golden-ratio-2;
