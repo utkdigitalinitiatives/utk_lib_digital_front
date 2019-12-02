@@ -16,7 +16,9 @@
   &--heading {
     display: flex;
     flex-direction: column;
-    width: $gr-long;
+    width: 700px;
+    position: absolute;
+    bottom: $golden-ratio-5;
 
     .utk-heading-1 {
       font-size: $type-6;
@@ -67,8 +69,10 @@
   }
 
   &--base {
-    width: $gr-long;
+    width: 700px;
     margin-top: $golden-ratio-3;
+    position: absolute;
+    bottom: 0;
 
     &--form {
       display: flex;
