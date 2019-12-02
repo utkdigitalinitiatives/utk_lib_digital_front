@@ -6,7 +6,7 @@
     }
 
     &--overlay {
-      background-color: rgba($smokeyx, 0.65);
+      background-color: rgba($smokeyx, 0.92);
     }
 
     .utk-digital--image figure img {
@@ -50,7 +50,7 @@
     top: 0;
     transition: $transition-all;
 
-    @include filter-gradient(rgba($smokeyx, 0), 15%, rgba($smokeyx, 0.95), calc(100% - 199px));
+    @include filter-gradient(rgba($smokeyx, 0), 15%, rgba($smokeyx, 0.92), calc(100% - 199px));
   }
 
   &--featured {
