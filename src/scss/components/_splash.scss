@@ -13,9 +13,8 @@
 
     &--overlay {
       transition: none;
-      background-color: rgba($smokeyx, 0.76);
 
-      @include filter-gradient(rgba($smokeyx, 0.76), 15%, rgba($smokeyx, 1), calc(100% - 199px));
+      @include filter-gradient(rgba($smokeyx, 0.92), 70%, rgba($smokeyx, 1), 100%);
     }
 
     .utk-digital--image {

@@ -1,18 +1,16 @@
 .utk-digital--header {
-  transition: $transition-all-load;
   background-color: $smokeyx;
 }
 
 .utk-digital--header--view-about {
   .utk-digital--about {
-    opacity: 1;
     height: 100%;
-    transition: $transition-all-load;
 
     .utk-digital--search--heading {
       position: relative;
       bottom: unset;
       height: auto;
+      opacity: 1;
     }
   }
 }
@@ -22,7 +20,6 @@
   width: 100%;
   color: $white;
   position: relative;
-  opacity: 0;
   transition: none;
   height: 0;
   overflow: hidden;
@@ -32,6 +29,8 @@
     bottom: unset;
     height: 0;
     padding: $golden-ratio-6 0;
+    transition: $transition-all-load;
+    opacity: 0;
   }
 
   p {
