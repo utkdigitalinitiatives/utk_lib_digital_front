@@ -50,11 +50,11 @@ class Digital extends Component {
                 remove(data.collections, function(collection) {
                     if (indexOf(digital.exclude, collection.PID) !== -1)
                         return collection
-                })
+                });
 
                 this.setState({
                     collections : data.collections
-                })
+                });
 
                 setTimeout(() => {
                     this.setState({

@@ -5,7 +5,14 @@
   "exclude": [
     "collections:gsmrc",
     "collections:uarc",
-    "collections:mpa"
+    "collections:mpa",
+    "arrowmont:arrow",
+    "arrowmont:curriculum",
+    "arrowmont:3d",
+    "arrowmont:arrscrap",
+    "arrowmont:arrpgimg",
+    "arrowmont:arrsimple",
+    "arrowmont:sturley"
   ],
   "groups": [
     {
