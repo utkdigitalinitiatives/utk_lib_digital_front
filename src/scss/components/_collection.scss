@@ -20,6 +20,12 @@
   @include respond(xs) {
     flex-basis: 100%;
     width: 100%;
+
+    .utk-digital--image,
+    .utk-digital--image-placeholder {
+      margin-left: -18px;
+      width: calc(100% + 36px);
+    }
   }
 
   h3 {
@@ -29,6 +35,7 @@
     line-height: 1.29em;
     margin: $golden-ratio-1 0 0;
     color: $smokey;
+    letter-spacing: -0.029em;
 
     @include respond(xs, sm) {
       font-size: $type-3;
