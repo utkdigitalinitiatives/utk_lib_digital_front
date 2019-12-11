@@ -5,7 +5,6 @@
   display: flex;
   flex-direction: column;
   transform: scale3d(1, 1, 1);
-  transition: $transition-all-fast;
 
   h3 {
     font-family: $sans;
