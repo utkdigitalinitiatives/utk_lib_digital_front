@@ -1,7 +1,7 @@
 {
   "endpoint": "https://www.lib.utk.edu/wp-json/dc/all",
-  "featuredFilter": "mods_relatedItem_Featured_Item_identifier_pid_s",
-  "featuredImageAvailable": "fedora_datastream_version_FEATURED_SIZE_ms",
+  "featuredFilter": "utk_mods_relatedItem_featuredItem_identifier_ms",
+  "featuredImageAvailable": "utk_fedora_datastream_version_FEATURED_SIZE_ms",
   "exclude": [
     "collections:gsmrc",
     "collections:uarc",

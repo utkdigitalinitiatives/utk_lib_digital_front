@@ -5,7 +5,7 @@
     "params": {
       "q": "*:*",
       "indent": "true",
-      "fl": "PID fgs_label_s mods_abstract_s mods_relatedItem_Featured_Item_titleInfo_title_s mods_relatedItem_Featured_Item_identifier_pid_s mods_relatedItem_Featured_Item_dateCreated_s ancestors_ms fedora_datastream_version_FEATURED_SIZE_ms",
+      "fl": "PID fgs_label_s mods_abstract_s utk_mods_relatedItem_featuredItem_titleInfo_title_ms mods_relatedItem_Featured_Item_identifier_pid_s utk_mods_relatedItem_featuredItem_date_ms ancestors_ms fedora_datastream_version_FEATURED_SIZE_ms",
       "fq": "RELS_EXT_hasModel_uri_ss:\"info:fedora/islandora:collectionCModel\" -PID:\"islandora:video_collection\" -PID:\"ir:citationCollection\" -PID:\"islandora:audio_collection\" -PID:\"islandora:oralhistories_collection\" -PID:\"islandora:sp_basic_image_collection\" -PID:\"islandora:sp_large_image_collection\" -PID:\"islandora:sp_pdf_collection\"",
       "sort": "PID asc",
       "rows": "90",
@@ -564,9 +564,9 @@
           "1921012"
         ],
         "mods_abstract_s": "Featuring images from the mid-nineteenth century through the late twentieth century, this digital collection is comprised of photographs and postcards from around the East Tennessee region. Particularly rich in images of Knoxville, the collection includes images of airports, exteriors and interiors of buildings (such as homes, businesses, schools, churches, hospitals), vistas, people, and more. Also present are photographs of the 1982 World's Fair in downtown Knoxville. This collection provides a glimpse at the development of Knoxville and the larger East Tennessee region.",
-        "mods_relatedItem_Featured_Item_titleInfo_title_s": "Gay Street Viaduct",
+        "utk_mods_relatedItem_featuredItem_titleInfo_title_ms": "Gay Street Viaduct",
         "mods_relatedItem_Featured_Item_identifier_pid_s": "tenncities:472",
-        "mods_relatedItem_Featured_Item_dateCreated_s": "1924-1930",
+        "utk_mods_relatedItem_featuredItem_date_ms": "1924-1930",
         "ancestors_ms": [
           "digital:collections",
           "islandora:root"

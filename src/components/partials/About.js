@@ -33,9 +33,13 @@ class About extends Component {
                                onKeyDown={this.handleKeyDown()}
                                onClick={this.handleOnClick()}><span className="icon-left-big"></span> Back to Search</a>
                         </span>
-                        <p>Cras sed augue quam. Donec congue nulla lectus, eu volutpat libero lacinia ac. Fusce commodo metus nec porta consequat. Quisque pellentesque convallis velit, nec auctor sem accumsan vitae. Duis massa sapien, sodales vel ex in, interdum condimentum ligula.</p>
-                        <p>Aliquam erat volutpat. In hac habitasse platea dictumst. Nunc vestibulum neque fermentum, euismod risus elementum, elementum turpis. Praesent dignissim fermentum velit, vitae mattis sapien dignissim id. Morbi at risus vel ex rutrum viverra. Curabitur auctor suscipit blandit. Pellentesque in nulla sed lorem rhoncus scelerisque. Curabitur consequat tortor lectus, vel ornare mi malesuada eget. Mauris rutrum massa in mauris euismod, in convallis ante iaculis.</p>
-                        <p>Ut eu erat ac turpis cursus dictum quis nec nisl. Suspendisse potenti. Duis augue eros, faucibus sed lorem eget, mollis euismod erat. Nunc eget sodales eros. Nulla blandit sapien lacus, ac elementum leo lobortis ut. Proin non ligula id sem gravida ultricies. Aenean facilisis metus nec tortor placerat, id ullamcorper augue tristique. Mauris a commodo nunc.</p>
+                        <p>The University of Tennessee Libraries Digital Collections provide access to images, books, artworks, manuscripts, musical scores, videos, and oral histories. Materials come from our Special Collections including manuscripts, University Archives, Modern Political Archives, and the Great Smoky Mountains Regional Collection, as well as the DeVine Music Library and the Pendergrass Agricultural and Veterinary Medicine Library. While our primary focus is on materials held in Special Collections, several digital collections are the result of collaborative efforts with other departments on campus, and institutions outside the university.</p>
+                        <p>UT Libraries has contributed to digital collections located at other institutions, such as:</p>
+                        <ul>
+                            <li><a href="#">Southeastern Native American Documents, 1730-1842</a> Contains letters, legal proceedings, military orders, financial papers, and archaeological images relating to Native Americans in the Southeast.</li>
+                            <li><a href="#">Chronicling America</a>Contains over 13 million pages of historical US newspapers, including 300,000 pages from Tennessee newspapers. </li>
+                        </ul>
+                        <p>The university’s institutional repository, TRACE - Tennessee Research and Creative Exchange, provides access to scholarly works by UT faculty, staff, and graduate students, as well as documents from the University Archives.</p>
                     </div>
                 </div>
             </div>

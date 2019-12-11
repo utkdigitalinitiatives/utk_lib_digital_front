@@ -45,7 +45,7 @@ class ImageIIIF extends Component {
     }
 
     getFeaturedImage = (data) => {
-        if (typeof data.fedora_datastream_version_FEATURED_SIZE_ms !== "undefined")
+        if (typeof data.utk_fedora_datastream_version_FEATURED_SIZE_ms !== "undefined")
             return true
     }
 

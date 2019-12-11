@@ -13,10 +13,10 @@ class Splash extends Component {
         const collectionUrl = baseUrl + item.PID;
         const itemUrl = baseUrl + item.mods_relatedItem_Featured_Item_identifier_pid_s;
 
-        let title = item.mods_relatedItem_Featured_Item_titleInfo_title_s
+        let title = item.utk_mods_relatedItem_featuredItem_titleInfo_title_ms
 
-        if (item.mods_relatedItem_Featured_Item_dateCreated_s)
-            title = title + ', ' + item.mods_relatedItem_Featured_Item_dateCreated_s
+        if (item.utk_mods_relatedItem_featuredItem_date_ms)
+            title = title + ', ' + item.utk_mods_relatedItem_featuredItem_date_ms
 
         return (
             <div className={`utk-digital--header--splash--featured`}>
