@@ -1,10 +1,26 @@
 .utk-digital--collection {
   padding: 0 23.5px;
   margin-bottom: $golden-ratio-4;
-  width: 25%;
   display: flex;
   flex-direction: column;
   transform: scale3d(1, 1, 1);
+  flex-basis: 25%;
+  width: 25%;
+
+  @include respond(md) {
+    flex-basis: 33.333333%;
+    width: 33.333333%;
+  }
+
+  @include respond(sm) {
+    flex-basis: 50%;
+    width: 50%;
+  }
+
+  @include respond(xs) {
+    flex-basis: 100%;
+    width: 100%;
+  }
 
   h3 {
     font-family: $sans;
@@ -13,6 +29,11 @@
     line-height: 1.29em;
     margin: $golden-ratio-1 0 0;
     color: $smokey;
+
+    @include respond(xs, sm) {
+      font-size: $type-3;
+      margin: $golden-ratio-2 0 0;
+    }
   }
 
   p {

@@ -6,6 +6,12 @@
     font-weight: 400;
     line-height: 1.29em;
     color: $smokey;
+    letter-spacing: -0.029em;
+
+    @include respond(xs) {
+      font-size: $type-4;
+      text-align: center;
+    }
   }
 
   header {
@@ -13,8 +19,22 @@
     justify-content: space-between;
     margin-top: $golden-ratio-3;
 
+    @include respond(xs) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
     > div {
       display: flex;
+
+      @include respond(xs) {
+        margin-bottom: $golden-ratio-3;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
 
       .ui.dropdown {
         position: relative;
