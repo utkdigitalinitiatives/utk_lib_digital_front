@@ -39,8 +39,10 @@ class Collection extends Component {
         const style = {zIndex: 100 - index}
         let description = null
 
-        if (data.mods_abstract_s)
-            description = this.trimByWord(data.mods_abstract_s, 40);
+        console.log(data.utk_mods_abstract_ms)
+
+        if (data.utk_mods_abstract_ms[0])
+            description = this.trimByWord(data.utk_mods_abstract_ms[0], 40);
 
         return (
             <a className={viewClass}
