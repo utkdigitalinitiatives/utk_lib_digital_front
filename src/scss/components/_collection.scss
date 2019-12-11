@@ -60,12 +60,37 @@
     background-color: $white;
     margin-left: 23.5px;
     width: calc(100% - 47px);
+    flex-basis: calc(100% - 47px);
     min-height: calc(#{$golden-ratio-7 + ($golden-ratio-4 * 2)});
+
+    @include respond(xs) {
+      margin-left: 0;
+      width: 100%;
+      flex-basis: 100%;
+      position: relative;
+      margin-bottom: 0;
+
+      .utk-digital--image,
+      .utk-digital--image-placeholder {
+        margin-left: 0 !important;
+        width: 100% !important;
+      }
+    }
+
+    @include respond(xs) {
+      flex-direction: column !important;
+    }
 
     .utk-digital--collection--content {
       margin-left: $golden-ratio-4;
       padding: $golden-ratio-4;
       flex-grow: 1;
+
+      @include respond(xs) {
+        margin-left: 0;
+        margin-top: $golden-ratio-2;
+        padding: $golden-ratio-3;
+      }
 
       &--more {
         font-weight: 700;
@@ -77,9 +102,22 @@
       top: $golden-ratio-4;
       right: -$golden-ratio-4;
 
+      @include respond(xs) {
+        right: 0;
+        top: $golden-ratio-3;
+        left: $golden-ratio-3;
+        width: $golden-ratio-7;
+        height: $golden-ratio-6;
+      }
+
       img {
         box-shadow: $box-shadow;
         filter: contrast(1.06) brightness(1.06) saturate(1.11);
+
+        @include respond(xs) {
+          width: $golden-ratio-7;
+          height: $golden-ratio-6;
+        }
       }
     }
 
@@ -87,8 +125,18 @@
       height: 100%;
       clip-path: polygon(0 0, calc(100% - 18px) 0,100% 100%,0 100%);
 
+      @include respond(xs) {
+        clip-path: none;
+        width: 100%;
+      }
+
       img {
         height: 100%;
+
+        @include respond(xs) {
+          height: $golden-ratio-6;
+          width: 100%;
+        }
       }
     }
 
@@ -102,6 +150,10 @@
       font-size: $type-4;
       font-weight: 700;
       margin-top: 0;
+
+      @include respond(xs) {
+        font-size: $type-3;
+      }
     }
 
     p {
@@ -124,6 +176,10 @@
       height: 100%;
       clip-path: polygon(0 0, calc(100% - 18px) 0,100% 100%,0 100%);
 
+      @include respond(xs) {
+        clip-path: none;
+      }
+
       img {
         object-fit: contain;
       }
@@ -140,12 +196,22 @@
       figure {
         left: -$golden-ratio-4;
         right: auto;
+
+        @include respond(xs) {
+          right: 0;
+          top: $golden-ratio-3;
+          left: $golden-ratio-3;
+        }
       }
 
       .utk-digital--image--preload,
       .utk-digital--image-placeholder {
         height: 100%;
         clip-path: polygon(0 0, 100% 0,100% 100%,18px 100%);
+
+        @include respond(xs) {
+          clip-path: none;
+        }
       }
     }
   }
