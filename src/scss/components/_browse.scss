@@ -27,6 +27,7 @@
 
     > div {
       display: flex;
+      flex-wrap: wrap;
 
       @include respond(xs) {
         margin-bottom: $golden-ratio-3;
@@ -50,13 +51,23 @@
         color: $smokey;
       }
 
+      @include respond(xs, sm) {
+        &:first-of-type {
+          margin-right: $golden-ratio-2;
+        }
+      }
+
       &:last-of-type {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
-        background-color: $globe !important;
+        background-color: darken($globe, 5) !important;
         color: $white !important;
         box-shadow: $box-shadow !important;
         cursor: default !important;
+
+        @include respond(xs, sm) {
+          display: none;
+        }
       }
     }
 
@@ -77,6 +88,7 @@
         font-size: $type-0 !important;
         color: $gray-0;
         opacity: 0.47;
+        cursor: pointer;
       }
 
       > .text {
@@ -86,13 +98,39 @@
         border-radius: $golden-ratio-4;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
-        display: flex;
+        display: block;
+        line-height: $golden-ratio-4;
         align-items: center;
-        background-color: darken($globe, 5);
+        background-color: $globe;
         color: $white;
         padding-right: $golden-ratio-4;
         box-shadow: inset $box-shadow;
         opacity: 1;
+
+        @include respond(xs, sm) {
+          border-top-left-radius: $golden-ratio-4;
+          border-bottom-left-radius: $golden-ratio-4;
+          max-width: $golden-ratio-8;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        @include respond(xs) {
+          max-width: $golden-ratio-7;
+        }
+      }
+
+      .menu {
+        right: 0;
+        left: auto;
+        margin-top: $golden-ratio-0;
+        font-size: $type-1;
+        box-shadow: $box-shadow-float;
+
+        > .item {
+          font-size: $type-1;
+        }
       }
     }
 
