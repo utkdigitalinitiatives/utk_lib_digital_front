@@ -76,6 +76,7 @@
       @include respond(xs,sm) {
         font-size: $type-2;
         justify-content: center;
+        flex-wrap: wrap;
       }
 
       a,
@@ -108,8 +109,24 @@
       display: flex;
       flex-direction: column;
 
+
+      @include respond(sm) {
+        align-items: center;
+      }
+
       .ui.action.input {
         position: relative;
+
+        @include respond(sm) {
+          width: $gr-long;
+        }
+
+        @include respond(xs,sm) {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
 
         .utk-search--icon {
           position: absolute;
@@ -121,6 +138,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          left: 0;
         }
 
         input {
@@ -133,6 +151,13 @@
           border-radius: $golden-ratio-4;
           border-top-right-radius: 0;
           border-bottom-right-radius: 0;
+
+          @include respond(xs,sm) {
+            width: 100%;
+            border-top-right-radius: $golden-ratio-4;
+            border-bottom-right-radius: $golden-ratio-4;
+            padding-right: 0;
+          }
 
           &::placeholder {
             color: $rock;
@@ -148,6 +173,14 @@
           border: none;
           border-left: 2px solid $gray-0;
           border-right: 2px solid $gray-0;
+          min-width: $golden-ratio-5;
+
+          @include respond(xs,sm) {
+            margin-top: $golden-ratio-2;
+            min-width: $golden-ratio-7;
+            border-radius: $golden-ratio-4 !important;
+            margin-right: $golden-ratio-2;
+          }
 
           &::before {
             position: absolute;
@@ -162,9 +195,15 @@
             padding: 0 35px 0 $golden-ratio-1;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: left;
             font-size: $type-1;
             color: $smokey;
+
+            @include respond(xs,sm) {
+              align-items: center;
+              justify-content: left;
+              padding: 0 35px 0 $golden-ratio-2;
+            }
           }
 
           > .menu {
@@ -209,6 +248,13 @@
           border-bottom-left-radius: 0 !important;
           transition: $transition-all-fast;
           border-left: 1px solid $white;
+
+          @include respond(xs,sm) {
+            flex-grow: 0;
+            flex-shrink: 1;
+            border-radius: $golden-ratio-4 !important;
+            margin-top: $golden-ratio-2;
+          }
 
           &:hover,
           &:focus {
