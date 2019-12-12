@@ -112,8 +112,9 @@
 
     @include respond(xs,sm) {
       bottom: 0;
-      background-color: rgba($smokeyx, 0.92);
+      background-color: $smokeyx;
       padding: 0 0 $golden-ratio-3;
+      transition: unset;
     }
 
     &--content {

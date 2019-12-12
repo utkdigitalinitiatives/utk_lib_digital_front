@@ -72,10 +72,10 @@
       -webkit-font-smoothing: subpixel-antialiased;
       display: flex;
       text-shadow: $box-shadow-float-submenu;
-      justify-content: center;
 
       @include respond(xs,sm) {
         font-size: $type-2;
+        justify-content: center;
       }
 
       a,
@@ -171,6 +171,24 @@
             width: auto;
             margin-top: $golden-ratio-0;
             border-radius: $golden-ratio-0;
+            left: unset;
+            right: 0;
+            box-shadow: $box-shadow-float;
+
+            @include respond(xs) {
+              width: 303px;
+              min-width: unset;
+            }
+
+            > .item {
+              font-size: $type-1;
+
+              @include respond(xs) {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+              }
+            }
           }
         }
 
