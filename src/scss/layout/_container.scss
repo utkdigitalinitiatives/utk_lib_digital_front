@@ -45,6 +45,7 @@ body > main {min-height: 400px;
   z-index: 0;
   padding-top: $golden-ratio-4;
   background-color: $gray-0;
+  overflow: hidden;
 }
 
 .utk-digital--grid {
