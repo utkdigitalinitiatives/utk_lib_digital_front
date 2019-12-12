@@ -6,21 +6,27 @@
     top: 0 ;
     position: absolute;
 
-    &--featured {
-      bottom: unset;
-      top: $golden-ratio-6;
+    @include respond(md, lg, xl) {
+      &--featured {
+        bottom: unset;
+        top: $golden-ratio-5;
 
-      .utk-digital--image {
-        width: 100%;
-        max-width: 100%;
-        opacity: 1;
-        transition: $transition-opacity-load;
+        .utk-digital--image {
+          width: 100%;
+          max-width: 100%;
+          opacity: 1;
+          transition: $transition-opacity-load;
 
-        figure img {
-          min-height: auto;
-          filter: blur(0) !important;
+          figure img {
+            min-height: auto;
+            filter: blur(0) !important;
+          }
         }
       }
+    }
+
+    @include respond(xs, sm) {
+      display: none;
     }
 
     &--overlay {
