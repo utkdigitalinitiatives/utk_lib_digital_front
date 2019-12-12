@@ -48,10 +48,24 @@
   z-index: 0;
   background-color: $smokey;
 
+  @include respond(xs,sm) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
   .utk-digital--image {
     z-index: 0;
     width: 100%;
     align-self: flex-end;
+
+
+    @include respond(xs,sm) {
+      height: 100%;
+
+      .utk-digital--image--preload {
+        height: 100%;
+      }
+    }
 
     figure {
       margin: 0;
@@ -63,6 +77,10 @@
         min-height: 500px;
         object-fit: cover;
         transition: $transition-all-load;
+
+        @include respond(xs,sm) {
+          filter: blur(6px);
+        }
       }
     }
   }
@@ -77,6 +95,10 @@
     transition: $transition-all-load;
 
     @include filter-gradient(rgba($smokeyx, 0), 15%, rgba($smokeyx, 0.92), calc(100% - 199px));
+
+    @include respond(xs,sm) {
+      @include filter-gradient(rgba($smokeyx, 0.92), calc(199px), rgba($smokeyx, 0), 100%);
+    }
   }
 
   &--featured {
@@ -88,12 +110,10 @@
     opacity: 1;
     transition: $transition-all-load;
 
-    .utk-digital--image {
-      z-index: 0;
-      opacity: 0;
-      width: 0;
-      margin-bottom: $golden-ratio-3;
-      box-shadow: $box-shadow-float-submenu;
+    @include respond(xs,sm) {
+      bottom: 0;
+      background-color: rgba($smokeyx, 0.92);
+      padding: 0 0 $golden-ratio-3;
     }
 
     &--content {
@@ -105,6 +125,39 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
+
+      @include respond(xs,sm) {
+        max-width: 100%;
+        padding-left: 0;
+        margin-left: calc(#{$golden-ratio-6 + 18px});
+        padding-top: $golden-ratio-3;
+        justify-content: flex-start;
+        text-align: left;
+        position: relative;
+      }
+
+      .utk-digital--image {
+        z-index: 0;
+        opacity: 0;
+        width: 0;
+        margin-bottom: $golden-ratio-3;
+        box-shadow: $box-shadow-float-submenu;
+
+        @include respond(xs,sm) {
+          opacity: 1;
+          transition: $transition-opacity-load;
+          position: absolute;
+          width: $golden-ratio-6;
+          height: $golden-ratio-5;
+          left: calc(#{-$golden-ratio-6 - 18px});
+          box-shadow: $box-shadow-float-submenu;
+
+          figure img {
+            min-height: auto;
+            filter: blur(0) !important;
+          }
+        }
+      }
 
       h3 {
         margin: 0 0 $golden-ratio-2;

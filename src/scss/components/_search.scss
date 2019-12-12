@@ -12,6 +12,11 @@
   opacity: 1;
   transition: $transition-all-load;
 
+  @include respond(xs,sm) {
+    bottom: unset;
+    margin-top: $golden-ratio-4;
+  }
+
   > .container {
     position: relative;
   }
@@ -23,6 +28,13 @@
     position: absolute;
     bottom: $golden-ratio-5;
 
+    @include respond(xs,sm) {
+      bottom: unset;
+      position: relative;
+      width: 100%;
+      text-align: center;
+    }
+
     .utk-heading-1 {
       font-size: $type-6;
       color: $white;
@@ -33,6 +45,10 @@
       display: block;
       margin-bottom: $golden-ratio-1;
       text-shadow: $box-shadow-float-submenu;
+
+      @include respond(xs,sm) {
+        font-size: $type-5;
+      }
     }
 
     .utk-heading-2 {
@@ -56,6 +72,11 @@
       -webkit-font-smoothing: subpixel-antialiased;
       display: flex;
       text-shadow: $box-shadow-float-submenu;
+      justify-content: center;
+
+      @include respond(xs,sm) {
+        font-size: $type-2;
+      }
 
       a,
       a:visited {
@@ -76,6 +97,12 @@
     position: absolute;
     bottom: 0;
     width: calc((100% - 38.2%) - 47px);
+
+    @include respond(xs,sm) {
+      bottom: unset;
+      position: relative;
+      width: 100%;
+    }
 
     &--form {
       display: flex;

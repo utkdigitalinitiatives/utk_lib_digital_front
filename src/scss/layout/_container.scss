@@ -32,6 +32,11 @@ body > main {min-height: 400px;
   position: relative;
   z-index: 1;
   background-color: $gray-0;
+
+  @include respond(xs, sm) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .utk-digital--collections {
