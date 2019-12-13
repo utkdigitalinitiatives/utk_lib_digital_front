@@ -11,24 +11,6 @@ const digital = require('../../digital.json')
 
 class Collection extends Component {
 
-    trimByWord = (sentence, words) => {
-        let trimmed = sentence;
-        let trimmedArray = trimmed.split(" ");
-
-        if(trimmedArray.length > words){
-            trimmedArray = trimmedArray.slice(0, words);
-            trimmed = trimmedArray.join(" ") + "... ";
-            return <React.Fragment>{trimmed}{this.readMore(sentence)}</React.Fragment>;
-        } else {
-            return <React.Fragment>{sentence}</React.Fragment>
-        }
-    };
-
-    readMore = (desc) => {
-        if (desc)
-            return <span className="utk-digital--collection--content--more"> Read More</span>
-    }
-
     render() {
 
         const {data, index, view} = this.props
@@ -37,12 +19,7 @@ class Collection extends Component {
         const url = `https://digital.lib.utk.edu/collections/islandora/object/${pid}`;
         const viewClass = `utk-digital--collection ${view}`;
         const style = {zIndex: 100 - index}
-        let description = null
-
-        console.log(data.utk_mods_abstract_ms)
-
-        if (data.utk_mods_abstract_ms[0])
-            description = this.trimByWord(data.utk_mods_abstract_ms[0], 40);
+        let description = data.utk_mods_abstract_ms[0]
 
         return (
             <a className={viewClass}
