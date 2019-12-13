@@ -28,22 +28,7 @@ class Search extends Component {
             typeLabel: e.target.textContent
         });
     };
-
-    togglePage = (e) => {
-        if (e.type === 'click' || (e.type === 'keydown' && e.keyCode === 13)) {
-            e.stopPropagation();
-            this.props.activeView('about');
-        }
-    }
-
-    handleOnClick () {
-        return (e) => this.togglePage(e);
-    }
-
-    handleKeyDown () {
-        return (e) => this.togglePage(e);
-    }
-
+    
     handleSubmit = (e) => {
 
         e.preventDefault();
@@ -68,9 +53,7 @@ class Search extends Component {
                         <span className="utk-heading-1" role="heading" aria-level="1">Digital Collections</span>
                         <span className="utk-description" role="subheading">
                             <span>Explore Items digitized from our collections.</span>
-                            <a href="#about"
-                               onKeyDown={this.handleKeyDown()}
-                               onClick={this.handleOnClick()}>Learn More</a>
+                            <a href="/collections/about">Learn More</a>
                         </span>
                     </div>
                     <div className="utk-digital--search--base">

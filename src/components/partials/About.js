@@ -29,9 +29,7 @@ class About extends Component {
                     <div className="utk-digital--search--heading">
                         <span className="utk-heading-2" role="heading" aria-level="1">About Digital Collections</span>
                         <span className="utk-description" role="subheading">
-                            <a href="#search"
-                               onKeyDown={this.handleKeyDown()}
-                               onClick={this.handleOnClick()}><span className="icon-left-big"></span> Back to Search</a>
+                            <a href="#search"><span className="icon-left-big"></span> Back to Search</a>
                         </span>
                         <p>The University of Tennessee Libraries Digital Collections provide access to images, books, artworks, manuscripts, musical scores, videos, and oral histories. Materials come from our Special Collections including manuscripts, University Archives, Modern Political Archives, and the Great Smoky Mountains Regional Collection, as well as the DeVine Music Library and the Pendergrass Agricultural and Veterinary Medicine Library. While our primary focus is on materials held in Special Collections, several digital collections are the result of collaborative efforts with other departments on campus, and institutions outside the university.</p>
                         <p>UT Libraries has contributed to digital collections located at other institutions, such as:</p>
