@@ -28,7 +28,7 @@ class Search extends Component {
             typeLabel: e.target.textContent
         });
     };
-    
+
     handleSubmit = (e) => {
 
         e.preventDefault();
@@ -53,7 +53,7 @@ class Search extends Component {
                         <span className="utk-heading-1" role="heading" aria-level="1">Digital Collections</span>
                         <span className="utk-description" role="subheading">
                             <span>Explore Items digitized from our collections.</span>
-                            <a href="/collections/about">Learn More</a>
+                            <a href="https://digital.lib.utk.edu/collections/about">Learn More</a>
                         </span>
                     </div>
                     <div className="utk-digital--search--base">
