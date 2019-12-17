@@ -57,7 +57,7 @@
   @include respond(xs,sm) {
     display: flex;
     flex-direction: column-reverse;
-    min-height: 600px;
+    min-height: 570px;
   }
 
   .utk-digital--image {
@@ -78,16 +78,18 @@
     figure {
       margin: 0;
       display: flex;
+      height: 100%;
       width: 100%;
 
       img {
-        width: 100%;
-        min-height: 500px;
+        width: 120%;
+        height: 120%;
         object-fit: cover;
         transition: $transition-all-load;
 
         @include respond(xs,sm) {
           filter: blur(11px);
+          height: 100%;
         }
       }
     }
@@ -120,7 +122,7 @@
 
     @include respond(xs,sm) {
       bottom: 0;
-      background-color: $smokeyx;
+      background-color: rgba($smokeyx, 0.72);
       padding: 0 0 $golden-ratio-3;
       transition: unset;
     }
@@ -164,6 +166,8 @@
           figure img {
             min-height: auto;
             filter: blur(0) !important;
+            width: 100%;
+            height: 100%;
           }
         }
       }
