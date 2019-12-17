@@ -87,7 +87,7 @@
         transition: $transition-all-load;
 
         @include respond(xs,sm) {
-          filter: blur(3px);
+          filter: blur(11px);
         }
       }
     }

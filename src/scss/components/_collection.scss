@@ -111,7 +111,7 @@
       }
 
       img {
-        box-shadow: $box-shadow;
+        box-shadow: $box-shadow-float;
         filter: contrast(1.06) brightness(1.06) saturate(1.11);
 
         @include respond(xs) {

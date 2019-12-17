@@ -44,7 +44,7 @@ class Grid extends Component {
         super(props);
 
         this.state = {
-            view: 'grid',
+            view: 'list',
             order: 'asc',
             enterLeaveAnimation: 'fade',
             collections: this.props.collections,
@@ -151,16 +151,16 @@ class Grid extends Component {
                 <header>
                     <div className="utk-digital--collections--view">
                         <Toggle
-                            clickHandler={this.toggleGrid}
-                            text="Grid"
-                            icon="th"
-                            active={this.state.view === 'grid'}
-                        />
-                        <Toggle
                             clickHandler={this.toggleList}
                             text="List"
                             icon="th-list"
                             active={this.state.view === 'list'}
+                        />
+                        <Toggle
+                            clickHandler={this.toggleGrid}
+                            text="Grid"
+                            icon="th"
+                            active={this.state.view === 'grid'}
                         />
                     </div>
                     <div className="utk-digital--collections--toggles">
