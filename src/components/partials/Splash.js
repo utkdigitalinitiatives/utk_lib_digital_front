@@ -11,7 +11,7 @@ class Splash extends Component {
 
         const baseUrl = 'https://digital.lib.utk.edu/collections/islandora/object/';
         const collectionUrl = baseUrl + item.PID;
-        const itemUrl = baseUrl + item.utk_mods_relatedItem_Featured_Item_identifier_pid_s;
+        const itemUrl = baseUrl + item.utk_mods_relatedItem_featuredItem_identifier_ms;
 
         let title = item.utk_mods_relatedItem_featuredItem_titleInfo_title_ms
 
