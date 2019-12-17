@@ -179,7 +179,13 @@
             margin-top: $golden-ratio-2;
             min-width: $golden-ratio-7;
             border-radius: $golden-ratio-4 !important;
-            margin-right: $golden-ratio-2;
+            width: 100%;
+
+            .menu {
+              left: 0 !important;
+              right: unset !important;
+              max-width: 325px !important;
+            }
           }
 
           &::before {
@@ -254,6 +260,11 @@
             flex-shrink: 1;
             border-radius: $golden-ratio-4 !important;
             margin-top: $golden-ratio-2;
+            background-color: $globe;
+            color: $white !important;
+            border-left: none;
+            font-size: $type-2;
+            padding: 0 $golden-ratio-3;
           }
 
           &:hover,
