@@ -9,7 +9,6 @@ yarn start
 
 Installation
 ```
-composer install
 yarn
 yarn build
 ```
