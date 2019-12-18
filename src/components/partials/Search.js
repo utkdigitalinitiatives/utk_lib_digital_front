@@ -37,7 +37,7 @@ class Search extends Component {
 
         let facet = '';
         if (type !== 'all')
-            facet = "=mods_typeOfResource_ms%3A%22" + type + "%22";
+            facet = "=utk_mods_typeOfResource_ms%3A%22" + type + "%22";
 
         let islandoraQuery = "https://digital.lib.utk.edu/collections/islandora/search/" + search + "?type=edismax&islandora_solr_search_navigation=0&f%5B0%5D" + facet;
 
