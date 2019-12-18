@@ -1,9 +1,22 @@
-# Digital Collection Front (2019)
+# Digital Collection Homepage (2019)
 
-Development
-1. `yarn`
-2. `yarn start`
+Local Development
+```
+yarn
+yarn start
+```
 
 Installation
-1. `yarn`
-2. `yarn build`
+```
+composer install
+yarn
+yarn build
+```
+
+Deployment
+```
+ssh user@digital.lib.utk.edu
+cd /vhosts/digital/web
+git pull origin master
+yarn build
+```
