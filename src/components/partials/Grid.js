@@ -19,7 +19,13 @@ class Collection extends Component {
         const url = `https://digital.lib.utk.edu/collections/islandora/object/${pid}`;
         const viewClass = `utk-digital--collection ${view}`;
         const style = {zIndex: 100 - index}
-        let description = data.utk_mods_abstract_ms[0]
+
+        let description = ''
+
+        // if (data.utk_mods_abstract_ms[0]) {
+        //     description = data.utk_mods_abstract_ms[0]
+        // }
+
 
         return (
             <a className={viewClass}
