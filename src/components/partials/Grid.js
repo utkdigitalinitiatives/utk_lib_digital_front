@@ -15,16 +15,18 @@ class Collection extends Component {
 
         const {data, index, view} = this.props
 
-        const pid = encodeURIComponent(data.PID);
-        const url = `https://digital.lib.utk.edu/collections/islandora/object/${pid}`;
-        const viewClass = `utk-digital--collection ${view}`;
+        const pid = encodeURIComponent(data.PID)
+        const url = `https://digital.lib.utk.edu/collections/islandora/object/${pid}`
+        const viewClass = `utk-digital--collection ${view}`
         const style = {zIndex: 100 - index}
+
+        // console.log(data)
 
         let description = ''
 
-        // if (data.utk_mods_abstract_ms[0]) {
-        //     description = data.utk_mods_abstract_ms[0]
-        // }
+        if (typeof data.utk_mods_abstract_ms != "undefined" ) {
+            description = data.utk_mods_abstract_ms[0]
+        }
 
 
         return (
