@@ -2,9 +2,7 @@
 https://github.com/utkdigitalinitiatives/utk_lib_digital_front
 
 ## Introduction
-The  homepage of Digital Collections at [digital.lib.utk.edu](The  homepage of Digital Collections at digital.lib.utk.edu) 
-is a lightweight ReactJS app the renders all available collections. As with most JavaScript based applications, the site runs 
-entirely in the browser, connecting to sourced APIs to deliver data to the DOM.
+The  homepage of Digital Collections at [digital.lib.utk.edu](digital.lib.utk.edu) is a lightweight ReactJS app the renders all available collections. As with most JavaScript based applications, the site runs entirely in the browser, connecting to sourced APIs to deliver data to the DOM.
 
 ### API
 A multi step process exists to bring the data from to the homepage. A middleware application exists to transcribe the data and elevate to a publicly available endpoint.
