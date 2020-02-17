@@ -23,6 +23,8 @@ Make sure all dependencies have been installed before moving on:
 - [Node.js](https://nodejs.org/en/download/) or as a [binary](https://nodejs.org/en/download/)
 - [Yarn](https://www.npmjs.com/package/yarn)
 
+## Getting Started
+
 ### Local Development & Debugging
 ```
 cd {local_working_directory}
