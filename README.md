@@ -16,7 +16,7 @@ A multi step process exists to bring the data from to the homepage. A middleware
 - The development directory is `./src/` and and development must be completed here. Manipulation of compiled files in `./dist` directory should not be done.
 - A NoJS fallback exists for users who either are using a browser that doesn't support JavaScript or have made the decision to disable JS. The fallback is a meta redirect. Note that this fallback is only for this accessibility driven purpose.
 
-## Development, Debugging & Deployment
+## Requirements
 
 Make sure all dependencies have been installed before moving on:
 
