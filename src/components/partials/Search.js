@@ -23,8 +23,6 @@ class Search extends Component {
     };
 
     updateType = (e, data) => {
-        console.log(data);
-
         this.setState({
             type: data.value
         });
