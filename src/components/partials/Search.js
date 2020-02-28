@@ -23,9 +23,10 @@ class Search extends Component {
     };
 
     updateType = (e, data) => {
+        console.log(data);
+
         this.setState({
-            type: data.value,
-            typeLabel: e.target.textContent
+            type: data.value
         });
     };
 
@@ -72,7 +73,6 @@ class Search extends Component {
                                 <input/>
                                 <Select icon
                                         compact
-                                        text={this.state.typeLabel}
                                         value={this.state.type}
                                         name="digital-resource"
                                         options={digital.searchOptions}

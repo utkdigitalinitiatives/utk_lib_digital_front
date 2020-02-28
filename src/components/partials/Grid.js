@@ -132,8 +132,7 @@ class Grid extends Component {
 
     updateGroups = (e, data) => {
         this.setState({
-            group: data.value,
-            groupLabel: e.target.textContent
+            group: data.value
         });
 
         this.sortGroups()
@@ -184,7 +183,6 @@ class Grid extends Component {
                         />
                         <Dropdown icon
                                   className="icon-down-open"
-                                  text={this.state.groupLabel}
                                   value={this.state.group}
                                   name="group"
                                   options={digital.groups}
