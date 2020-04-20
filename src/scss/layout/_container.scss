@@ -31,6 +31,7 @@ body > main {min-height: 400px;
   width: 100%;
   position: relative;
   z-index: 1;
+  overflow: unset;
   background-color: $smokey;
 
   @include respond(xs, sm) {
