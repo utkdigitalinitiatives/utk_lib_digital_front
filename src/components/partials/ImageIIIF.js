@@ -76,7 +76,7 @@ class ImageIIIF extends Component {
                     <LazyLoad once={true}
                               resize={true}
                               offset={0}
-                              throttle={290}>
+                              throttle={29}>
                         <Source src={source} />
                     </LazyLoad>
                     <span className="utk-digital--image--preload">
