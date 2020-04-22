@@ -14,15 +14,13 @@ class Source extends Component {
     };
 
     componentDidMount(){
-        setTimeout(() => {
-            this.setState({didMount: true})
-        }, 470)
+        this.setState({didMount: true})
     }
 
     render() {
         return (
             <figure className={`image-fade-in${this.state.didMount && ' image-visible'}`}>
-                <img src={this.props.src} />
+                <img src={this.props.src} alt={this.props.alt} />
             </figure>
         )
     }
@@ -77,17 +75,17 @@ class ImageIIIF extends Component {
                               resize={true}
                               offset={470}
                               throttle={0}>
-                        <Source src={source} />
+                        <Source src={source} alt={this.props.data.fgs_label_s} />
                     </LazyLoad>
                     <span className="utk-digital--image--preload">
-                        <img src={preload} />
+                        <img src={preload} alt={this.props.data.fgs_label_s} />
                     </span>
                 </div>
             )
         else
             return (
                 <span className="utk-digital--image-placeholder">
-                    <img src={placeholder} />
+                    <img src={placeholder} alt={this.props.data.fgs_label_s} />
                 </span>
             )
     }

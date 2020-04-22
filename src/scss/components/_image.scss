@@ -38,8 +38,10 @@
     background-color: $rock;
 
     > img {
+      display: block;
       filter: blur(18px);
       width: 100%;
+      height: 100%;
       object-fit: cover;
       transition: $transition-opacity;
       opacity: 0.85;
