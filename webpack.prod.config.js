@@ -5,6 +5,8 @@ const DefinePlugin = webpack.DefinePlugin;
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
@@ -19,7 +21,7 @@ module.exports = {
         // the entry point of our app
     ],
     output: {
-        filename: 'digital.js',
+        filename: 'digital.[hash:6].js',
         path: path.resolve(__dirname, 'dist'),
         publicPath: 'dist/'
     },
@@ -72,6 +74,11 @@ module.exports = {
         ]
     },
     plugins: [
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, "./src/index.html"),
+            filename: path.join(__dirname, "./index.html")
+        }),
         new DefinePlugin({
             'process.env': {
                 NODE_ENV: JSON.stringify('production')
@@ -84,7 +91,7 @@ module.exports = {
             threshold: 10240,
             minRatio: 0.8
         }),
-        new ExtractTextPlugin({filename: 'digital.css', allChunks: true})
+        new ExtractTextPlugin({filename: 'digital.[hash:6].css', allChunks: true})
     ],
 
 };
