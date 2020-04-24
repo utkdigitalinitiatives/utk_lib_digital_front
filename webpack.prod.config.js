@@ -5,21 +5,21 @@ const DefinePlugin = webpack.DefinePlugin;
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     externals: {
-        // Use external version of React
         "react": "React",
         "react-dom": "ReactDOM",
         "lodash": "_"
     },
     entry: [
         './index.js'
-        // the entry point of our app
     ],
     output: {
-        filename: 'digital.js',
+        filename: 'digital.[hash:6].js',
         path: path.resolve(__dirname, 'dist'),
         publicPath: 'dist/'
     },
@@ -72,11 +72,24 @@ module.exports = {
         ]
     },
     plugins: [
+
+        // clears ./dist
+        new CleanWebpackPlugin(),
+
+        // outputs source html template w/ hashed assets mapped
+        new HtmlWebpackPlugin({
+            template: path.join(__dirname, "./src/index.html"),
+            filename: path.join(__dirname, "./index.html")
+        }),
+
+        // define as prod
         new DefinePlugin({
             'process.env': {
                 NODE_ENV: JSON.stringify('production')
             }
         }),
+
+        //basic compression for our assets and gzip derivatives
         new CompressionPlugin({
             filename: "[path].gz[query]",
             algorithm: "gzip",
@@ -84,7 +97,13 @@ module.exports = {
             threshold: 10240,
             minRatio: 0.8
         }),
-        new ExtractTextPlugin({filename: 'digital.css', allChunks: true})
+
+        // output the style sheet from sass
+        new ExtractTextPlugin({
+            filename: 'digital.[hash:6].css',
+            allChunks: true
+        })
+
     ],
 
 };

@@ -15,10 +15,9 @@ module.exports = {
         './index.js'
     ],
     output: {
-        filename: 'digital.js',
+        filename: 'digital.[hash:6].js',
     },
     devtool: 'source-map',
-
     module: {
         rules: [
             {
@@ -70,7 +69,7 @@ module.exports = {
         new webpack.NamedModulesPlugin(),
         // prints more readable module names in the browser console on HMR updates
 
-        new ExtractTextPlugin({filename: 'digital.css', allChunks: true}),
+        new ExtractTextPlugin({filename: 'digital.[hash:6].css', allChunks: true}),
 
         new HtmlWebPackPlugin({
             template: path.join(__dirname, "./src/index.html"),
