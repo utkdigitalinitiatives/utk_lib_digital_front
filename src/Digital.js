@@ -49,7 +49,7 @@ class Digital extends Component {
 
                 remove(data.collections, function(collection) {
 
-                    // remove items if in explictly excluded
+                    // remove items if explictly excluded
                     if (indexOf(digital.exclude, collection.PID) !== -1)
                         return collection
 
@@ -95,7 +95,7 @@ class Digital extends Component {
         let collections = this.state.collections;
 
         return (
-                <React.Fragment>
+            <React.Fragment>
                 {this.loadContent(collections)}
                 <div className={`utk-loading${this.state.dataLoad && ' utk-loading--loaded'}`}>
                     <div className="utk-loading--spinner"></div>
