@@ -48,8 +48,15 @@ class Digital extends Component {
             .then(data => {
 
                 remove(data.collections, function(collection) {
+
+                    // remove items if explictly excluded
                     if (indexOf(digital.exclude, collection.PID) !== -1)
                         return collection
+
+                    // remove items if abstract does not exist
+                    if (!collection.hasOwnProperty("utk_mods_abstract_ms"))
+                        return collection
+
                 });
 
                 this.setState({
