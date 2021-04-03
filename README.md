@@ -27,8 +27,8 @@ Make sure all dependencies have been installed before moving on:
 ```
 cd {local_working_directory}
 git clone git@github.com:utkdigitalinitiatives/utk_lib_digital_front.git
-yarn
-yarn start
+cd utk_lib_digital_front
+yarn && yarn start
 ```
 
 ### Fresh Installation
