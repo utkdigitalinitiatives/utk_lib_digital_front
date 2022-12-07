@@ -18,7 +18,7 @@ class Collection extends Component {
         const pid = encodeURIComponent(data.PID)
         const url = `https://digital.lib.utk.edu/collections/islandora/object/${pid}`
         const viewClass = `utk-digital--collection ${view}`
-        const style = {zIndex: 100 - index}
+        const style = {zIndex: 1000 - index}
 
         // console.log(data)
 
