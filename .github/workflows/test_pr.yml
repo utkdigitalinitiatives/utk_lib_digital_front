@@ -1,5 +1,5 @@
-name: Build and Deploy
-on: [push]
+name: Test Build
+on: [pull_request]
 jobs:
   ci:
     strategy:
@@ -9,12 +9,10 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
-
       - name: Set Node.js 14.x
         uses: actions/setup-node@v3
         with:
           node-version: 14.x
-
       - name: Run yarn
         run: yarn
       - name: Build production bundle
