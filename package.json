@@ -60,5 +60,8 @@
     "build": "webpack --config ./webpack.prod.config.js --mode production"
   },
   "homepage": "https://www.lib.utk.edu/",
-  "publicPath": ""
+  "publicPath": "",
+  "resolutions": {
+    "node-sass/node-gyp": "^6.0.0"
+  }
 }
