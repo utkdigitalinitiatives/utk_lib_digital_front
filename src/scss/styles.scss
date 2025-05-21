@@ -56,3 +56,29 @@
  * vendor
  */
 @import "../vendor/bootstrap/bootstrap-grid";
+
+/*
+ * overrides - add these at the end
+ */
+#utk-lib-digital-front {
+  a:not(.btn) {
+    text-decoration: none;
+    color: $globe !important; /* Using the same colors from your standard-body-link mixin */
+    
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $leconte !important;
+    }
+  }
+  
+  .btn {
+    // Restore button properties if needed
+    background-color: $gray-1;
+    
+    &-outline {
+      border: 2px solid $gray-1;
+      background-color: transparent;
+    }
+  }
+}
