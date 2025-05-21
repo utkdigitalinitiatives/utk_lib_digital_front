@@ -68,7 +68,7 @@ export default function Header() {
   };
   const logoTextStyle = {
     fontWeight: "bold",
-    color: "#333",
+    color: "rgb(75,75,75)",
     fontSize: 22,
     letterSpacing: "2px",
     marginLeft: 8,
@@ -82,7 +82,7 @@ export default function Header() {
   const actionLinkStyle = {
     display: "flex",
     alignItems: "center",
-    color: "#333",
+    color: "rgb(75,75,75)",
     textDecoration: "none",
     fontSize: 16,
     fontWeight: 500,
@@ -98,7 +98,7 @@ export default function Header() {
     cursor: "pointer",
     display: "inline-flex",
     alignItems: "center",
-    color: "#333",
+    color: "rgb(75,75,75)",
     padding: "0.25rem 0.5rem",
     borderRadius: 4,
     marginLeft: 8,

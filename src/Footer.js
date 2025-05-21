@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { FooterSystem } from './components/FooterSystem';
 
 // Helper component for social icons
 const SocialIcon = ({ href, label, children }) => {
@@ -311,7 +310,6 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <FooterSystem />
         </React.Fragment>
     );
 };

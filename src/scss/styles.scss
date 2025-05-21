@@ -57,13 +57,11 @@
  */
 @import "../vendor/bootstrap/bootstrap-grid";
 
-/*
- * overrides - add these at the end
- */
+
 #utk-lib-digital-front {
   a:not(.btn) {
     text-decoration: none;
-    color: $globe !important; /* Using the same colors from your standard-body-link mixin */
+    color: $globe !important; 
     
     &:hover,
     &:focus {
@@ -73,12 +71,25 @@
   }
   
   .btn {
-    // Restore button properties if needed
     background-color: $gray-1;
     
     &-outline {
       border: 2px solid $gray-1;
       background-color: transparent;
+    }
+  }
+}
+
+
+#utk-lib-footer {
+  .footer-link {
+    text-decoration: none;
+    color: rgb(75,75,75) !important;
+    
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: #006c93 !important; 
     }
   }
 }
