@@ -1,5 +1,5 @@
 {
-  "endpoint": "https://dev-utk-libraries.pantheonsite.io/wp-json/dc/all",
+  "endpoint": "https://live-utk-libraries.pantheonsite.io/wp-json/dc/all",
   "featuredFilter": "utk_mods_relatedItem_featuredItem_identifier_ms",
   "featuredImageAvailable": "utk_fedora_datastream_version_FEATURED_SIZE_ms",
   "exclude": [
