@@ -56,3 +56,40 @@
  * vendor
  */
 @import "../vendor/bootstrap/bootstrap-grid";
+
+
+#utk-lib-digital-front {
+  a:not(.btn) {
+    text-decoration: none;
+    color: $globe !important; 
+    
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: $leconte !important;
+    }
+  }
+  
+  .btn {
+    background-color: $gray-1;
+    
+    &-outline {
+      border: 2px solid $gray-1;
+      background-color: transparent;
+    }
+  }
+}
+
+
+#utk-lib-footer {
+  .footer-link {
+    text-decoration: none;
+    color: rgb(75,75,75) !important;
+    
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: #006c93 !important; 
+    }
+  }
+}

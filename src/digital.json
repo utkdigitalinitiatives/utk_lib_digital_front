@@ -1,5 +1,5 @@
 {
-  "endpoint": "https://www.lib.utk.edu/wp-json/dc/all",
+  "endpoint": "https://old.lib.utk.edu/wp-json/dc/all",
   "featuredFilter": "utk_mods_relatedItem_featuredItem_identifier_ms",
   "featuredImageAvailable": "utk_fedora_datastream_version_FEATURED_SIZE_ms",
   "exclude": [
