@@ -227,7 +227,7 @@ const Footer = () => {
                         {/* Address */}
                         <div style={addressContainerStyle}>
                             <div>
-                                <a href="/" style={{ fontWeight: 'bold' }} className="footer-link">
+                                <a href="https://lib.utk.edu/" style={{ fontWeight: 'bold' }} className="footer-link">
                                     University Libraries
                                 </a>
                             </div>
