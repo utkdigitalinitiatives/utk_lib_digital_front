@@ -281,9 +281,6 @@ const Footer = () => {
                                     <FooterLink href="https://lib.utk.edu/about/about-john-c-hodges-society" isExternal={true}>
                                         John C. Hodges Society
                                     </FooterLink>
-                                    <FooterLink href="https://lib.utk.edu/about/belonging" isExternal={true}>
-                                        Belonging and Engagement
-                                    </FooterLink>
                                     <FooterLink href="https://volumes.lib.utk.edu/features/" isExternal={true}>
                                         <i>Speaking Volumes</i> magazine
                                     </FooterLink>
