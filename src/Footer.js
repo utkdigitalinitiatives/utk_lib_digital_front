@@ -272,15 +272,16 @@ const Footer = () => {
                             <div style={linkColumnStyle}>
                                 <ul style={listGroupStyle}>
                                     <FooterLink
-                                        href="lib.utk.edu/about"
+                                        href="https://lib.utk.edu/about"
                                         isBold={true}
+                                        isExternal={true}
                                     >
                                         About
                                     </FooterLink>
-                                    <FooterLink href="lib.utk.edu/about/about-john-c-hodges-society">
+                                    <FooterLink href="https://lib.utk.edu/about/about-john-c-hodges-society" isExternal={true}>
                                         John C. Hodges Society
                                     </FooterLink>
-                                    <FooterLink href="lib.utk.edu/about/belonging">
+                                    <FooterLink href="https://lib.utk.edu/about/belonging" isExternal={true}>
                                         Belonging and Engagement
                                     </FooterLink>
                                     <FooterLink href="https://volumes.lib.utk.edu/features/" isExternal={true}>
@@ -292,16 +293,16 @@ const Footer = () => {
                             {/* Second column of links */}
                             <div style={linkColumnStyle}>
                                 <ul style={listGroupStyle}>
-                                    <FooterLink href="lib.utk.edu/directory">
+                                    <FooterLink href="https://lib.utk.edu/directory" isExternal={true}>
                                         Directory
                                     </FooterLink>
-                                    <FooterLink href="lib.utk.edu/employment">
+                                    <FooterLink href="https://lib.utk.edu/employment" isExternal={true}>
                                         Employment
                                     </FooterLink>
-                                    <FooterLink href="lib.utk.edu/about/policies">
+                                    <FooterLink href="https://lib.utk.edu/about/policies" isExternal={true}>
                                         Policies
                                     </FooterLink>
-                                    <FooterLink href="lib.utk.edu/department/community-learning-and-engagement">
+                                    <FooterLink href="https://lib.utk.edu/department/community-learning-and-engagement" isExternal={true}>
                                         Outreach
                                     </FooterLink>
                                 </ul>
